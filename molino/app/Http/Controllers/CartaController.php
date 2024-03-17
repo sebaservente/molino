@@ -10,7 +10,7 @@ class CartaController extends Controller
    public function desayunos()
    {
        $desayunos = Desayuno::all();
-       return view('carta/desayunos',[
+       return view('carta.desayunos',[
            'desayunos' => $desayunos,
        ]);
    }

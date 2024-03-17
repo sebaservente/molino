@@ -9,6 +9,10 @@
 .picture__img img{
     width: 2rem;
 }
+.img_productos {
+    width: 2rem;
+    margin: .5rem;
+}
 nav {
     display: flex;
     /*justify-content: center;*/

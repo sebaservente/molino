@@ -14,4 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('index');
-Route::get('/carta/desayunos', [\App\Http\Controllers\CartaController::class, 'desayunos'])->name('desayunos');
+
+Route::get('/carta.desayunos', [\App\Http\Controllers\CartaController::class, 'desayunos'])->name('desayunos');
+
+
+Route::get('/admin.mill', [\App\Http\Controllers\AdminController::class, 'admin'])->name('admin');
+Route::get('/admin.ingreso', [\App\Http\Controllers\AdminController::class, 'create'])->name('admin.create');
