@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body, main {
+    height: 100%;
+}
+nav {
+    display: flex;
+    /*justify-content: center;*/
+    padding-left: 10px;
+    align-items: center;
+    height: 75px;
+    background: rgb(220 38 38);
+    color: #f0f0f0;
+}
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    background: rgb(220 38 38);
+    color: #f0f0f0;
+}
