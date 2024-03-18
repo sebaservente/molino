@@ -10,7 +10,7 @@
     width: 2rem;
 }
 .img_productos {
-    width: 2rem;
+    width: 3rem;
     margin: .5rem;
 }
 nav {
@@ -29,4 +29,11 @@ nav {
     height: 75px;
     background: rgb(220 38 38);
     color: #f0f0f0;
+}
+.productos {
+    width: 90%;
+    display: flex;
+    margin: auto;
+    border-radius: 10px;
+    background: #1c7430;
 }
