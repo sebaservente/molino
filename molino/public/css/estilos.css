@@ -22,13 +22,26 @@ nav {
     background: rgb(220 38 38);
     color: #f0f0f0;
 }
+.div__formCrearProducto {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.div__formCrearProducto form {
+    width: 100%;
+    max-width: 400px;
+    font-weight: 700;
+    background: #EEEEEEFF;
+}
+textarea {
+    resize: none;
+}
 .footer {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 75px;
     background: rgb(220 38 38);
-    color: #f0f0f0;
 }
 .productos {
     width: 90%;
