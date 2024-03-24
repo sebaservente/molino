@@ -30,7 +30,7 @@ class CartaController extends Controller
     }
     public function bebidasId(int $id)
     {
-        
+
     }
     public function platos()
     {
