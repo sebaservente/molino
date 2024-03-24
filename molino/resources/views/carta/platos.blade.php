@@ -5,24 +5,25 @@
 ?>
 @extends('template.main')
 
-@section('title', 'Desayunos y Meriendas')
+@section('title', 'Cafeteria')
 
 @section('main')
-    <h1 class="text-center my-3 bg-primary">Mill Desayunos y Meriendas</h1>
+
+    <h1 class="text-center my-3 bg-warning">Platos</h1>
 
     <div class="div__productos">
-        @foreach($productos as $desayuno)
-            @if($desayuno->categoria == 'desayunos')
+        @foreach($productos as $platos)
+            @if($platos->categoria == 'platos')
                 <div class="productos my-3 shadow">
                     <div class="img__productos">
-                        @if($desayuno->imagen != null && public_path('img/reserva') . '/' . $desayuno->imagen)
+                        @if($platos->imagen != null && public_path('img/reserva') . '/' . $platos->imagen)
                             <picture class="">
                                 <source media="(min-width: 751px)"
-                                        srcset="{{ asset('img/reserva/' . $desayuno->imagen) }}">
+                                        srcset="{{ asset('img/reserva/' . $platos->imagen) }}">
                                 <source media="(min-width: 380px)"
-                                        srcset="{{ asset('img/reserva/' . $desayuno->imagen) }}">
-                                <img src="{{ asset('img/reserva/' . $desayuno->imagen) }}" class="w-100"
-                                     alt="{{ $desayuno->imagen_descripcion }}">
+                                        srcset="{{ asset('img/reserva/' . $platos->imagen) }}">
+                                <img src="{{ asset('img/reserva/' . $platos->imagen) }}" class="w-100"
+                                     alt="{{ $platos->imagen_descripcion }}">
                             </picture>
                         @else
                             <picture class="">
@@ -35,8 +36,8 @@
                     </div>
 
                     <div class="datos__productos">
-                        <p class="datos__parrafo">{{ $desayuno->titulo }}</p>
-                        <p class="datos__parrafo">$ <span> {{ $desayuno->precio }}</span></p>
+                        <p class="datos__parrafo">{{ $platos->titulo }}</p>
+                        <p class="datos__parrafo">$ <span> {{ $platos->precio }}</span></p>
                     </div>
                 </div>
             @endif

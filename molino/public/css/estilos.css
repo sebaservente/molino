@@ -75,4 +75,10 @@ textarea {
 .datos__parrafo span {
     font-weight: 400;
 }
+.h2__crearProducto {
+    text-align: center;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding-right: 1rem;
+}
 /*--------------FIN DE PRODUCTOS------------*/

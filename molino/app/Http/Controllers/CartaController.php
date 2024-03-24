@@ -2,16 +2,44 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Desayuno;
+use App\Models\Producto;
 use Illuminate\Http\Request;
 
 class CartaController extends Controller
 {
    public function desayunos()
    {
-       $desayunos = Desayuno::all();
+       $productos = Producto::all();
        return view('carta.desayunos',[
-           'desayunos' => $desayunos,
+           'productos' => $productos,
        ]);
    }
+    public function cafeteria()
+    {
+        $productos = Producto::all();
+        return view('carta.cafeteria',[
+            'productos' => $productos,
+        ]);
+    }
+    public function bebidas()
+    {
+        $productos = Producto::all();
+        return view('carta.bebidas',[
+            'productos' => $productos,
+        ]);
+    }
+    public function platos()
+    {
+        $productos = Producto::all();
+        return view('carta.platos',[
+            'productos' => $productos,
+        ]);
+    }
+    public function ensaladas()
+    {
+        $productos = Producto::all();
+        return view('carta.ensaladas',[
+            'productos' => $productos,
+        ]);
+    }
 }
