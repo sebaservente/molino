@@ -1,6 +1,7 @@
 <?php
 /**
  * @var \App\Models\Producto[] $productos
+ * @var \App\Models\Producto[] $productosBebidas
  */
 ?>
 @extends('template.main')
@@ -10,21 +11,19 @@
 @section('main')
 
     <h1 class="text-center my-3 bg-warning">Bebidas</h1>
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal fade" id="staticBackdrop{{ $productosBebidas->producto_id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <h2>{{ $productosBebidas->titulo }}</h2>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
                 </div>
             </div>
         </div>
@@ -32,10 +31,10 @@
     <div class="div__productos">
         @foreach($productos as $bebidas)
             @if($bebidas->categoria == 'bebidas')
-                {{--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                    Launch demo modal
-                </button>--}}
-                <a href="#" data-toggle="modal" data-target="#exampleModalCenter">
+{{--                --}}{{--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">--}}
+{{--                    Launch demo modal--}}
+{{--                </button>--}}
+                <a href="#" class="text-decoration-none"  data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $productosBebidas->producto_id }}">
                     <div class="productos my-3 shadow">
                         <div class="img__productos">
                             @if($bebidas->imagen != null && public_path('img/reserva') . '/' . $bebidas->imagen)

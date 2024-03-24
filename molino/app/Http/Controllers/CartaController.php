@@ -28,6 +28,10 @@ class CartaController extends Controller
             'productos' => $productos,
         ]);
     }
+    public function bebidasId(int $id)
+    {
+        
+    }
     public function platos()
     {
         $productos = Producto::all();

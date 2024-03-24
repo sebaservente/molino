@@ -16,6 +16,7 @@ class AdminController extends Controller
     {
         return view( 'admin.create');
     }
+
     public function createConfirm(Request $request)
     {
         $data = $request->except(['_token']);

@@ -127,7 +127,7 @@
                     <li><a href="{{ route('cafeteria') }}" class="text-decoration-none text-dark"><span class="px-2 py-3 uppercase"><i class="bi bi-cup px-2 unos"></i></span>Cafeteria</a>
                         {{--<p class="Maña__uno dos w-100 py-3 uppercase"><span class="px-2"><i class="bi bi-cup px-2 doss"></i></span>Cafeteria</p>--}}</li>
                     {{--<li><p class="Maña__uno tres w-100 py-3 uppercase"><span class="px-2"><i class="bi bi-cup-straw px-2 tress"></i></span>Bebidas</p></li>--}}
-                    <li><a href="{{ route('bebidas') }}" class="text-decoration-none text-dark"><span class="px-2 py-3 uppercase"><i class="bi bi-cup-straw px-2 tress"></i></span>Bebidas</a>
+                    <li><a href="{{ route('bebidas')  }}" class="text-decoration-none text-dark"><span class="px-2 py-3 uppercase"><i class="bi bi-cup-straw px-2 tress"></i></span>Bebidas</a>
                     <li><a href="{{ route('platos') }}" class="text-decoration-none text-dark"><span class="px-2 py-3 uppercase"><i class="bi bi-cc-circle px-2 cincos"></i></span>Platos</a>
                     <li><a href="{{ route('ensaladas') }}" class="text-decoration-none text-dark"><span class="px-2 py-3 uppercase"><i class="bi bi-cc-circle px-2 cincos"></i></span>Ensaladas</a>
                     {{--<li><p class="Maña__uno cuatro w-100 py-3 uppercase"><span class="px-2"><i class="bi bi-cc-circle px-2 cuatros"></i></span>Platos</p></li>--}}
