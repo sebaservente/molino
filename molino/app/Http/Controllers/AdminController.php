@@ -20,6 +20,7 @@ class AdminController extends Controller
     public function createConfirm(Request $request)
     {
         $data = $request->except(['_token']);
+        $request->validate(Producto::VALIDAR_CREAR_PRODUCTOS, Producto::MENSAJES_PRODUCTOS);
        /* dd($data);*/
         try {
             \DB::transaction(function()use ($data){
@@ -30,8 +31,8 @@ class AdminController extends Controller
             return redirect()
                 ->route('admin')
                 /*->with('status.message', 'El producto <b> ' . e($producto->titulo) . ' </b> fue creado exitosamente. ')*/
-                /*->with('status.message', 'El equipo <b>' . e($data['titulo']) . '</b> fue creado exitosamente')
-                ->with('status.type', 'success')*/;
+                ->with('status.message', 'El equipo <b>' . e($data['titulo']) . '</b> fue creado exitosamente')
+                ->with('status.type', 'success');
         }catch (\Exception $e){
             return redirect()
                 ->route('admin.create')

@@ -134,8 +134,11 @@
             </li>
         </ul>
     </div>--}}
+    @if(Session::has('status.message'))
+        <div class="bg-warning text-dark text-center p-1"><b>{!! Session::get('status.message') !!}</b></div>
+    @endif
     <section class="min-vh-100">
-        {{--<h2>ADMIN</h2>--}}
+
         @yield('admin')
         {{--<div class="div__somos py-2"></div>--}}
     </section>
