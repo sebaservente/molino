@@ -18,7 +18,6 @@ Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('i
 Route::get('/carta/desayunos', [\App\Http\Controllers\CartaController::class, 'desayunos'])->name('desayunos');
 Route::get('/carta/cafeteria', [\App\Http\Controllers\CartaController::class, 'cafeteria'])->name('cafeteria');
 Route::get('/carta/bebidas', [\App\Http\Controllers\CartaController::class, 'bebidas'])->name('bebidas');
-//Route::get('/carta/bebidas/{id}', [\App\Http\Controllers\CartaController::class, 'bebidasId'])->name('bebidas.iD')->whereNumber('id');
 Route::get('/carta/platos', [\App\Http\Controllers\CartaController::class, 'platos'])->name('platos');
 Route::get('/carta/ensaladas', [\App\Http\Controllers\CartaController::class, 'ensaladas'])->name('ensaladas');
 

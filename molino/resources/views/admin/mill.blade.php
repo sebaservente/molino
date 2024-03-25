@@ -23,7 +23,7 @@
                 </div>
                 <div class="py-3">
                     <button class="btn btn-dark w-100 shadow">Ingresar</button>
-                   {{-- <a href="{{ route('admin.create') }}" class="btn btn-dark">Ingresar</a>--}}
+                    {{--<a href="{{ route('admin.create') }}" class="btn btn-danger">Ingresar</a>--}}
                 </div>
             </form>
 

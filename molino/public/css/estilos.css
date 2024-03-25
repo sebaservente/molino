@@ -9,7 +9,12 @@
 .picture__img img{
     width: 2rem;
 }
-
+.textBold4 {
+    font-weight: 400;
+}
+.textBold8 {
+    font-weight: 800;
+}
 nav {
     display: flex;
     /*justify-content: center;*/
