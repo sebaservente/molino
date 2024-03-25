@@ -8,9 +8,9 @@
 @section('title', 'Administración Mill')
 
 @section('admin')
-    <h1 class="text-center my-3">Administración Mill</h1>
+    <h1 class="pt-4 text-center textBold8 text-uppercase">Administración Mill</h1>
     <div class="py-5">
-        <h2 class="text-center">Crear Producto</h2>
+        <h2 class="text-center textBold8 text-uppercase">Login de Ingreso</h2>
         <div class="div__formCrearProducto">
             <form action="{{ route('admin.create') }}" method="get" enctype="multipart/form-data" class="p-3 rounded rounded-lg shadow">
                 <div class="py-2">
