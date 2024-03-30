@@ -15,6 +15,9 @@
 .textBold8 {
     font-weight: 800;
 }
+.fontSize {
+    font-size: 2rem;
+}
 nav {
     display: flex;
     /*justify-content: center;*/
@@ -88,7 +91,17 @@ textarea {
 }
 .img__productos {
     width: 30%;
+    margin: auto;
     padding: .5rem;
+}
+.datos__descripcion {
+    font-size: .7rem;
+    color: gray;
+    margin-top: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 95%;
 }
 .datos__productos {
     width: 65%;
@@ -100,7 +113,7 @@ textarea {
     font-weight: 700;
     color: #000;
     width: 95%;
-    margin: 1rem auto;
+    margin: 1rem 0 0 0;
     font-size: 0.9rem;
 }
 .datos__parrafo span {

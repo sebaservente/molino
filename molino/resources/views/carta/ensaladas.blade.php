@@ -17,9 +17,9 @@
 
             <div class="modal fade" id="staticBackdrop{{ $ensaladas->producto_id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
-                    <div class="modal-content">
+                    <div class="modal-content text-center">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                            <h2 class="modal-title textBold8" id="staticBackdropLabel">{{ $ensaladas->titulo }}</h2>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -42,8 +42,8 @@
                                     </picture>
                                 @endif
                             </div>
-                            <h2>{{ $ensaladas->titulo }}</h2>
-                            <p class="textBold8">Precio: $ <span class="textBold4">{{ $ensaladas->precio }}</span></p>
+                            <p class="">{{ $ensaladas->descripcion }}</p>
+                            <p class="textBold8 fontSize">Precio: $ <span class="textBold4">{{ $ensaladas->precio }}</span></p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -75,12 +75,14 @@
                             @endif
                         </div>
                         <div class="datos__productos">
-                            <p class="datos__parrafo">{{ $ensaladas->titulo }}</p>
-                            <p class="datos__parrafo">$ <span> {{ $ensaladas->precio }}</span></p>
+                            <div class="div__datos">
+                                <p class="datos__parrafo">{{ $ensaladas->titulo }}</p>
+                                <p class="datos__descripcion">{{ $ensaladas->descripcion }}</p>
+                            </div>
+                            <p class="fw-bold text-dark">$ <span> {{ $ensaladas->precio }}</span></p>
                         </div>
                     </a>
                 </div>
-
             @endif
         @endforeach
     </div>

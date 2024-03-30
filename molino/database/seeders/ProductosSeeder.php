@@ -27,7 +27,7 @@ class ProductosSeeder extends Seeder
             ],
             [
                 'producto_id' => 2,
-                'titulo' => 'Cafe con leche + dos medialunas',
+                'titulo' => 'Cafe con Media lunas',
                 'precio' => 1600,
                 'descripcion' => 'Cafe con leche + dos medialunas',
                 'categoria' => 'cafeteria',

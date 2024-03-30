@@ -16,13 +16,13 @@
 
             <div class="modal fade" id="staticBackdrop{{ $desayuno->producto_id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
-                    <div class="modal-content">
+                    <div class="modal-content text-center">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <h2 class="modal-title textBold8" id="staticBackdropLabel">{{ $desayuno->titulo }}</h2>
+                            {{--<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>--}}
                         </div>
                         <div class="modal-body">
-                            <div class="img__productos">
+                            <div class="img__productos ">
                                 @if($desayuno->imagen != null && public_path('img/reserva') . '/' . $desayuno->imagen)
                                     <picture class="">
                                         <source media="(min-width: 751px)"
@@ -41,8 +41,8 @@
                                     </picture>
                                 @endif
                             </div>
-                            <h2>{{ $desayuno->titulo }}</h2>
-                            <p class="textBold8">Precio: $ <span class="textBold4">{{ $desayuno->precio }}</span></p>
+                            <p class="">{{ $desayuno->descripcion }}</p>
+                            <p class="textBold8 fontSize">Precio: $ <span class="textBold4">{{ $desayuno->precio }}</span></p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -74,12 +74,14 @@
                             @endif
                         </div>
                         <div class="datos__productos">
-                            <p class="datos__parrafo">{{ $desayuno->titulo }}</p>
-                            <p class="datos__parrafo">$ <span> {{ $desayuno->precio }}</span></p>
+                            <div class="div__datos">
+                                <p class="datos__parrafo">{{ $desayuno->titulo }}</p>
+                                <p class="datos__descripcion">{{ $desayuno->descripcion }}</p>
+                            </div>
+                            <p class="fw-bold text-dark">$ <span> {{ $desayuno->precio }}</span></p>
                         </div>
                     </a>
                 </div>
-
             @endif
 
         @endforeach
