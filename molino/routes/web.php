@@ -24,4 +24,6 @@ Route::get('/carta/ensaladas', [\App\Http\Controllers\CartaController::class, 'e
 
 Route::get('/admin/mill', [\App\Http\Controllers\AdminController::class, 'admin'])->name('admin');
 Route::get('/admin/ingreso', [\App\Http\Controllers\AdminController::class, 'create'])->name('admin.create');
+Route::get('/admin/ingreso', [\App\Http\Controllers\AdminController::class, 'ver'])->name('admin.create');
 Route::post('/admin/ingreso', [\App\Http\Controllers\AdminController::class, 'createConfirm'])->name('admin.create.confirm');
+Route::post('/admin/ingreso/{id}/eliminar', [\App\Http\Controllers\AdminController::class, 'delete'])->name('admin.delete')->whereNumber('id');

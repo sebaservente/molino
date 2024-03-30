@@ -24,7 +24,7 @@ class AdminController extends Controller
        /* dd($data);*/
         try {
             \DB::transaction(function()use ($data){
-                Producto::create($data);
+                $producto = Producto::create($data);
 
                 /*$equipos->generos()->attach($data['generos'] ?? []);*/
             });
@@ -40,5 +40,36 @@ class AdminController extends Controller
                 ->with('status.message', 'Ocurrio un error al tratar de crear el equipo')
                 ->with('status.type', 'danger');
         }
+    }
+    public function ver()
+    {
+        $productos = Producto::all();
+        return view( 'admin.create',[
+            'productos' => $productos
+        ]);
+    }
+    public function delete(int $id)
+    {
+        $productos = Producto::findOrFail($id);
+
+        try {
+            \DB::transaction(function()use ($productos){
+                $productos->delete();
+
+                /*$equipos->generos()->attach($data['generos'] ?? []);*/
+            });
+            return redirect()
+                ->route('admin.create')
+                /*->with('status.message', 'El producto <b> ' . e($producto->titulo) . ' </b> fue creado exitosamente. ')*/
+                ->with('status.message', 'El Producto <b>" ' . e($productos['titulo']) . ' "</b> fue eliminado exitosamente')
+                ->with('status.type', 'success');
+        }catch (\Exception $e){
+            return redirect()
+                ->route('admin.create')
+                ->withInput()
+                ->with('status.message', 'Ocurrio un error al tratar de crear el equipo')
+                ->with('status.type', 'danger');
+        }
+
     }
 }
