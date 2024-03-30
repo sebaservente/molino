@@ -138,6 +138,9 @@
             </li>
         </ul>
     </div>
+    <div>
+        <h3 class="metodo__pago">Metodos de pago</h3>
+    </div>
     <section class="min-vh-100">
         @yield('main')
         {{--<div class="div__somos py-2"></div>--}}

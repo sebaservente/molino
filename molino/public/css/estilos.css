@@ -45,7 +45,14 @@ textarea {
     height: 75px;
     background: rgb(220 38 38);
 }
-
+.metodo__pago {
+    font-size: .7rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f3f0f0;
+}
 /*--------------PRODUCTOS------------*/
 .div__productos {
     width: 90%;

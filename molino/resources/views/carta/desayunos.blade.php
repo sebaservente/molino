@@ -8,7 +8,7 @@
 @section('title', 'Desayunos y Meriendas')
 
 @section('main')
-    <h1 class="text-center my-3 bg-primary">Mill Desayunos y Meriendas</h1>
+    <h1 class="text-center my-3 ">Desayunos y Meriendas</h1>
 
     <div class="div__productos">
         @foreach($productos as $desayuno)
