@@ -9,11 +9,10 @@
 
 @section('main')
 
-    <h1 class="text-center my-3 bg-warning">Ensaladas</h1>
+    <h1 class="text-center my-3 ">Ensaladas</h1>
 
     <div class="div__productos">
         @foreach($productos as $ensaladas)
-
             {{-- todo Ventana Modal : Luego Hacer un componente--}}
 
             <div class="modal fade" id="staticBackdrop{{ $ensaladas->producto_id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -53,11 +52,11 @@
                 </div>
             </div>
 
-        @if($ensaladas->categoria == 'ensaladas')
-                <a href="#" class="text-decoration-none"  data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $ensaladas->producto_id }}">
-                    <div class="productos my-3 shadow">
+            @if($ensaladas->categoria == 'ensaladas')
+                <div class="productos ">
+                    <a href="#" class="text-decoration-none shadow"  data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $ensaladas->producto_id }}">
                         <div class="img__productos">
-                            @if($ensaladas->imagen != null && public_path('img/reserva') . '/' . $bebidas->imagen)
+                            @if($ensaladas->imagen != null && public_path('img/reserva') . '/' . $ensaladas->imagen)
                                 <picture class="">
                                     <source media="(min-width: 751px)"
                                             srcset="{{ asset('img/reserva/' . $ensaladas->imagen) }}">
@@ -75,13 +74,12 @@
                                 </picture>
                             @endif
                         </div>
-
                         <div class="datos__productos">
                             <p class="datos__parrafo">{{ $ensaladas->titulo }}</p>
                             <p class="datos__parrafo">$ <span> {{ $ensaladas->precio }}</span></p>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
 
             @endif
         @endforeach

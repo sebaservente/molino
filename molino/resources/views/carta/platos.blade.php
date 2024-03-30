@@ -9,11 +9,10 @@
 
 @section('main')
 
-    <h1 class="text-center my-3 bg-warning">Platos</h1>
+    <h1 class="text-center my-3">Platos</h1>
 
     <div class="div__productos">
         @foreach($productos as $platos)
-
             {{-- todo Ventana Modal : Luego Hacer un componente--}}
 
             <div class="modal fade" id="staticBackdrop{{ $platos->producto_id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -53,9 +52,9 @@
                 </div>
             </div>
 
-        @if($platos->categoria == 'platos')
-                <a href="#" class="text-decoration-none"  data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $platos->producto_id }}">
-                    <div class="productos my-3 shadow">
+            @if($platos->categoria == 'platos')
+                <div class="productos ">
+                    <a href="#" class="text-decoration-none shadow"  data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $platos->producto_id }}">
                         <div class="img__productos">
                             @if($platos->imagen != null && public_path('img/reserva') . '/' . $platos->imagen)
                                 <picture class="">
@@ -75,13 +74,12 @@
                                 </picture>
                             @endif
                         </div>
-
                         <div class="datos__productos">
                             <p class="datos__parrafo">{{ $platos->titulo }}</p>
                             <p class="datos__parrafo">$ <span> {{ $platos->precio }}</span></p>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
 
             @endif
         @endforeach

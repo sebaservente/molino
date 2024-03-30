@@ -55,24 +55,43 @@ textarea {
 }
 /*--------------PRODUCTOS------------*/
 .div__productos {
-    width: 90%;
-    margin: auto;
+    /*width: 90%; *!*/
+    /*display: flex;
+    flex-wrap: wrap;
+    justify-content: center;*/
+}
+
+.div__producto {
+   /* display: flex;*/
 }
 .productos {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin: 1rem auto;
+}
+.productos a{
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    background: #edf2f4;
+    width: 100%;
     max-width: 400px;
+   /* max-width: 400px;
     height: 6rem;
     display: flex;
     flex-wrap: wrap;
-    margin: auto;
+    justify-content: center;
     border-radius: 10px;
-    background: #e9ecef52;
+    */
+
 }
 .img__productos {
-    width: 6rem;
+    width: 30%;
     padding: .5rem;
 }
 .datos__productos {
-    width: 12rem;
+    width: 65%;
 }
 .datos__parrafo {
     white-space: nowrap;
