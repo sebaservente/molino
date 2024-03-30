@@ -49,18 +49,22 @@
                 @enderror
                 <div class="my-2">
                     <label for="descripcion" class="form-label">Descripción</label>
-                    <textarea id="descripcion" name="descripcion" class="form-control"></textarea>
+                    <textarea id="descripcion" name="descripcion" class="form-control">{{ old('descripcion') }}</textarea>
                 </div>
                 <div class="my-2">
                     <label for="categoria" class="form-label">Categoria</label>
                     {{--<input type="text" name="categoria" id="categoria" class="form-control">--}}
-                    <select name="categoria">
+                    <select name="categoria" @error('categoria') aria-describedby="error-categoria" @enderror >
                         <option value="desayunos">Desayunos</option>
                         <option value="cafeteria" selected>Cafeteria</option>
                         <option value="platos">Platos</option>
                         <option value="bebidas">Bebidas</option>
                         <option value="ensaladas">Ensaladas</option>
+
                     </select>
+                    @error('categoria')
+                    <div class="text-dark textBold8" id="error-categoria"><span class=""><i class="bi bi-x-circle px-1"></i></span>{{ $message }}</div>
+                    @enderror
                 </div>
 
 

@@ -15,8 +15,8 @@ class Producto extends Model
     public const VALIDAR_CREAR_PRODUCTOS = [
         'titulo' => 'required|min:2',
         'precio' => 'required|numeric|min:0',
-        /*'cantidad' => 'required|numeric|min:0',
-        'descripcion' => 'required|min:2',
+        'categoria' => 'required',
+        /*'descripcion' => 'required|min:2',
         'alt_imagen' => 'required|min:2',*/
     ];
     public const MENSAJES_PRODUCTOS = [
@@ -25,10 +25,8 @@ class Producto extends Model
         'precio.required' => 'El precio del producto es obligatorio.',
         'precio.numeric' => 'El precio debe ser un numero.',
         'precio.min' => 'El precio debe ser positivo.',
-        /*'cantidad.required' => 'La cantidad del equipo es obligatoria.',
-        'cantidad.numeric' => 'La cantidad debe ser un numero.',
-        'cantidad.min' => 'La cantidad debe ser positiva.',
-        'descripcion.required' => 'La descripción del equipo es obligatoria.',
+        'categoria.required' => 'La categoria del producto es obligatoria.',
+         /*'descripcion.required' => 'La descripción del equipo es obligatoria.',
         'descripcion.min' => 'Debes escribir al menos :min caracteres.',
         'alt_imagen.required' => 'La descripción de la imagen es obligatoria.',
         'alt_imagen.min' => 'Debes escribir al menos :min caracteres.',*/

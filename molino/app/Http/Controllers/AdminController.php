@@ -24,7 +24,7 @@ class AdminController extends Controller
        /* dd($data);*/
         try {
             \DB::transaction(function()use ($data){
-                $producto = Producto::create($data);
+                Producto::create($data);
 
                 /*$equipos->generos()->attach($data['generos'] ?? []);*/
             });
