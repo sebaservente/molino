@@ -135,7 +135,7 @@
         </ul>
     </div>--}}
     @if(Session::has('status.message'))
-        <div class="bg-warning text-dark text-center p-1"><b>{!! Session::get('status.message') !!}</b></div>
+        <div class="bg-dark text-light text-center p-1 fontSizePequeño"><b>{!! Session::get('status.message') !!}</b></div>
     @endif
     <section class="min-vh-100">
 

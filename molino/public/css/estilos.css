@@ -18,6 +18,9 @@
 .fontSize {
     font-size: 2rem;
 }
+.fontSizePequeño {
+    font-size: .7rem;
+}
 nav {
     display: flex;
     /*justify-content: center;*/

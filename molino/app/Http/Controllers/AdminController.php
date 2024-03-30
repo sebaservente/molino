@@ -31,7 +31,7 @@ class AdminController extends Controller
             return redirect()
                 ->route('admin')
                 /*->with('status.message', 'El producto <b> ' . e($producto->titulo) . ' </b> fue creado exitosamente. ')*/
-                ->with('status.message', 'El equipo <b>' . e($data['titulo']) . '</b> fue creado exitosamente')
+                ->with('status.message', 'El Producto <b>" ' . e($data['titulo']) . ' "</b> fue creado exitosamente')
                 ->with('status.type', 'success');
         }catch (\Exception $e){
             return redirect()
