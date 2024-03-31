@@ -12,7 +12,7 @@
     <div class="py-5">
         <h2 class="text-center textBold8 text-uppercase">Login de Ingreso</h2>
         <div class="div__formCrearProducto">
-            <form action="{{ route('admin.create') }}" method="get" enctype="multipart/form-data" class="p-3 rounded rounded-lg shadow">
+            <form action="{{ route('admin.home') }}" method="get" enctype="multipart/form-data" class="p-3 rounded rounded-lg shadow">
                 <div class="py-2">
                     <label for="email" class="form-label">Email</label>
                     <input type="email" name="email" id="email" class="form-control">

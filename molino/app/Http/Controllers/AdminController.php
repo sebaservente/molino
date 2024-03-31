@@ -12,6 +12,14 @@ class AdminController extends Controller
         return view('admin.mill');
     }
 
+    public function home()
+    {
+        $productos = Producto::all();
+        return view('admin.home', [
+            'productos' => $productos
+        ]);
+    }
+
     public function create()
     {
         return view( 'admin.create');
@@ -29,7 +37,7 @@ class AdminController extends Controller
                 /*$equipos->generos()->attach($data['generos'] ?? []);*/
             });
             return redirect()
-                ->route('admin')
+                ->route('admin.home')
                 /*->with('status.message', 'El producto <b> ' . e($producto->titulo) . ' </b> fue creado exitosamente. ')*/
                 ->with('status.message', 'El Producto <b>" ' . e($data['titulo']) . ' "</b> fue creado exitosamente')
                 ->with('status.type', 'success');
