@@ -395,14 +395,14 @@
    {{-- <div>
         <h3 class="text-center">Productos</h3>
         @foreach($productos as $producto)
-            --}}{{-- todo Ventana Modal : Luego Hacer un componente--}}{{--
+             todo Ventana Modal : Luego Hacer un componente
 
             <div class="modal fade" id="staticBackdrop{{ $producto->producto_id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content text-center">
                         <div class="modal-header">
                             <h2 class="modal-title textBold8" id="staticBackdropLabel">{{ $producto->titulo }}</h2>
-                            --}}{{--<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>--}}{{--
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <div class="img__productos">
@@ -439,7 +439,7 @@
                     <div class="modal-content text-center">
                         <div class="modal-header">
                             <h2 class="modal-title textBold8" id="staticBackdropLabel">Eliminando <span>{{ $producto->titulo }}</span></h2>
-                            --}}{{--<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>--}}{{--
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <div class="img__productos">
@@ -470,7 +470,7 @@
                                 @csrf
                                 <button class="btn btn-danger">Eliminar Producto</button>
                             </form>
-                            --}}{{-- <a href="{{ route('admin.delete', ['id' => $producto->producto_id]) }}" class="btn btn-danger">Eliminar Producto</a>--}}{{--
+                             <a href="{{ route('admin.delete', ['id' => $producto->producto_id]) }}" class="btn btn-danger">Eliminar Producto</a>
                         </div>
                     </div>
                 </div>
