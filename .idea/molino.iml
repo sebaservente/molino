@@ -8,6 +8,9 @@
       <sourceFolder url="file://$MODULE_DIR$/molino/tests" isTestSource="true" packagePrefix="Tests\" />
       <sourceFolder url="file://$MODULE_DIR$/molino/tests/Feature" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/molino/tests/Unit" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/molino/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/molino/vendor/barryvdh/laravel-debugbar" />
       <excludeFolder url="file://$MODULE_DIR$/molino/vendor/barryvdh/laravel-ide-helper" />
       <excludeFolder url="file://$MODULE_DIR$/molino/vendor/barryvdh/reflection-docblock" />
@@ -128,8 +131,11 @@
       <excludeFolder url="file://$MODULE_DIR$/molino/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/molino/vendor/voku/portable-ascii" />
       <excludeFolder url="file://$MODULE_DIR$/molino/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/molino/vendor/intervention/gif" />
+      <excludeFolder url="file://$MODULE_DIR$/molino/vendor/intervention/image" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="Final_laravel" />
   </component>
 </module>

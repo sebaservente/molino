@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Producto;
 use Illuminate\Http\Request;
-
+use Intervention\Image\ImageManager;
+use Intervention\Image\Drivers\Gd\Driver;
 class AdminController extends Controller
 {
     public function admin()
@@ -30,6 +31,25 @@ class AdminController extends Controller
         $data = $request->except(['_token']);
         $request->validate(Producto::VALIDAR_CREAR_PRODUCTOS, Producto::MENSAJES_PRODUCTOS);
        /* dd($data);*/
+
+
+        if ($request->hasFile('imagen')){
+
+            $manager = new ImageManager(new Driver());
+            $imagen = $request->file('imagen');
+            $nombreImagen = date('YmdHis') . "_" . \Str::slug($data['titulo']) . "." . $imagen->extension();
+            $img = $manager->read($imagen);
+            $img = $img->resize(300,300);
+            /*$imagenServidor = Image::make($imagen);*/
+            /*$imagenServidor->fit(300, 300);*/
+            $imagenPath = public_path('img/reserva') . '/' . $nombreImagen;
+            $img->toJpeg(80)->save($imagenPath);
+            $data['imagen'] = $nombreImagen;
+
+        }
+
+
+
         try {
             \DB::transaction(function()use ($data){
                 $producto = Producto::create($data);

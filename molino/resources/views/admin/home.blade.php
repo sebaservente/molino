@@ -392,7 +392,7 @@
         </div>
     </div>
 
-   {{-- <div>
+    <div>
         <h3 class="text-center">Productos</h3>
         @foreach($productos as $producto)
              todo Ventana Modal : Luego Hacer un componente
@@ -518,6 +518,6 @@
             </div>
 
         @endforeach
-    </div>--}}
+    </div>
 
 @endsection

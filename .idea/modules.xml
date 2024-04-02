@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Final_laravel/.idea/Final_laravel.iml" filepath="$PROJECT_DIR$/../Final_laravel/.idea/Final_laravel.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/molino.iml" filepath="$PROJECT_DIR$/.idea/molino.iml" />
     </modules>
   </component>
