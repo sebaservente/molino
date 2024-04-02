@@ -6,6 +6,7 @@ use App\Models\Producto;
 use Illuminate\Http\Request;
 use Intervention\Image\ImageManager;
 use Intervention\Image\Drivers\Gd\Driver;
+
 class AdminController extends Controller
 {
     public function admin()
@@ -40,8 +41,6 @@ class AdminController extends Controller
             $nombreImagen = date('YmdHis') . "_" . \Str::slug($data['titulo']) . "." . $imagen->extension();
             $img = $manager->read($imagen);
             $img = $img->resize(300,300);
-            /*$imagenServidor = Image::make($imagen);*/
-            /*$imagenServidor->fit(300, 300);*/
             $imagenPath = public_path('img/reserva') . '/' . $nombreImagen;
             $img->toJpeg(80)->save($imagenPath);
             $data['imagen'] = $nombreImagen;
