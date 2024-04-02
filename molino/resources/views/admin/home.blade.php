@@ -395,7 +395,7 @@
     <div>
         <h3 class="text-center">Productos</h3>
         @foreach($productos as $producto)
-             todo Ventana Modal : Luego Hacer un componente
+             {{--todo Ventana Modal : Luego Hacer un componente--}}
 
             <div class="modal fade" id="staticBackdrop{{ $producto->producto_id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -510,7 +510,7 @@
                     </a>
                 </div>
                 <div class="text-center">
-                    <a href="" class="btn btn-dark">Editar</a>
+                    <a href="{{ route('admin.upload' ,['id' => $producto->producto_id]) }}" class="btn btn-dark">Editar</a>
                     <a href=""
                        data-bs-toggle="modal" data-bs-target="#staticBackdrop1{{ $producto->producto_id }}"
                        class="btn btn-danger">Eliminar</a>

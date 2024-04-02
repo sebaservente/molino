@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * 
+ *
  *
  * @property int $producto_id
  * @property string $titulo
@@ -42,8 +42,8 @@ class Producto extends Model
         'titulo' => 'required|min:2',
         'precio' => 'required|numeric|min:0',
         'categoria' => 'required',
-        /*'descripcion' => 'required|min:2',
-        'alt_imagen' => 'required|min:2',*/
+        'descripcion' => 'required|min:2',
+        'imagen_descripcion' => 'required|min:2',
     ];
     public const MENSAJES_PRODUCTOS = [
         'titulo.required' => 'El titulo del producto es obligatorio.',
@@ -52,10 +52,10 @@ class Producto extends Model
         'precio.numeric' => 'El precio debe ser un numero.',
         'precio.min' => 'El precio debe ser positivo.',
         'categoria.required' => 'La categoria del producto es obligatoria.',
-         /*'descripcion.required' => 'La descripción del equipo es obligatoria.',
+        'descripcion.required' => 'La descripción del producto es obligatoria.',
         'descripcion.min' => 'Debes escribir al menos :min caracteres.',
-        'alt_imagen.required' => 'La descripción de la imagen es obligatoria.',
-        'alt_imagen.min' => 'Debes escribir al menos :min caracteres.',*/
+        'imagen_descripcion.required' => 'La descripción de la imagen es obligatoria.',
+        'imagen_descripcion.min' => 'Debes escribir al menos :min caracteres.',
     ];
 
 }

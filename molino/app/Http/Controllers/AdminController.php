@@ -40,9 +40,9 @@ class AdminController extends Controller
             $imagen = $request->file('imagen');
             $nombreImagen = date('YmdHis') . "_" . \Str::slug($data['titulo']) . "." . $imagen->extension();
             $img = $manager->read($imagen);
-            $img = $img->resize(300,300);
+            $img = $img->resize(500,500);
             $imagenPath = public_path('img/reserva') . '/' . $nombreImagen;
-            $img->toJpeg(80)->save($imagenPath);
+            $img->toPng(320)->save($imagenPath);
             $data['imagen'] = $nombreImagen;
 
         }
@@ -68,13 +68,6 @@ class AdminController extends Controller
                 ->with('status.type', 'danger');
         }
     }
-    public function ver()
-    {
-        $productos = Producto::all();
-        return view( 'admin.create',[
-            'productos' => $productos
-        ]);
-    }
     public function delete(int $id)
     {
         $productos = Producto::findOrFail($id);
@@ -98,5 +91,43 @@ class AdminController extends Controller
                 ->with('status.type', 'danger');
         }
 
+    }
+
+    public function upload(int $id)
+    {
+
+        $producto = Producto::findOrFail($id);
+        return view('admin.upload',[
+            'producto' => $producto
+        ]);
+    }
+    public function uploadConfirm(Request $request,int $id)
+    {
+        $request->validate(Producto::VALIDAR_CREAR_PRODUCTOS, Producto::MENSAJES_PRODUCTOS);
+        $producto = Producto::findOrFail($id);
+        $data = $request->except(['_token']);
+
+        if ($request->hasFile('imagen')){
+            $manager = new ImageManager(new Driver());
+            $imagen = $request->file('imagen');
+            $nombreImagen = date('YmdHis') . "_" . \Str::slug($data['titulo']) . "." . $imagen->extension();
+            $img = $manager->read($imagen);
+            $img = $img->resize(500,500);
+            $imagenPath = public_path('img/reserva') . '/' . $nombreImagen;
+            $img->toPng(320)->save($imagenPath);
+            $data['imagen'] = $nombreImagen;
+            $imagenVieja = $producto->imagen;
+
+            if ($imagenVieja ?? false){
+                unlink(public_path('img/reserva' . '/' . $imagenVieja));
+
+            }
+        }
+
+        $producto->update($data);
+        return redirect()
+            ->route('admin.home')
+            ->with('status.message', 'El Producto <b>" ' . e($producto['titulo']) . ' "</b> fue editado exitosamente')
+            ->with('status.type', 'success');
     }
 }
