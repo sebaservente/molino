@@ -5,13 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bf12ddd-626c-4bb2-af5e-086d7e032c9e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/molino/resources/views/admin/upload.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/molino/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/app/Http/Controllers/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/molino/app/Models/Producto.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/app/Models/Producto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/molino/resources/views/admin/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/resources/views/admin/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/molino/resources/views/admin/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/resources/views/admin/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/molino/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/molino/public/img/reserva/20240402162813_cafe-chico.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/molino/public/img/reserva/20240402163321_cafe-c-crema.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/molino/public/img/reserva/20240402204608_takashi-murakami.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/molino/public/img/reserva/20240402204939_bienvenido-verano.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/molino/public/img/reserva/20240402214500_cafe-con-tostado.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/molino/public/img/reserva/20240402214555_ensalada.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/molino/public/img/reserva/20240402214700_bienvenido-verano-v3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/molino/public/img/reserva/20240402225735_cafe-con-leche-tostadas-queso-y-mermelada.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/molino/public/img/reserva/20240402230800_agua-mineral-villavicencio.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -57,7 +57,6 @@ class AdminController extends Controller
             });
             return redirect()
                 ->route('admin.home')
-                /*->with('status.message', 'El producto <b> ' . e($producto->titulo) . ' </b> fue creado exitosamente. ')*/
                 ->with('status.message', 'El Producto <b>" ' . e($data['titulo']) . ' "</b> fue creado exitosamente')
                 ->with('status.type', 'success');
         }catch (\Exception $e){
@@ -75,12 +74,11 @@ class AdminController extends Controller
         try {
             \DB::transaction(function()use ($productos){
                 $productos->delete();
-
+                /*$imagenVieja = $equipos->imagen;*/
                 /*$equipos->generos()->attach($data['generos'] ?? []);*/
             });
             return redirect()
                 ->route('admin.create')
-                /*->with('status.message', 'El producto <b> ' . e($producto->titulo) . ' </b> fue creado exitosamente. ')*/
                 ->with('status.message', 'El Producto <b>" ' . e($productos['titulo']) . ' "</b> fue eliminado exitosamente')
                 ->with('status.type', 'success');
         }catch (\Exception $e){
