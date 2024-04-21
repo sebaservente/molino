@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- *
+ * 
  *
  * @property int $producto_id
  * @property string $titulo
@@ -29,6 +29,10 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Producto whereProductoId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Producto whereTitulo($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Producto whereUpdatedAt($value)
+ * @property int $categoria_id
+ * @property string $cate
+ * @method static \Illuminate\Database\Eloquent\Builder|Producto whereCate($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Producto whereCategoriaId($value)
  * @mixin \Eloquent
  */
 class Producto extends Model
@@ -58,4 +62,8 @@ class Producto extends Model
         'imagen_descripcion.min' => 'Debes escribir al menos :min caracteres.',
     ];
 
+    public function categoria()
+    {
+        return $this->belongsTo(Categoria::class, 'categoria_id', 'categoria_id');
+    }
 }

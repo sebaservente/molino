@@ -51,7 +51,7 @@
                 </div>
             </div>
 
-            @if($desayuno->categoria == 'desayunos')
+            @if($desayuno->categoria->nombre == 'Desayunos y Meriendas')
                 <div class="productos ">
                     <a href="#" class="text-decoration-none shadow"  data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $desayuno->producto_id }}">
                         <div class="img__productos">

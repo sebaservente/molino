@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('titulo', 255);
             $table->unsignedInteger('precio');
             $table->text('descripcion');
-            $table->string('categoria', 255);
+            $table->string('cate', 255);
             $table->string('imagen', 255)->nullable();
             $table->string('imagen_descripcion', 255)->nullable();
             $table->timestamps();

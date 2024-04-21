@@ -52,7 +52,7 @@
                 </div>
             </div>
 
-            @if($platos->categoria == 'platos')
+            @if($platos->categoria->nombre == 'Platos')
                 <div class="productos ">
                     <a href="#" class="text-decoration-none shadow"  data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $platos->producto_id }}">
                         <div class="img__productos">

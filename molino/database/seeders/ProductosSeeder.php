@@ -16,10 +16,11 @@ class ProductosSeeder extends Seeder
         DB::table('productos')->insert([
             [
               'producto_id' => 1,
+              'categoria_id' => 1,
               'titulo' => 'Cafe con leche + tostadas, queso y mermelada',
               'precio' => 2000,
               'descripcion' => 'Cafe con leche + tostadas, queso y mermelada',
-              'categoria' => 'desayunos',
+              'cate' => 'desayunos',
               'imagen' => null,
               'imagen_descripcion' => null,
               'created_at' => now(),
@@ -27,10 +28,11 @@ class ProductosSeeder extends Seeder
             ],
             [
                 'producto_id' => 2,
+                'categoria_id' => 2,
                 'titulo' => 'Cafe con Media lunas',
                 'precio' => 1600,
                 'descripcion' => 'Cafe con leche + dos medialunas',
-                'categoria' => 'cafeteria',
+                'cate' => 'cafeteria',
                 'imagen' => null,
                 'imagen_descripcion' => null,
                 'created_at' => now(),
