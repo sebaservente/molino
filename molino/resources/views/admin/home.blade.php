@@ -10,6 +10,7 @@
 @section('admin')
     <h1 class="pt-4 text-center textBold8 text-uppercase">Panel de Administración</h1>
     <div class="home__panel">
+        {{--DESAYUNOS Y MERIENDAS--}}
         <div class="div__productos ">
             <h2 class="text-center">Desayunos y Meriendas</h2>
             @foreach($productos as $desayuno)
@@ -46,6 +47,16 @@
                                 <p class="textBold8 fontSize">Precio: $ <span class="textBold4">{{ $desayuno->precio }}</span></p>
                             </div>
                             <div class="modal-footer">
+                                <div class="text-center">
+                                    <a href="{{ route('admin.upload' ,['id' => $desayuno->producto_id]) }}" class="btn btn-dark">Editar</a>
+                                    <form action="{{ route('admin.delete', ['id' => $desayuno->producto_id]) }}" method="post">
+                                        @csrf
+                                        <button class="btn btn-danger">Eliminar Producto</button>
+                                    </form>
+                                    {{--<a href=""
+                                       data-bs-toggle="modal" data-bs-target="#staticBackdrop1{{ $desayuno->producto_id }}"
+                                       class="btn btn-danger">Eliminar</a>--}}
+                                </div>
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                             </div>
                         </div>
@@ -86,17 +97,18 @@
                 @endif
             @endforeach
         </div>
+        {{--CAFETERIA--}}
         <div class="div__productos ">
             <h2 class="text-center">Cafeteria</h2>
             @foreach($productos as $cafeterias)
                 {{-- todo Ventana Modal : Luego Hacer un componente--}}
 
-                <div class="modal fade" id="staticBackdrop{{ $cafeterias->producto_id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+             {{--   <div class="modal fade" id="staticBackdrop{{ $cafeterias->producto_id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content text-center">
                             <div class="modal-header">
                                 <h2 class="modal-title textBold8" id="staticBackdropLabel">{{ $cafeterias->titulo }}</h2>
-                                {{--<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>--}}
+                                --}}{{--<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>--}}{{--
                             </div>
                             <div class="modal-body">
                                 <div class="img__productos">
@@ -127,7 +139,7 @@
                         </div>
                     </div>
                 </div>
-
+--}}
                 @if($cafeterias->categoria == 'cafeteria')
                     <div class="productos ">
                         <a href="#" class="text-decoration-none shadow p-1"  data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $cafeterias->producto_id }}">
@@ -162,17 +174,18 @@
                 @endif
             @endforeach
         </div>
+        {{--PLATOS--}}
         <div class="div__productos ">
             <h2 class="text-center">Platos</h2>
             @foreach($productos as $platos)
                 {{-- todo Ventana Modal : Luego Hacer un componente--}}
 
-                <div class="modal fade" id="staticBackdrop{{ $platos->producto_id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            {{--             <div class="modal fade" id="staticBackdrop{{ $platos->producto_id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content text-center">
                             <div class="modal-header">
                                 <h2 class="modal-title textBold8" id="staticBackdropLabel">{{ $platos->titulo }}</h2>
-                                {{--<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>--}}
+                                --}}{{--<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>--}}{{--
                             </div>
                             <div class="modal-body">
                                 <div class="img__productos">
@@ -203,7 +216,7 @@
                         </div>
                     </div>
                 </div>
-
+--}}
                 @if($platos->categoria == 'platos')
                     <div class="productos ">
                         <a href="#" class="text-decoration-none shadow p-1"  data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $platos->producto_id }}">
@@ -238,17 +251,18 @@
                 @endif
             @endforeach
         </div>
+        {{--ENSALADAS--}}
         <div class="div__productos ">
             <h2 class="text-center">Ensaladas</h2>
             @foreach($productos as $ensaladas)
                 {{-- todo Ventana Modal : Luego Hacer un componente--}}
 
-                <div class="modal fade" id="staticBackdrop{{ $ensaladas->producto_id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        {{--        <div class="modal fade" id="staticBackdrop{{ $ensaladas->producto_id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content text-center">
                             <div class="modal-header">
                                 <h2 class="modal-title textBold8" id="staticBackdropLabel">{{ $ensaladas->titulo }}</h2>
-                                {{--<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>--}}
+                                --}}{{--<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>--}}{{--
                             </div>
                             <div class="modal-body">
                                 <div class="img__productos">
@@ -279,7 +293,7 @@
                         </div>
                     </div>
                 </div>
-
+--}}
                 @if($ensaladas->categoria == 'ensaladas')
                     <div class="productos ">
                         <a href="#" class="text-decoration-none shadow p-1"  data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $ensaladas->producto_id }}">
@@ -314,17 +328,18 @@
                 @endif
             @endforeach
         </div>
+        {{--BEBIDAS--}}
         <div class="div__productos ">
             <h2 class="text-center">Bebidas</h2>
             @foreach($productos as $bebidas)
                 {{-- todo Ventana Modal : Luego Hacer un componente--}}
 
-                <div class="modal fade" id="staticBackdrop{{ $bebidas->producto_id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+     {{--           <div class="modal fade" id="staticBackdrop{{ $bebidas->producto_id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content text-center">
                             <div class="modal-header">
                                 <h2 class="modal-title textBold8" id="staticBackdropLabel">{{ $bebidas->titulo }}</h2>
-                                {{--<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>--}}
+                                --}}{{--<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>--}}{{--
                             </div>
                             <div class="modal-body">
                                 <div class="img__productos">
@@ -355,7 +370,7 @@
                         </div>
                     </div>
                 </div>
-
+--}}
                 @if($bebidas->categoria == 'bebidas')
                     <div class="productos ">
                         <a href="#" class="text-decoration-none shadow p-1"  data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $bebidas->producto_id }}">
@@ -392,10 +407,10 @@
         </div>
     </div>
 
-    <div>
+    {{--<div>
         <h3 class="text-center">Productos</h3>
         @foreach($productos as $producto)
-             {{--todo Ventana Modal : Luego Hacer un componente--}}
+             --}}{{--todo Ventana Modal : Luego Hacer un componente--}}{{--
 
             <div class="modal fade" id="staticBackdrop{{ $producto->producto_id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -470,7 +485,7 @@
                                 @csrf
                                 <button class="btn btn-danger">Eliminar Producto</button>
                             </form>
-                             <a href="{{ route('admin.delete', ['id' => $producto->producto_id]) }}" class="btn btn-danger">Eliminar Producto</a>
+                             --}}{{--<a href="{{ route('admin.delete', ['id' => $producto->producto_id]) }}" class="btn btn-danger">Eliminar Producto</a>--}}{{--
                         </div>
                     </div>
                 </div>
@@ -478,7 +493,7 @@
 
             <div class="pb-2 ">
                 <div class="productos ">
-                    <a href="#" class="text-decoration-none shadow"  data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $producto->producto_id }}">
+                    <a href="#" class="text-decoration-none shadow"  data-bs-toggle="modal" data-bs-target="#staticBackdrop1{{ $producto->producto_id }}">
                         <div class="img__productos">
                             @if($producto->imagen != null && public_path('img/reserva') . '/' . $producto->imagen)
                                 <picture class="">
@@ -499,25 +514,29 @@
                             @endif
                         </div>
                         <div class="datos__productos">
-                            <div class="div__datos">
-                                <p class="datos__parrafo">{{ $producto->titulo }}</p>
-                                <p class="datos__descripcion">{{ $producto->descripcion }}</p>
+                            <div>
+                                <div class="div__datos">
+                                    <p class="datos__parrafo">{{ $producto->titulo }}</p>
+                                    <p class="datos__descripcion">{{ $producto->descripcion }}</p>
+                                </div>
+                                <p class="fw-bold text-dark">$ <span> {{ $producto->precio }}</span></p>
+                                <p class="fw-bold text-dark">Categoria:  <span class="text-secondary"> {{ $producto->categoria }}</span></p>
+
                             </div>
-                            <p class="fw-bold text-dark">$ <span> {{ $producto->precio }}</span></p>
-                            <p class="fw-bold text-dark">Categoria:  <span class="text-secondary"> {{ $producto->categoria }}</span></p>
+                            <div class="text-center">
+                                <a href="{{ route('admin.upload' ,['id' => $producto->producto_id]) }}" class="btn btn-dark">Editar</a>
+                                <a href=""
+                                   data-bs-toggle="modal" data-bs-target="#staticBackdrop1{{ $producto->producto_id }}"
+                                   class="btn btn-danger">Eliminar</a>
+                            </div>
                         </div>
 
                     </a>
                 </div>
-                <div class="text-center">
-                    <a href="{{ route('admin.upload' ,['id' => $producto->producto_id]) }}" class="btn btn-dark">Editar</a>
-                    <a href=""
-                       data-bs-toggle="modal" data-bs-target="#staticBackdrop1{{ $producto->producto_id }}"
-                       class="btn btn-danger">Eliminar</a>
-                </div>
+
             </div>
 
         @endforeach
-    </div>
+    </div>--}}
 
 @endsection

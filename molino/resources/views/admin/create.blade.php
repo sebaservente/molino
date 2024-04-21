@@ -55,8 +55,7 @@
                             name="descripcion"
                             class="form-control"
                             placeholder="Descripción del Producto"
-                            @error('descripcion') aria-describedby="error-descripcion" @enderror>
-                        {{ old('descripcion') }}</textarea>
+                            @error('descripcion') aria-describedby="error-descripcion" @enderror>{{ old('descripcion') }}</textarea>
                     </div>
                     @error('descripcion')
                     <div class="text-dark textBold8" id="error-descripcion"><span class=""><i class="bi bi-x-circle px-1"></i></span>{{ $message }}</div>

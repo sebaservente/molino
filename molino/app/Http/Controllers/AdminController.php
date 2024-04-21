@@ -31,11 +31,8 @@ class AdminController extends Controller
     {
         $data = $request->except(['_token']);
         $request->validate(Producto::VALIDAR_CREAR_PRODUCTOS, Producto::MENSAJES_PRODUCTOS);
-       /* dd($data);*/
-
 
         if ($request->hasFile('imagen')){
-
             $manager = new ImageManager(new Driver());
             $imagen = $request->file('imagen');
             $nombreImagen = date('YmdHis') . "_" . \Str::slug($data['titulo']) . "." . $imagen->extension();
@@ -46,8 +43,6 @@ class AdminController extends Controller
             $data['imagen'] = $nombreImagen;
 
         }
-
-
 
         try {
             \DB::transaction(function()use ($data){
@@ -69,7 +64,14 @@ class AdminController extends Controller
     }
     public function delete(int $id)
     {
+        dd($id);
         $productos = Producto::findOrFail($id);
+        $imagenVieja = $productos->imagen;
+
+        if ($imagenVieja ?? false){
+            unlink(public_path('img/reserva' . '/' . $imagenVieja));
+
+        }
 
         try {
             \DB::transaction(function()use ($productos){

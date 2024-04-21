@@ -97,9 +97,8 @@ textarea {
 
 }
 .img__productos {
-    width: 30%;
+    width: 6rem;
     margin: auto;
-    padding: .5rem;
 }
 .img__productosHome {
         width: 15%;
@@ -119,6 +118,7 @@ textarea {
 }
 .datos__productos {
     width: 65%;
+    padding-left: 1rem;
 }
 .datos__parrafo {
     white-space: nowrap;

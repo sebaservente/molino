@@ -5,17 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bf12ddd-626c-4bb2-af5e-086d7e032c9e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Final_laravel/laravel_tp_final/servente_sebastian/wildboard-tp-01/app/Http/Controllers/ControllerPedidos.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Final_laravel/laravel_tp_final/servente_sebastian/wildboard-tp-01/app/Http/Controllers/ControllerPedidos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Final_laravel/laravel_tp_final/servente_sebastian/wildboard-tp-01/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Final_laravel/laravel_tp_final/servente_sebastian/wildboard-tp-01/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/molino/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/app/Http/Controllers/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/molino/public/img/reserva/20240402162813_cafe-chico.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/molino/public/img/reserva/20240402163321_cafe-c-crema.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/molino/public/img/reserva/20240402204608_takashi-murakami.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/molino/public/img/reserva/20240402204939_bienvenido-verano.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/molino/public/img/reserva/20240402214500_cafe-con-tostado.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/molino/public/img/reserva/20240402214555_ensalada.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/molino/public/img/reserva/20240402214700_bienvenido-verano-v3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/molino/public/img/reserva/20240402225735_cafe-con-leche-tostadas-queso-y-mermelada.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/molino/public/img/reserva/20240402230800_agua-mineral-villavicencio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/molino/public/css/estilos.css" beforeDir="false" afterPath="$PROJECT_DIR$/molino/public/css/estilos.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/molino/public/img/reserva/20240402232039_cafe-con-leche-tostadas-queso-y-mermelada.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/molino/resources/views/admin/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/resources/views/admin/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/molino/resources/views/admin/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/resources/views/admin/home.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -300,20 +299,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/xampp/htdocs/molino/molino/resources/views/admin",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/molino/molino/resources/views/admin&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\molino\molino\resources\views\admin" />
@@ -331,6 +330,14 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-PS-241.14494.237" />
+        <option value="bundled-php-predefined-ba97393d7c68-8f0632a2a215-com.jetbrains.php.sharedIndexes-PS-241.14494.237" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -343,6 +350,11 @@
       <workItem from="1712012499660" duration="2195000" />
       <workItem from="1712015202347" duration="4567000" />
       <workItem from="1712070600303" duration="4930000" />
+      <workItem from="1712429670611" duration="2143000" />
+      <workItem from="1712529485927" duration="3030000" />
+      <workItem from="1713120835596" duration="1265000" />
+      <workItem from="1713124794420" duration="3803000" />
+      <workItem from="1713718689293" duration="2047000" />
     </task>
     <servers />
   </component>
