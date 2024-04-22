@@ -12,14 +12,23 @@
     <div class="py-5">
         <h2 class="text-center textBold8 text-uppercase">Login de Ingreso</h2>
         <div class="div__formCrearProducto">
-            <form action="{{ route('admin.home') }}" method="get" enctype="multipart/form-data" class="p-3 rounded rounded-lg shadow">
+            <form action="{{ route('login.In') }}" method="post" class="p-3 rounded rounded-lg shadow">
+                @csrf
                 <div class="py-2">
                     <label for="email" class="form-label">Email</label>
-                    <input type="email" name="email" id="email" class="form-control">
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        class="form-control"
+                        value="{{ old('email' )}}"
+                        @error('email') aria-describedby="error-email" @enderror
+                    >
+
                 </div>
                 <div class="py-2">
                     <label for="password" class="form-label">Contraseña</label>
-                    <input type="password" name="password" id="password" class="form-control">
+                    <input type="password" name="password" id="password" class="form-control" >
                 </div>
                 <div class="py-3">
                     <button class="btn btn-dark w-100 shadow">Ingresar</button>

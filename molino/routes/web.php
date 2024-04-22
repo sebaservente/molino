@@ -22,10 +22,14 @@ Route::get('/carta/platos', [\App\Http\Controllers\CartaController::class, 'plat
 Route::get('/carta/ensaladas', [\App\Http\Controllers\CartaController::class, 'ensaladas'])->name('ensaladas');
 
 
-Route::get('/admin/mill', [\App\Http\Controllers\AdminController::class, 'admin'])->name('admin');
-Route::get('/admin/home', [\App\Http\Controllers\AdminController::class, 'home'])->name('admin.home');
-Route::get('/admin/create', [\App\Http\Controllers\AdminController::class, 'create'])->name('admin.create');
-Route::post('/admin/create', [\App\Http\Controllers\AdminController::class, 'createConfirm'])->name('admin.create.confirm');
-Route::post('/admin/create/{id}/delete', [\App\Http\Controllers\AdminController::class, 'delete'])->name('admin.delete')->whereNumber('id');
-Route::get('/admin/upload/{id}', [\App\Http\Controllers\AdminController::class, 'upload'])->name('admin.upload')->whereNumber('id');
-Route::post('/admin/upload/{id}/uploadConfirm', [\App\Http\Controllers\AdminController::class, 'uploadConfirm'])->name('admin.uploadConfirm')->whereNumber('id');
+Route::get('/admin/mill', [\App\Http\Controllers\AuthController::class, 'login'])->name('login');
+Route::post('/admin/mill', [\App\Http\Controllers\AuthController::class, 'loginIn'])->name('login.In');
+Route::post('/admin/mill/cerrarSession', [\App\Http\Controllers\AuthController::class, 'logout'])->name('logout');
+
+
+Route::get('/admin/home', [\App\Http\Controllers\AdminController::class, 'home'])->name('admin.home')->middleware(['auth']);
+Route::get('/admin/create', [\App\Http\Controllers\AdminController::class, 'create'])->name('admin.create')->middleware(['auth']);
+Route::post('/admin/create', [\App\Http\Controllers\AdminController::class, 'createConfirm'])->name('admin.create.confirm')->middleware(['auth']);
+Route::post('/admin/create/{id}/delete', [\App\Http\Controllers\AdminController::class, 'delete'])->name('admin.delete')->whereNumber('id')->middleware(['auth']);
+Route::get('/admin/upload/{id}', [\App\Http\Controllers\AdminController::class, 'upload'])->name('admin.upload')->whereNumber('id')->middleware(['auth']);
+Route::post('/admin/upload/{id}/uploadConfirm', [\App\Http\Controllers\AdminController::class, 'uploadConfirm'])->name('admin.uploadConfirm')->whereNumber('id')->middleware(['auth']);

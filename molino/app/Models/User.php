@@ -9,7 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
 /**
- * 
+ *
  *
  * @property int $id
  * @property string $name
@@ -46,6 +46,8 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+    protected $table = 'users';
+    protected $primaryKey = 'user_id';
     protected $fillable = [
         'name',
         'email',

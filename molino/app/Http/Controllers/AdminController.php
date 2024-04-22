@@ -10,10 +10,6 @@ use Intervention\Image\Drivers\Gd\Driver;
 
 class AdminController extends Controller
 {
-    public function admin()
-    {
-        return view('admin.mill');
-    }
 
     public function home()
     {

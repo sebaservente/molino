@@ -9,15 +9,13 @@
       <change beforePath="$PROJECT_DIR$/../Final_laravel/laravel_tp_final/servente_sebastian/wildboard-tp-01/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Final_laravel/laravel_tp_final/servente_sebastian/wildboard-tp-01/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/molino/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/app/Http/Controllers/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/molino/app/Http/Controllers/CartaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/app/Http/Controllers/CartaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/molino/app/Models/Producto.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/app/Models/Producto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/molino/database/migrations/2024_03_17_201955_create_productos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/database/migrations/2024_03_17_201955_create_productos_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/molino/database/migrations/2024_04_21_170046_create_categorias_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/database/migrations/2024_04_21_170046_create_categorias_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/molino/database/seeders/ProductosSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/database/seeders/ProductosSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/molino/public/css/estilos.css" beforeDir="false" afterPath="$PROJECT_DIR$/molino/public/css/estilos.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/molino/resources/views/admin/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/resources/views/admin/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/molino/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/molino/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/molino/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/database/seeders/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/molino/resources/views/admin/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/resources/views/admin/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/molino/resources/views/admin/upload.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/resources/views/admin/upload.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/molino/resources/views/admin/mill.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/resources/views/admin/mill.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/molino/resources/views/template/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/resources/views/template/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/molino/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -357,7 +355,7 @@
       <workItem from="1712529485927" duration="3030000" />
       <workItem from="1713120835596" duration="1265000" />
       <workItem from="1713124794420" duration="3803000" />
-      <workItem from="1713718689293" duration="17719000" />
+      <workItem from="1713718689293" duration="24018000" />
     </task>
     <servers />
   </component>

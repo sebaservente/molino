@@ -1,4 +1,4 @@
-<?php
+<?phpa
 /**
  * @var \App\Models\Producto[] $productos
  */
@@ -9,6 +9,12 @@
 
 @section('admin')
     <h1 class="pt-4 text-center textBold8 text-uppercase">Panel de Administración</h1>
+    <div>
+        <form action="{{ route('logout')}}" method="post">
+            @csrf
+            <button class="btn btn-dark">Cerrar Sessión</button>
+        </form>
+    </div>
     <div class="home__panel">
         {{--DESAYUNOS Y MERIENDAS--}}
         <div class="div__productos ">
