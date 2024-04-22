@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('nombre',125);
             $table->char('abreviatura',3);
             $table->timestamps();
+            $table->index('nombre');
         });
     }
 

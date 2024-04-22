@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * 
+ *
  *
  * @property int $producto_id
  * @property string $titulo
@@ -40,12 +40,12 @@ class Producto extends Model
     /*use HasFactory;*/
     protected $table = 'productos';
     protected $primaryKey = 'producto_id';
-    protected $fillable = ['titulo','precio','descripcion','categoria','imagen','imagen_descripcion'];
+    protected $fillable = ['categoria_id','titulo','precio','descripcion','imagen','imagen_descripcion'];
 
     public const VALIDAR_CREAR_PRODUCTOS = [
         'titulo' => 'required|min:2',
         'precio' => 'required|numeric|min:0',
-        'categoria' => 'required',
+        'categoria_id' => 'required|numeric|min:1|exists:categorias,categoria_id',
         'descripcion' => 'required|min:2',
         'imagen_descripcion' => 'required|min:2',
     ];
@@ -55,7 +55,7 @@ class Producto extends Model
         'precio.required' => 'El precio del producto es obligatorio.',
         'precio.numeric' => 'El precio debe ser un numero.',
         'precio.min' => 'El precio debe ser positivo.',
-        'categoria.required' => 'La categoria del producto es obligatoria.',
+        'categoria_id.required' => 'La categoria del producto es obligatoria.',
         'descripcion.required' => 'La descripción del producto es obligatoria.',
         'descripcion.min' => 'Debes escribir al menos :min caracteres.',
         'imagen_descripcion.required' => 'La descripción de la imagen es obligatoria.',

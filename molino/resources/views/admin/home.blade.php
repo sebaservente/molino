@@ -12,7 +12,7 @@
     <div class="home__panel">
         {{--DESAYUNOS Y MERIENDAS--}}
         <div class="div__productos ">
-            <h2 class="text-center">Desayunos y Meriendas</h2>
+            <h2 class="text-center fontSize1">Desayunos y Meriendas</h2>
             @foreach($productos as $desayuno)
                 {{-- todo Ventana Modal : Luego Hacer un componente--}}
 
@@ -63,7 +63,7 @@
                     </div>
                 </div>
 
-                @if($desayuno->categoria == 'desayunos')
+                @if($desayuno->categoria->nombre == 'Desayunos y Meriendas')
                     <div class="productos ">
                         <a href="#" class="text-decoration-none shadow p-1"  data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $desayuno->producto_id }}">
                             <div class="img__productosHome">
@@ -140,7 +140,7 @@
                     </div>
                 </div>
 --}}
-                @if($cafeterias->categoria == 'cafeteria')
+                @if($cafeterias->categoria->nombre == 'Cafeteria')
                     <div class="productos ">
                         <a href="#" class="text-decoration-none shadow p-1"  data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $cafeterias->producto_id }}">
                             <div class="img__productosHome">
@@ -217,7 +217,7 @@
                     </div>
                 </div>
 --}}
-                @if($platos->categoria == 'platos')
+                @if($platos->categoria->nombre == 'Platos')
                     <div class="productos ">
                         <a href="#" class="text-decoration-none shadow p-1"  data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $platos->producto_id }}">
                             <div class="img__productosHome">
@@ -294,7 +294,7 @@
                     </div>
                 </div>
 --}}
-                @if($ensaladas->categoria == 'ensaladas')
+                @if($ensaladas->categoria->nombre == 'Ensaladas')
                     <div class="productos ">
                         <a href="#" class="text-decoration-none shadow p-1"  data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $ensaladas->producto_id }}">
                             <div class="img__productosHome">
@@ -371,7 +371,7 @@
                     </div>
                 </div>
 --}}
-                @if($bebidas->categoria == 'bebidas')
+                @if($bebidas->categoria->nombre == 'Bebidas')
                     <div class="productos ">
                         <a href="#" class="text-decoration-none shadow p-1"  data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $bebidas->producto_id }}">
                             <div class="img__productosHome ">

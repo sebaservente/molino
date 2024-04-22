@@ -2,6 +2,7 @@
 /**
  * @var \Illuminate\Support\ViewErrorBag $errors
  * @var \App\Models\Producto $producto
+ * @var \App\Models\Categoria $categorias
  */
 ?>
 @extends('template.admin')
@@ -56,18 +57,22 @@
                         <textarea id="descripcion" name="descripcion" class="form-control">{{ old('descripcion' , $producto->descripcion) }}</textarea>
                     </div>
                     <div class="my-2">
-                        <label for="categoria" class="form-label">Categoria</label>
+                        <label for="categoria_id" class="form-label">Categoria</label>
                         {{--<input type="text" name="categoria" id="categoria" class="form-control">--}}
-                        <select name="categoria" @error('categoria') aria-describedby="error-categoria" @enderror >
-                            <option value="desayunos">Desayunos</option>
-                            <option value="cafeteria" selected>Cafeteria</option>
-                            <option value="platos">Platos</option>
-                            <option value="bebidas">Bebidas</option>
-                            <option value="ensaladas">Ensaladas</option>
-
+                        <select name="categoria_id"
+                                id="categoria_id"
+                                class="form-control"
+                                @error('categoria_id') aria-describedby="error-categoria_id" @enderror >
+                            @foreach($categorias as $categoria)
+                                <option
+                                    value="{{ $categoria->categoria_id }}"
+                                    {{-- @if($categoria->categoria_id == old('categoria_id')) selected @endif--}}
+                                    @selected($categoria->categoria_id == old('categoria_id', $producto->categoria_id))
+                                >{{ $categoria->nombre }}</option>
+                            @endforeach
                         </select>
-                        @error('categoria')
-                        <div class="text-dark textBold8" id="error-categoria"><span class=""><i class="bi bi-x-circle px-1"></i></span>{{ $message }}</div>
+                        @error('categoria_id')
+                        <div class="text-dark textBold8" id="error-categoria_id"><span class=""><i class="bi bi-x-circle px-1"></i></span>{{ $message }}</div>
                         @enderror
                     </div>
 

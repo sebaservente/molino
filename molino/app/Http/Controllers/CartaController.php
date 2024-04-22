@@ -9,35 +9,35 @@ class CartaController extends Controller
 {
    public function desayunos()
    {
-       $productos = Producto::all();
+       $productos = Producto::with('categoria')->get();
        return view('carta.desayunos',[
            'productos' => $productos,
        ]);
    }
     public function cafeteria()
     {
-        $productos = Producto::all();
+        $productos = Producto::with('categoria')->get();
         return view('carta.cafeteria',[
             'productos' => $productos,
         ]);
     }
     public function bebidas()
     {
-        $productos = Producto::all();
+        $productos = Producto::with('categoria')->get();
         return view('carta.bebidas',[
             'productos' => $productos,
         ]);
     }
     public function platos()
     {
-        $productos = Producto::all();
+        $productos = Producto::with('categoria')->get();
         return view('carta.platos',[
             'productos' => $productos,
         ]);
     }
     public function ensaladas()
     {
-        $productos = Producto::all();
+        $productos = Producto::with('categoria')->get();
         return view('carta.ensaladas',[
             'productos' => $productos,
         ]);

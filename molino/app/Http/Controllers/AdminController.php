@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categoria;
 use App\Models\Producto;
 use Illuminate\Http\Request;
 use Intervention\Image\ImageManager;
@@ -24,7 +25,10 @@ class AdminController extends Controller
 
     public function create()
     {
-        return view( 'admin.create');
+        $categorias = Categoria::orderBy('nombre')->get();
+            return view( 'admin.create', [
+                'categorias' => $categorias
+            ]);
     }
 
     public function createConfirm(Request $request)
@@ -45,7 +49,7 @@ class AdminController extends Controller
         }
 
         try {
-            \DB::transaction(function()use ($data){
+            \DB::transaction(function() use ($data){
                 $producto = Producto::create($data);
 
                 /*$equipos->generos()->attach($data['generos'] ?? []);*/
@@ -64,7 +68,7 @@ class AdminController extends Controller
     }
     public function delete(int $id)
     {
-        dd($id);
+        /*dd($id);*/
         $productos = Producto::findOrFail($id);
         $imagenVieja = $productos->imagen;
 
@@ -75,17 +79,20 @@ class AdminController extends Controller
 
         try {
             \DB::transaction(function()use ($productos){
+                /*$productos->categoria()->detach();*/
                 $productos->delete();
+                /*$productos->categoria()->attach($data['categoria']);*/
+                /*$equipos->generos()->attach($data['generos'] ?? []);*/
                 /*$imagenVieja = $equipos->imagen;*/
                 /*$equipos->generos()->attach($data['generos'] ?? []);*/
             });
             return redirect()
-                ->route('admin.create')
+                ->route('admin.home')
                 ->with('status.message', 'El Producto <b>" ' . e($productos['titulo']) . ' "</b> fue eliminado exitosamente')
                 ->with('status.type', 'success');
         }catch (\Exception $e){
             return redirect()
-                ->route('admin.create')
+                ->route('admin.home')
                 ->withInput()
                 ->with('status.message', 'Ocurrio un error al tratar de crear el equipo')
                 ->with('status.type', 'danger');
@@ -97,8 +104,10 @@ class AdminController extends Controller
     {
 
         $producto = Producto::findOrFail($id);
+        $categorias = Categoria::orderBy('nombre')->get();
         return view('admin.upload',[
-            'producto' => $producto
+            'producto' => $producto,
+            'categorias' => $categorias
         ]);
     }
     public function uploadConfirm(Request $request,int $id)
