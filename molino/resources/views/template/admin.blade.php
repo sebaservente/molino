@@ -163,16 +163,7 @@
         </div>
     @elseguest
         <div class="container-fluid bg-dark">
-            <ul class="navbar-nav me-auto my-lg-0 menu text-danger" style="--bs-scroll-height: 20rem">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle mx-1 menu__ancla" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        MENU
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li>Debes estar autenticado para poder usar el menu, gracias !</li>
-                    </ul>
-                </li>
-            </ul>
+
         </div>
 
     @endauth

@@ -8,7 +8,7 @@
 @section('title', 'Administración Mill')
 
 @section('admin')
-    <h1 class="pt-4 text-center textBold8 text-uppercase">Panel de Administración</h1>
+    <h1 class="pt-4 text-center fontSize1 textBold8 text-uppercase">Panel de Administración</h1>
     <div>
         <form action="{{ route('logout')}}" method="post">
             @csrf

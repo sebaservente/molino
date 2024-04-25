@@ -73,4 +73,15 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public const VALIDAR_INICIO = [
+        'email' => 'required',
+        'password' => 'required',
+
+    ];
+    public const MENSAJES_INICIO = [
+        'email.required' => 'El email es obligatorio.',
+        'password.required' => 'La Contraseña es obligatoria.',
+
+    ];
 }

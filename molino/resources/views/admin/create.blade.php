@@ -10,7 +10,7 @@
 @section('title', 'Administración Mill')
 
 @section('admin')
-    <h1 class="text-center my-3">Administración Mill</h1>
+    <h1 class="text-center my-3 fontSize1">Administración Mill</h1>
     <div>
         <div class="my-5">
             <div class="d-flex justify-content-center">

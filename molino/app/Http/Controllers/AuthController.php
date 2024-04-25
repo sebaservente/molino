@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Facade\Ignition\Middleware\AddQueries;
 use Illuminate\Http\Request;
 
@@ -15,18 +16,19 @@ class AuthController extends Controller
     public function loginIn(Request $request)
     {
         /*dd($request);*/
-       $credentials = [
+        $request->validate(User::VALIDAR_INICIO, User::MENSAJES_INICIO);
+        $credentials = [
            'email' => $request->input('email'),
            'password' => $request->input('password'),
-       ];
-       if (\Auth::attempt($credentials)){
+        ];
+        if (\Auth::attempt($credentials)){
            $request->session()->regenerate();
            return redirect()
                ->route('admin.home')
                ->with('status.message', 'Sessión iniciada correctamente. ')
                ->with('status.type', 'success') ;
-       }
-       return redirect()
+        }
+        return redirect()
            ->route('login')
            ->with('status.message', 'Datos incorrectos')
            ->with('status.type', 'danger')
