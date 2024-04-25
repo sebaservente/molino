@@ -7,15 +7,9 @@
     <list default="true" id="6bf12ddd-626c-4bb2-af5e-086d7e032c9e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../Final_laravel/laravel_tp_final/servente_sebastian/wildboard-tp-01/app/Http/Controllers/ControllerPedidos.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Final_laravel/laravel_tp_final/servente_sebastian/wildboard-tp-01/app/Http/Controllers/ControllerPedidos.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Final_laravel/laravel_tp_final/servente_sebastian/wildboard-tp-01/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Final_laravel/laravel_tp_final/servente_sebastian/wildboard-tp-01/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/molino/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/app/Http/Controllers/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/molino/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/app/Models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/molino/public/css/estilos.css" beforeDir="false" afterPath="$PROJECT_DIR$/molino/public/css/estilos.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/molino/resources/views/admin/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/resources/views/admin/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/molino/resources/views/admin/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/resources/views/admin/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/molino/resources/views/admin/mill.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/resources/views/admin/mill.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/molino/resources/views/template/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/resources/views/template/admin.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -357,7 +351,7 @@
       <workItem from="1713124794420" duration="3803000" />
       <workItem from="1713718689293" duration="24018000" />
       <workItem from="1713838588140" duration="854000" />
-      <workItem from="1714008570091" duration="698000" />
+      <workItem from="1714008570091" duration="2696000" />
     </task>
     <servers />
   </component>

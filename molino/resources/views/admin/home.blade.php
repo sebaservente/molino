@@ -70,9 +70,9 @@
                 </div>
 
                 @if($desayuno->categoria->nombre == 'Desayunos y Meriendas')
-                    <div class="productos ">
+                    <div class="productos__admin ">
                         <a href="#" class="text-decoration-none shadow p-1"  data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $desayuno->producto_id }}">
-                            <div class="img__productosHome">
+                            <div class="img__productosAdmin">
                                 @if($desayuno->imagen != null && public_path('img/reserva') . '/' . $desayuno->imagen)
                                     <picture class="">
                                         <source media="(min-width: 751px)"
@@ -92,8 +92,8 @@
                                 @endif
                             </div>
                             <div class="datos__productos">
-                                <div class="div__datos">
-                                    <p class="datos__parrafo">{{ $desayuno->titulo }}</p>
+                                <div class="div__datosAdmin">
+                                    <p class="datos__parrafo text-center">{{ $desayuno->titulo }}</p>
                                    {{-- <p class="datos__descripcion">{{ $desayuno->descripcion }}</p>--}}
                                 </div>
                                 {{--<p class="fw-bold text-dark">$ <span> {{ $desayuno->precio }}</span></p>--}}
@@ -147,9 +147,9 @@
                 </div>
 --}}
                 @if($cafeterias->categoria->nombre == 'Cafeteria')
-                    <div class="productos ">
+                    <div class="productos__admin ">
                         <a href="#" class="text-decoration-none shadow p-1"  data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $cafeterias->producto_id }}">
-                            <div class="img__productosHome">
+                            <div class="img__productosAdmin">
                                 @if($cafeterias->imagen != null && public_path('img/reserva') . '/' . $cafeterias->imagen)
                                     <picture class="">
                                         <source media="(min-width: 751px)"
@@ -224,9 +224,9 @@
                 </div>
 --}}
                 @if($platos->categoria->nombre == 'Platos')
-                    <div class="productos ">
+                    <div class="productos__admin ">
                         <a href="#" class="text-decoration-none shadow p-1"  data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $platos->producto_id }}">
-                            <div class="img__productosHome">
+                            <div class="img__productosAdmin">
                                 @if($platos->imagen != null && public_path('img/reserva') . '/' . $platos->imagen)
                                     <picture class="">
                                         <source media="(min-width: 751px)"
@@ -301,9 +301,9 @@
                 </div>
 --}}
                 @if($ensaladas->categoria->nombre == 'Ensaladas')
-                    <div class="productos ">
+                    <div class="productos__admin ">
                         <a href="#" class="text-decoration-none shadow p-1"  data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $ensaladas->producto_id }}">
-                            <div class="img__productosHome">
+                            <div class="img__productosAdmin">
                                 @if($ensaladas->imagen != null && public_path('img/reserva') . '/' . $ensaladas->imagen)
                                     <picture class="">
                                         <source media="(min-width: 751px)"
@@ -378,9 +378,9 @@
                 </div>
 --}}
                 @if($bebidas->categoria->nombre == 'Bebidas')
-                    <div class="productos ">
+                    <div class="productos__admin ">
                         <a href="#" class="text-decoration-none shadow p-1"  data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $bebidas->producto_id }}">
-                            <div class="img__productosHome ">
+                            <div class="img__productosAdmin ">
                                 @if($bebidas->imagen != null && public_path('img/reserva') . '/' . $bebidas->imagen)
                                     <picture class="">
                                         <source media="(min-width: 751px)"
