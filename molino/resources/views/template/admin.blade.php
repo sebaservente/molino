@@ -176,7 +176,23 @@
         <div class="bg-dark text-light text-center p-1 fontSizePequeño"><b>{!! Session::get('status.message') !!}</b></div>
     @endif
     <section class="min-vh-100">
+        <h1 class="pt-4 text-center fontSize1 textBold8 text-uppercase">Panel de Administración</h1>
+        <div class="admin__menu">
+            <div class="d-flex">
+                <div><a href="" class="btn btn-dark">DESAYUNOS Y MERIENDAS</a></div>
+                <div><a href="" class="btn btn-dark">CAFETERIA</a></div>
+                <div><a href="" class="btn btn-dark">PLATOS</a></div>
+                <div><a href="" class="btn btn-dark">ENSALADAS</a></div>
+                <div><a href="" class="btn btn-dark">BEBIDAS</a></div>
+            </div>
+            <div>
+                <form action="{{ route('logout')}}" method="post">
+                    @csrf
+                    <button class="btn btn-dark">Cerrar Sessión</button>
+                </form>
+            </div>
 
+        </div>
         @yield('admin')
         {{--<div class="div__somos py-2"></div>--}}
     </section>
