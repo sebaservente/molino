@@ -8,7 +8,7 @@
 @section('title', 'Administración Mill')
 
 @section('admin')
-    <h1 class="pt-4 text-center fontSize1 textBold8 text-uppercase">Home admin</h1>
+    <h1 class="py-4 px-3  fontSize1 textBold8 text-uppercase">CREAR PLATO DEL DÍA</h1>
 
     {{--<div class="home__panel">
         --}}{{--DESAYUNOS Y MERIENDAS--}}{{--

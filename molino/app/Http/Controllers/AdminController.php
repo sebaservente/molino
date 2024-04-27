@@ -135,4 +135,29 @@ class AdminController extends Controller
             ->with('status.message', 'El Producto <b>" ' . e($producto['titulo']) . ' "</b> fue editado exitosamente')
             ->with('status.type', 'success');
     }
+
+    public function desayuno()
+    {
+        return view('admin.productos.desayuno');
+    }
+
+    public function cafeteria()
+    {
+        return view('admin.productos.cafeteria');
+    }
+
+    public function bebidas()
+    {
+        return view('admin.productos.bebidas');
+    }
+
+    public function ensaladas()
+    {
+        return view('admin.productos.ensaladas');
+    }
+
+    public function platos()
+    {
+        return view('admin.productos.platos');
+    }
 }

@@ -33,3 +33,11 @@ Route::post('/admin/create', [\App\Http\Controllers\AdminController::class, 'cre
 Route::post('/admin/create/{id}/delete', [\App\Http\Controllers\AdminController::class, 'delete'])->name('admin.delete')->whereNumber('id')->middleware(['auth']);
 Route::get('/admin/upload/{id}', [\App\Http\Controllers\AdminController::class, 'upload'])->name('admin.upload')->whereNumber('id')->middleware(['auth']);
 Route::post('/admin/upload/{id}/uploadConfirm', [\App\Http\Controllers\AdminController::class, 'uploadConfirm'])->name('admin.uploadConfirm')->whereNumber('id')->middleware(['auth']);
+
+
+
+Route::get('/admin/productos/desayuno', [\App\Http\Controllers\AdminController::class, 'desayuno'])->name('admin.desayuno')->middleware(['auth']);
+Route::get('/admin/productos/cafeteria', [\App\Http\Controllers\AdminController::class, 'cafeteria'])->name('admin.cafeteria')->middleware(['auth']);
+Route::get('/admin/productos/bebidas', [\App\Http\Controllers\AdminController::class, 'bebidas'])->name('admin.bebidas')->middleware(['auth']);
+Route::get('/admin/productos/ensaladas', [\App\Http\Controllers\AdminController::class, 'ensaladas'])->name('admin.ensaladas')->middleware(['auth']);
+Route::get('/admin/productos/platos', [\App\Http\Controllers\AdminController::class, 'platos'])->name('admin.platos')->middleware(['auth']);

@@ -5,12 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bf12ddd-626c-4bb2-af5e-086d7e032c9e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/molino/resources/views/admin/productos/bebidas.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/molino/resources/views/admin/productos/cafeteria.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/molino/resources/views/admin/productos/desayuno.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/molino/resources/views/admin/productos/ensaladas.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/molino/resources/views/admin/productos/platos.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Final_laravel/laravel_tp_final/servente_sebastian/wildboard-tp-01/app/Http/Controllers/ControllerPedidos.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Final_laravel/laravel_tp_final/servente_sebastian/wildboard-tp-01/app/Http/Controllers/ControllerPedidos.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Final_laravel/laravel_tp_final/servente_sebastian/wildboard-tp-01/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Final_laravel/laravel_tp_final/servente_sebastian/wildboard-tp-01/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/molino/public/css/estilos.css" beforeDir="false" afterPath="$PROJECT_DIR$/molino/public/css/estilos.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/molino/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/app/Http/Controllers/AdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/molino/resources/views/admin/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/resources/views/admin/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/molino/resources/views/template/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/resources/views/template/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/molino/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -300,7 +306,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/xampp/htdocs/molino/molino/resources/views/admin",
+    "last_opened_file_path": "C:/xampp/htdocs/molino/molino/resources/views/admin/productos",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -312,9 +318,13 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\molino\molino\resources\views\admin\productos" />
       <recent name="C:\xampp\htdocs\molino\molino\resources\views\admin" />
       <recent name="C:\xampp\htdocs\Final_laravel\laravel_tp_final\servente_sebastian\wildboard-tp-01" />
       <recent name="C:\xampp\htdocs\laravel_tp_final-main\laravel_tp_final-main\servente_sebastian\wildboard-tp-01" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\molino\molino\resources\views\admin\productos" />
     </key>
   </component>
   <component name="RunManager" selected="PHPUnit.Main">
@@ -355,6 +365,7 @@
       <workItem from="1713838588140" duration="854000" />
       <workItem from="1714008570091" duration="2696000" />
       <workItem from="1714091676374" duration="6571000" />
+      <workItem from="1714231738028" duration="2583000" />
     </task>
     <servers />
   </component>
