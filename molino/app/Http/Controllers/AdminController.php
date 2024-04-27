@@ -138,7 +138,10 @@ class AdminController extends Controller
 
     public function desayuno()
     {
-        return view('admin.productos.desayuno');
+        $productos = Producto::all();
+        return view('admin.productos.desayuno', [
+            'productos' => $productos
+        ]);
     }
 
     public function cafeteria()

@@ -149,36 +149,26 @@
                     <ul class="dropdown-menu">
                         <li><a href="{{ route('admin.home') }}" class="text-decoration-none text-dark"><span class="px-2 py-3 uppercase"><i class="bi bi-cup-hot px-2 unos"></i></span>Home</a></li>
                         <li><a href="{{ route('admin.create') }}" class="text-decoration-none text-dark"><span class="px-2 py-3 uppercase"><i class="bi bi-cup-hot px-2 unos"></i></span>Crear Producto</a></li>
-                        {{--<p class="Maña__uno uno desayuno py-3 uppercase"><span class="px-2 "><i class="bi bi-cup-hot px-2 unos"></i></span>Desayunos y Meriendas</p>--}}
-                        {{--<li><a href="{{ route('cafeteria') }}" class="text-decoration-none text-dark"><span class="px-2 py-3 uppercase"><i class="bi bi-cup px-2 unos"></i></span>Cafeteria</a>
-                            --}}{{--<p class="Maña__uno dos w-100 py-3 uppercase"><span class="px-2"><i class="bi bi-cup px-2 doss"></i></span>Cafeteria</p>--}}{{--</li>
-                        --}}{{--<li><p class="Maña__uno tres w-100 py-3 uppercase"><span class="px-2"><i class="bi bi-cup-straw px-2 tress"></i></span>Bebidas</p></li>--}}{{--
-                        <li><a href="{{ route('bebidas')  }}" class="text-decoration-none text-dark"><span class="px-2 py-3 uppercase"><i class="bi bi-cup-straw px-2 tress"></i></span>Bebidas</a>
-                        <li><a href="{{ route('platos') }}" class="text-decoration-none text-dark"><span class="px-2 py-3 uppercase"><i class="bi bi-cc-circle px-2 cincos"></i></span>Platos</a>
-                        <li><a href="{{ route('ensaladas') }}" class="text-decoration-none text-dark"><span class="px-2 py-3 uppercase"><i class="bi bi-cc-circle px-2 cincos"></i></span>Ensaladas</a>
-                        --}}{{--<li><p class="Maña__uno cuatro w-100 py-3 uppercase"><span class="px-2"><i class="bi bi-cc-circle px-2 cuatros"></i></span>Platos</p></li>--}}{{--
-                        --}}{{--<li><p class="Maña__uno cinco w-100 py-3 uppercase"><span class="px-2"><i class="bi bi-cc-circle px-2 cincos"></i></span>Ensaladas</p></li>--}}{{--
-                        <li><hr class="dropdown-divider"></li>
-                        <li><p class="Maña__uno w-100 py-3 uppercase"><span class="px-2"><i class="bi bi-cc-circle px-2"></i></span>Platos del día</p></li>--}}
+                        <div>
+                            <form action="{{ route('logout')}}" method="post">
+                                @csrf
+                                <button class="btn btn-none">Cerrar Sessión</button>
+                            </form>
+                        </div>
                     </ul>
                 </li>
             </ul>
         </div>
         <div class="admin__menu">
-            <div class="d-flex">
-                <div class="px-1"><a href="{{ route('admin.desayuno') }}" class="btn btn-dark shadow">DESAYUNOS Y MERIENDAS</a></div>
-                <div class="px-1"><a href="{{ route('admin.cafeteria') }}" class="btn btn-dark shadow">CAFETERIA</a></div>
-                <div class="px-1"><a href="{{ route('admin.platos') }}" class="btn btn-dark shadow">PLATOS</a></div>
-                <div class="px-1"><a href="{{ route('admin.ensaladas') }}" class="btn btn-dark shadow">ENSALADAS</a></div>
-                <div class="px-1"><a href="{{ route('admin.bebidas') }}" class="btn btn-dark shadow">BEBIDAS</a></div>
-                <div class="px-1"><a href="{{ route('admin.home') }}" class="btn btn-secondary  shadow">CREAR PLATO DEL DÍA</a></div>
+            <div class="menu__DelAdmin">
+                <div class="px-1 py-1"><a href="{{ route('admin.desayuno') }}" class="btn btn-dark shadow">DESAYUNOS Y MERIENDAS</a></div>
+                <div class="px-1 py-1"><a href="{{ route('admin.cafeteria') }}" class="btn btn-dark shadow">CAFETERIA</a></div>
+                <div class="px-1 py-1"><a href="{{ route('admin.platos') }}" class="btn btn-dark shadow">PLATOS</a></div>
+                <div class="px-1 py-1"><a href="{{ route('admin.ensaladas') }}" class="btn btn-dark shadow">ENSALADAS</a></div>
+                <div class="px-1 py-1"><a href="{{ route('admin.bebidas') }}" class="btn btn-dark shadow">BEBIDAS</a></div>
+                <div class="px-1 py-1"><a href="{{ route('admin.home') }}" class="btn btn-secondary  shadow">CREAR PLATO DEL DÍA</a></div>
             </div>
-            <div>
-                <form action="{{ route('logout')}}" method="post">
-                    @csrf
-                    <button class="btn btn-dark">Cerrar Sessión</button>
-                </form>
-            </div>
+
 
         </div>
     @elseguest
