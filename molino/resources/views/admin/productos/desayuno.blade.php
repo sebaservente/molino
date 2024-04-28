@@ -93,7 +93,7 @@
             </div>
 
             @if($desayuno->categoria->nombre == 'Desayunos y Meriendas')
-                <div class="div__adminProductos shadow px-2 py-2">
+                <div class="div__adminProductos shadow px-2 my-2">
                     <div class="img__productosAdmin shadow">
                         @if($desayuno->imagen != null && public_path('img/reserva') . '/' . $desayuno->imagen)
                             <picture class="">
@@ -115,18 +115,18 @@
                     </div>
                     <div class="datos__productosAdmin">
                         <div class="div__datosAdmin">
-                            <p class="datos__parrafoAdmin text-center">{{ $desayuno->titulo }}</p>
-                            <p class="datos__descripcion">{{ $desayuno->descripcion }}</p>
+                          {{--  <p class="datos__parrafoAdmin text-center">{{ $desayuno->titulo }}</p>--}}
+                          {{--  <p class="datos__descripcion">{{ $desayuno->descripcion }}</p>--}}
                         </div>
-                        <p class="fw-bold text-dark">$ <span> {{ $desayuno->precio }}</span></p>
+                        {{--<p class="fw-bold text-dark">$ <span> {{ $desayuno->precio }}</span></p>--}}
                     </div>
-                    <div class="btn__productosAdmin">
-                        <div class="hola"><a href="#" class="text-decoration-none text-dark "  data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $desayuno->producto_id }}"><i class="bi bi-eye px-1"></i>Ver</a></div>
-                        <div class="hola"><a href="{{ route('admin.upload' ,['id' => $desayuno->producto_id]) }}" class="text-decoration-none text-dark "><i class="bi bi-pencil-square px-1"></i>Editar</a></div>
-                            <div class="btnEliminarAdmin">
-                                <a href="#" class="text-decoration-none text-dark "  data-bs-toggle="modal" data-bs-target="#staticBackdrop2{{ $desayuno->producto_id }}"><i class="bi bi-trash px-1"></i>Eliminar</a>
-                            </div>
+                    {{--<div class="btn__productosAdmin">
+                        <div class="hola px-2"><a href="#" class="text-decoration-none text-dark "  data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $desayuno->producto_id }}"><i class="bi bi-eye px-1"></i>Ver</a></div>
+                        <div class="hola px-2"><a href="{{ route('admin.upload' ,['id' => $desayuno->producto_id]) }}" class="text-decoration-none text-dark "><i class="bi bi-pencil-square px-1"></i>Editar</a></div>
+                        <div class="btnEliminarAdmin px-2">
+                            <a href="#" class="text-decoration-none text-dark "  data-bs-toggle="modal" data-bs-target="#staticBackdrop2{{ $desayuno->producto_id }}"><i class="bi bi-trash px-1"></i>Eliminar</a>
                         </div>
+                    </div>--}}
                 </div>
             @endif
         @endforeach

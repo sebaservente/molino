@@ -8,11 +8,9 @@
       <change beforePath="$PROJECT_DIR$/../Final_laravel/laravel_tp_final/servente_sebastian/wildboard-tp-01/app/Http/Controllers/ControllerPedidos.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Final_laravel/laravel_tp_final/servente_sebastian/wildboard-tp-01/app/Http/Controllers/ControllerPedidos.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Final_laravel/laravel_tp_final/servente_sebastian/wildboard-tp-01/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Final_laravel/laravel_tp_final/servente_sebastian/wildboard-tp-01/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/molino/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/app/Http/Controllers/AdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/molino/public/css/estilos.css" beforeDir="false" afterPath="$PROJECT_DIR$/molino/public/css/estilos.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/molino/resources/views/admin/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/resources/views/admin/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/molino/resources/views/admin/productos/desayuno.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/resources/views/admin/productos/desayuno.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/molino/resources/views/template/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/resources/views/template/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/molino/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/resources/views/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -297,21 +295,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/xampp/htdocs/molino/molino/resources/views/admin/productos",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/molino/molino/resources/views/admin/productos&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\molino\molino\resources\views\admin\productos" />
@@ -362,6 +360,7 @@
       <workItem from="1714008570091" duration="2696000" />
       <workItem from="1714091676374" duration="6571000" />
       <workItem from="1714231738028" duration="13100000" />
+      <workItem from="1714261906131" duration="2893000" />
     </task>
     <servers />
   </component>
