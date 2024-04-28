@@ -8,9 +8,8 @@
 @section('title', 'Administración Mill')
 
 @section('desayuno')
-    <h1 class="py-4 px-4   fontSize1 textBold8 text-uppercase">DESAYUNOS Y MERIENDAS</h1>
     <div class="div__productos py-3 px-2">
-        <h2 class="text-center fontSize1">Desayunos y Meriendas</h2>
+        <h2 class="py-4 px-4 w-100 fontSize1 textBold8 text-uppercase text-center">Desayunos y Meriendas</h2>
         @foreach($productos as $desayuno)
            {{-- todo Ventana Modal : Luego Hacer un componente--}}
 
@@ -45,7 +44,12 @@
                             <p class="textBold8 fontSize">Precio: $ <span class="textBold4">{{ $desayuno->precio }}</span></p>
                         </div>
                         <div class="modal-footer">
-
+                            <div class="btn__productosAdmin">
+                                    <div class="hola px-2"><a href="{{ route('admin.upload' ,['id' => $desayuno->producto_id]) }}" class="text-decoration-none text-dark "><i class="bi bi-pencil-square px-1"></i>Editar</a></div>
+                                    <div class="btnEliminarAdmin px-2">
+                                        <a href="#" class="text-decoration-none text-dark "  data-bs-toggle="modal" data-bs-target="#staticBackdrop2{{ $desayuno->producto_id }}"><i class="bi bi-trash px-1"></i>Eliminar</a>
+                                    </div>
+                            </div>
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                         </div>
                     </div>
@@ -93,40 +97,35 @@
             </div>
 
             @if($desayuno->categoria->nombre == 'Desayunos y Meriendas')
-                <div class="div__adminProductos shadow px-2 my-2">
-                    <div class="img__productosAdmin shadow">
-                        @if($desayuno->imagen != null && public_path('img/reserva') . '/' . $desayuno->imagen)
-                            <picture class="">
-                                <source media="(min-width: 751px)"
-                                        srcset="{{ asset('img/reserva/' . $desayuno->imagen) }}">
-                                <source media="(min-width: 380px)"
-                                        srcset="{{ asset('img/reserva/' . $desayuno->imagen) }}">
-                                <img src="{{ asset('img/reserva/' . $desayuno->imagen) }}" class="w-100"
-                                     alt="{{ $desayuno->imagen_descripcion }}">
-                            </picture>
-                        @else
-                            <picture class="">
-                                <source media="(min-width: 751px)" srcset="{{ asset('img/cafeCleche.png') }}">
-                                <source media="(min-width: 380px)" srcset="{{ asset('img/cafeCleche.png') }}">
-                                <img src="{{ asset('img/cafeCleche.png') }}" class="w-100"
-                                     alt="Imagen logo de la marca">
-                            </picture>
-                        @endif
-                    </div>
-                    <div class="datos__productosAdmin">
-                        <div class="div__datosAdmin">
-                          {{--  <p class="datos__parrafoAdmin text-center">{{ $desayuno->titulo }}</p>--}}
+                <div class="div__adminProductos shadow mx-1 my-2">
+                    <a href="#" class="text-decoration-none text-dark d-flex w-100 " data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $desayuno->producto_id }}">
+                        <div class="img__productosAdmin shadow">
+                            @if($desayuno->imagen != null && public_path('img/reserva') . '/' . $desayuno->imagen)
+                                <picture class="">
+                                    <source media="(min-width: 751px)"
+                                            srcset="{{ asset('img/reserva/' . $desayuno->imagen) }}">
+                                    <source media="(min-width: 380px)"
+                                            srcset="{{ asset('img/reserva/' . $desayuno->imagen) }}">
+                                    <img src="{{ asset('img/reserva/' . $desayuno->imagen) }}" class="w-100"
+                                         alt="{{ $desayuno->imagen_descripcion }}">
+                                </picture>
+                            @else
+                                <picture class="">
+                                    <source media="(min-width: 751px)" srcset="{{ asset('img/cafeCleche.png') }}">
+                                    <source media="(min-width: 380px)" srcset="{{ asset('img/cafeCleche.png') }}">
+                                    <img src="{{ asset('img/cafeCleche.png') }}" class="w-100"
+                                         alt="Imagen logo de la marca">
+                                </picture>
+                            @endif
+                        </div>
+                        <div class="datos__productosAdmin">
+                        <div class="div__datosAdmin w-100 px-1">
+                            <p class="datos__parrafoAdmin m-0 py-1">{{ $desayuno->titulo }}</p>
                           {{--  <p class="datos__descripcion">{{ $desayuno->descripcion }}</p>--}}
                         </div>
                         {{--<p class="fw-bold text-dark">$ <span> {{ $desayuno->precio }}</span></p>--}}
                     </div>
-                    {{--<div class="btn__productosAdmin">
-                        <div class="hola px-2"><a href="#" class="text-decoration-none text-dark "  data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $desayuno->producto_id }}"><i class="bi bi-eye px-1"></i>Ver</a></div>
-                        <div class="hola px-2"><a href="{{ route('admin.upload' ,['id' => $desayuno->producto_id]) }}" class="text-decoration-none text-dark "><i class="bi bi-pencil-square px-1"></i>Editar</a></div>
-                        <div class="btnEliminarAdmin px-2">
-                            <a href="#" class="text-decoration-none text-dark "  data-bs-toggle="modal" data-bs-target="#staticBackdrop2{{ $desayuno->producto_id }}"><i class="bi bi-trash px-1"></i>Eliminar</a>
-                        </div>
-                    </div>--}}
+                    </a>
                 </div>
             @endif
         @endforeach
