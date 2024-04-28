@@ -39,11 +39,11 @@ class AdminController extends Controller
             $img = $manager->read($imagen);
             $img = $img->resize(500,500);
             $imagenPath = public_path('img/reserva') . '/' . $nombreImagen;
-<<<<<<< Updated upstream
+
             $img->toPng(320)->save($imagenPath);
-=======
-            $img->toJpeg(360)->save($imagenPath);
->>>>>>> Stashed changes
+
+            /*$img->toJpeg(360)->save($imagenPath);*/
+
             $data['imagen'] = $nombreImagen;
 
         }
