@@ -3,10 +3,10 @@
   <component name="PHPUnit">
     <option name="directories">
       <list>
-        <option value="$PROJECT_DIR$/molino/tests/Unit" />
-        <option value="$PROJECT_DIR$/molino/tests/Feature" />
         <option value="$PROJECT_DIR$/../Final_laravel/laravel_tp_final/servente_sebastian/wildboard-tp-01/tests/Unit" />
         <option value="$PROJECT_DIR$/../Final_laravel/laravel_tp_final/servente_sebastian/wildboard-tp-01/tests/Feature" />
+        <option value="$PROJECT_DIR$/molino/tests/Unit" />
+        <option value="$PROJECT_DIR$/molino/tests/Feature" />
       </list>
     </option>
   </component>

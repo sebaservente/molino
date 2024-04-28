@@ -7,10 +7,7 @@
     <list default="true" id="6bf12ddd-626c-4bb2-af5e-086d7e032c9e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../Final_laravel/laravel_tp_final/servente_sebastian/wildboard-tp-01/app/Http/Controllers/ControllerPedidos.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Final_laravel/laravel_tp_final/servente_sebastian/wildboard-tp-01/app/Http/Controllers/ControllerPedidos.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Final_laravel/laravel_tp_final/servente_sebastian/wildboard-tp-01/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Final_laravel/laravel_tp_final/servente_sebastian/wildboard-tp-01/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/molino/public/css/estilos.css" beforeDir="false" afterPath="$PROJECT_DIR$/molino/public/css/estilos.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/molino/resources/views/admin/productos/desayuno.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/resources/views/admin/productos/desayuno.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/molino/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/molino/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -361,6 +358,7 @@
       <workItem from="1714091676374" duration="6571000" />
       <workItem from="1714231738028" duration="13100000" />
       <workItem from="1714261906131" duration="2893000" />
+      <workItem from="1714314709903" duration="519000" />
     </task>
     <servers />
   </component>
