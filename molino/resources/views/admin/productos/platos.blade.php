@@ -7,7 +7,7 @@
 
 @section('title', 'Administración Mill')
 
-@section('cafeteria')
+@section('admin')
     <h1 class="py-4 px-3  fontSize1 textBold8 text-uppercase">PLATOS</h1>
 
 

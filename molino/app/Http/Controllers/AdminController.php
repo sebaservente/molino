@@ -132,12 +132,27 @@ class AdminController extends Controller
 
             }
         }
+        try {
+            \DB::transaction(function()use ($data, $producto){
+                /*$productos->categoria()->detach();*/
+                $producto->update($data);
+                /*$productos->categoria()->attach($data['categoria']);*/
+                /*$equipos->generos()->attach($data['generos'] ?? []);*/
+                /*$imagenVieja = $equipos->imagen;*/
+                /*$equipos->generos()->attach($data['generos'] ?? []);*/
+            });
+            return redirect()
+                ->route('admin.home')
+                ->with('status.message', 'El Producto <b>" ' . e($producto['titulo']) . ' "</b> fue editado exitosamente')
+                ->with('status.type', 'success');
+        }catch (\Exception $e){
+            return redirect()
+                ->route('admin.home')
+                ->withInput()
+                ->with('status.message', 'Ocurrio un error al tratar de crear el equipo')
+                ->with('status.type', 'danger');
+        }
 
-        $producto->update($data);
-        return redirect()
-            ->route('admin.home')
-            ->with('status.message', 'El Producto <b>" ' . e($producto['titulo']) . ' "</b> fue editado exitosamente')
-            ->with('status.type', 'success');
     }
 
     public function desayuno()

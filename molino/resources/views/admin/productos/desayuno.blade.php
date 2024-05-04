@@ -7,7 +7,7 @@
 
 @section('title', 'Administración Mill')
 
-@section('desayuno')
+@section('admin')
     <div class="div__productos py-3 px-2">
         <h2 class="py-4 px-4 w-100 fontSize1 textBold8 text-uppercase text-center">Desayunos y Meriendas</h2>
         @foreach($productos as $desayuno)
@@ -22,7 +22,7 @@
                         </div>
                         <div class="modal-body">
                             <div class="img__productos">
-                                @if($desayuno->imagen != null && public_path('img/reserva') . '/' . $desayuno->imagen)
+                                @if($desayuno->imagen != null && file_exists(public_path('img/reserva' . '/' . $desayuno->imagen)))
                                     <picture class="">
                                         <source media="(min-width: 751px)"
                                                 srcset="{{ asset('img/reserva/' . $desayuno->imagen) }}">
@@ -64,7 +64,7 @@
                         </div>
                         <div class="modal-body">
                             <div class="img__productos">
-                                @if($desayuno->imagen != null && public_path('img/reserva') . '/' . $desayuno->imagen)
+                                @if($desayuno->imagen != null && file_exists(public_path('img/reserva' . '/' . $desayuno->imagen)))
                                     <picture class="">
                                         <source media="(min-width: 751px)"
                                                 srcset="{{ asset('img/reserva/' . $desayuno->imagen) }}">
@@ -100,7 +100,7 @@
                 <div class="div__adminProductos shadow mx-1 my-2">
                     <a href="#" class="text-decoration-none text-dark d-flex w-100 " data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $desayuno->producto_id }}">
                         <div class="img__productosAdmin shadow">
-                            @if($desayuno->imagen != null && public_path('img/reserva') . '/' . $desayuno->imagen)
+                            @if($desayuno->imagen != null && file_exists(public_path('img/reserva' . '/' . $desayuno->imagen)))
                                 <picture class="">
                                     <source media="(min-width: 751px)"
                                             srcset="{{ asset('img/reserva/' . $desayuno->imagen) }}">

@@ -46,4 +46,11 @@ class AuthController extends Controller
             ->with('status', 'Sessión Cerrada exitosamente')
             ->with('status', 'success') ;
     }
+
+
+    public function recuperarPassword()
+    {
+        /*dd('hola mundo');*/
+        return view('admin.auth.recuperar-password');
+    }
 }

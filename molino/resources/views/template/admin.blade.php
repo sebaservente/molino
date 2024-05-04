@@ -180,10 +180,11 @@
 
     <section class="min-vh-100">
         @yield('admin')
-        @yield('desayuno')
+        {{--@yield('desayuno')
         @yield('cafeteria')
         @yield('platos')
         @yield('ensaladas')
+        @yield('bebidas')--}}
         {{--<div class="div__somos py-2"></div>--}}
     </section>
 </main>
