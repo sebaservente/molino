@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('index')->middleware(['guest']);
+Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('index');
 
 Route::get('/carta/desayunos', [\App\Http\Controllers\CartaController::class, 'desayunos'])->name('desayunos')->middleware(['guest']);
 Route::get('/carta/cafeteria', [\App\Http\Controllers\CartaController::class, 'cafeteria'])->name('cafeteria')->middleware(['guest']);
