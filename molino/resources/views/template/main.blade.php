@@ -14,9 +14,9 @@
 <nav class="navbar navbar-expand-lg nav">
     <div class="container-fluid">
         <picture class="picture__img w-10">
-            <source media="(min-width: 751px)" srcset="<?= url('../img/molino.png'); ?>"<?= url('../img/molino.png'); ?>>
-            <source media="(min-width: 380px)" srcset="<?= url('../img/molino.png'); ?>">
-            <img src="<?= url('../img/molino.png'); ?>" class="rounded rounded-full m-auto" alt="Mi imagen responsive">
+            <source media="(min-width: 751px)" srcset="<?= url('img/molino.png'); ?>"<?= url('../img/molino.png'); ?>>
+            <source media="(min-width: 380px)" srcset="<?= url('img/molino.png'); ?>">
+            <img src="<?= url('img/molino.png'); ?>" class="rounded rounded-full m-auto" alt="Mi imagen responsive">
         </picture>
         {{--<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

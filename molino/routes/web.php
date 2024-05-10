@@ -15,11 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('index');
 
-Route::get('/carta/desayunos', [\App\Http\Controllers\CartaController::class, 'desayunos'])->name('desayunos')->middleware(['guest']);
-Route::get('/carta/cafeteria', [\App\Http\Controllers\CartaController::class, 'cafeteria'])->name('cafeteria')->middleware(['guest']);
-Route::get('/carta/bebidas', [\App\Http\Controllers\CartaController::class, 'bebidas'])->name('bebidas')->middleware(['guest']);
-Route::get('/carta/platos', [\App\Http\Controllers\CartaController::class, 'platos'])->name('platos')->middleware(['guest']);
-Route::get('/carta/ensaladas', [\App\Http\Controllers\CartaController::class, 'ensaladas'])->name('ensaladas')->middleware(['guest']);
+Route::get('/carta/desayunos', [\App\Http\Controllers\CartaController::class, 'desayunos'])->name('desayunos');
+Route::get('/carta/cafeteria', [\App\Http\Controllers\CartaController::class, 'cafeteria'])->name('cafeteria');
+Route::get('/carta/bebidas', [\App\Http\Controllers\CartaController::class, 'bebidas'])->name('bebidas');
+Route::get('/carta/platos', [\App\Http\Controllers\CartaController::class, 'platos'])->name('platos');
+Route::get('/carta/ensaladas', [\App\Http\Controllers\CartaController::class, 'ensaladas'])->name('ensaladas');
 
 
 Route::get('/admin/mill', [\App\Http\Controllers\AuthController::class, 'login'])->name('login')->middleware(['guest']);

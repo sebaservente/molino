@@ -22,20 +22,21 @@
                         </div>
                         <div class="modal-body">
                             <div class="img__productos">
+{{--                                @if($desayuno->imagen != null && Storage::disk('public')->has('img/reserva/' . $desayuno->imagen))--}}
                                 @if($desayuno->imagen != null && file_exists(public_path('img/reserva' . '/' . $desayuno->imagen)))
                                     <picture class="">
                                         <source media="(min-width: 751px)"
-                                                srcset="{{ asset('img/reserva/' . $desayuno->imagen) }}">
+                                                srcset="{{ url('img/reserva/' . $desayuno->imagen) }}">
                                         <source media="(min-width: 380px)"
-                                                srcset="{{ asset('img/reserva/' . $desayuno->imagen) }}">
-                                        <img src="{{ asset('img/reserva/' . $desayuno->imagen) }}" class="w-100"
+                                                srcset="{{ url('img/reserva/' . $desayuno->imagen) }}">
+                                        <img src="{{ url('img/reserva/' . $desayuno->imagen) }}" class="w-100"
                                              alt="{{ $desayuno->imagen_descripcion }}">
                                     </picture>
                                 @else
                                     <picture class="">
-                                        <source media="(min-width: 751px)" srcset="{{ asset('img/cafeCleche.png') }}">
-                                        <source media="(min-width: 380px)" srcset="{{ asset('img/cafeCleche.png') }}">
-                                        <img src="{{ asset('img/cafeCleche.png') }}" class="w-100"
+                                        <source media="(min-width: 751px)" srcset="{{ url('img/cafeCleche.png') }}">
+                                        <source media="(min-width: 380px)" srcset="{{ url('img/cafeCleche.png') }}">
+                                        <img src="{{ url('img/cafeCleche.png') }}" class="w-100"
                                              alt="Imagen logo de la marca">
                                     </picture>
                                 @endif
@@ -67,17 +68,17 @@
                                 @if($desayuno->imagen != null && file_exists(public_path('img/reserva' . '/' . $desayuno->imagen)))
                                     <picture class="">
                                         <source media="(min-width: 751px)"
-                                                srcset="{{ asset('img/reserva/' . $desayuno->imagen) }}">
+                                                srcset="{{ url('img/reserva/' . $desayuno->imagen) }}">
                                         <source media="(min-width: 380px)"
-                                                srcset="{{ asset('img/reserva/' . $desayuno->imagen) }}">
-                                        <img src="{{ asset('img/reserva/' . $desayuno->imagen) }}" class="w-100"
+                                                srcset="{{ url('img/reserva/' . $desayuno->imagen) }}">
+                                        <img src="{{ url('img/reserva/' . $desayuno->imagen) }}" class="w-100"
                                              alt="{{ $desayuno->imagen_descripcion }}">
                                     </picture>
                                 @else
                                     <picture class="">
-                                        <source media="(min-width: 751px)" srcset="{{ asset('img/cafeCleche.png') }}">
-                                        <source media="(min-width: 380px)" srcset="{{ asset('img/cafeCleche.png') }}">
-                                        <img src="{{ asset('img/cafeCleche.png') }}" class="w-100"
+                                        <source media="(min-width: 751px)" srcset="{{ url('img/cafeCleche.png') }}">
+                                        <source media="(min-width: 380px)" srcset="{{ url('img/cafeCleche.png') }}">
+                                        <img src="{{ url('img/cafeCleche.png') }}" class="w-100"
                                              alt="Imagen logo de la marca">
                                     </picture>
                                 @endif
@@ -103,17 +104,17 @@
                             @if($desayuno->imagen != null && file_exists(public_path('img/reserva' . '/' . $desayuno->imagen)))
                                 <picture class="">
                                     <source media="(min-width: 751px)"
-                                            srcset="{{ asset('img/reserva/' . $desayuno->imagen) }}">
+                                            srcset="{{ url('img/reserva/' . $desayuno->imagen) }}">
                                     <source media="(min-width: 380px)"
-                                            srcset="{{ asset('img/reserva/' . $desayuno->imagen) }}">
-                                    <img src="{{ asset('img/reserva/' . $desayuno->imagen) }}" class="w-100"
+                                            srcset="{{ url('img/reserva/' . $desayuno->imagen) }}">
+                                    <img src="{{ url('img/reserva/' . $desayuno->imagen) }}" class="w-100"
                                          alt="{{ $desayuno->imagen_descripcion }}">
                                 </picture>
                             @else
                                 <picture class="">
-                                    <source media="(min-width: 751px)" srcset="{{ asset('img/cafeCleche.png') }}">
-                                    <source media="(min-width: 380px)" srcset="{{ asset('img/cafeCleche.png') }}">
-                                    <img src="{{ asset('img/cafeCleche.png') }}" class="w-100"
+                                    <source media="(min-width: 751px)" srcset="{{ url('img/cafeCleche.png') }}">
+                                    <source media="(min-width: 380px)" srcset="{{ url('img/cafeCleche.png') }}">
+                                    <img src="{{ url('img/cafeCleche.png') }}" class="w-100"
                                          alt="Imagen logo de la marca">
                                 </picture>
                             @endif
