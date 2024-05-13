@@ -22,10 +22,10 @@ Route::get('/carta/platos', [\App\Http\Controllers\CartaController::class, 'plat
 Route::get('/carta/ensaladas', [\App\Http\Controllers\CartaController::class, 'ensaladas'])->name('ensaladas');
 
 
-Route::get('/admin/mill', [\App\Http\Controllers\AuthController::class, 'login'])->name('login')->middleware(['guest']);
-Route::post('/admin/mill', [\App\Http\Controllers\AuthController::class, 'loginIn'])->name('login.In')->middleware(['guest']);
+Route::get('/admin/mill', [\App\Http\Controllers\AuthController::class, 'login'])->name('login');
+Route::post('/admin/mill', [\App\Http\Controllers\AuthController::class, 'loginIn'])->name('login.In');
 Route::post('/admin/mill/cerrarSession', [\App\Http\Controllers\AuthController::class, 'logout'])->name('logout')->middleware(['auth']);
-Route::get('/admin/auth/recuperar-password', [\App\Http\Controllers\AuthController::class, 'recuperarPassword'])->name('recuperarPassword')->middleware(['guest']);
+Route::get('/admin/auth/recuperar-password', [\App\Http\Controllers\AuthController::class, 'recuperarPassword'])->name('recuperarPassword');
 
 Route::get('/admin/home', [\App\Http\Controllers\AdminController::class, 'home'])->name('admin.home')->middleware(['auth']);
 Route::get('/admin/create', [\App\Http\Controllers\AdminController::class, 'create'])->name('admin.create')->middleware(['auth']);
