@@ -23,13 +23,13 @@
                         <div class="modal-body">
                             <div class="img__productos">
 {{--                                @if($desayuno->imagen != null && Storage::disk('public')->has('img/reserva/' . $desayuno->imagen))--}}
-                                @if($desayuno->imagen != null && file_exists(public_path('img/reserva' . '/' . $desayuno->imagen)))
+                                @if($desayuno->imagen != null && public_path('img' . '/' . $desayuno->imagen))
                                     <picture class="">
                                         <source media="(min-width: 751px)"
-                                                srcset="{{ url('img/reserva/' . $desayuno->imagen) }}">
+                                                srcset="{{ url('img/' . $desayuno->imagen) }}">
                                         <source media="(min-width: 380px)"
-                                                srcset="{{ url('img/reserva/' . $desayuno->imagen) }}">
-                                        <img src="{{ url('img/reserva/' . $desayuno->imagen) }}" class="w-100"
+                                                srcset="{{ url('img/' . $desayuno->imagen) }}">
+                                        <img src="{{ url('img/' . $desayuno->imagen) }}" class="w-100"
                                              alt="{{ $desayuno->imagen_descripcion }}">
                                     </picture>
                                 @else
@@ -65,13 +65,13 @@
                         </div>
                         <div class="modal-body">
                             <div class="img__productos">
-                                @if($desayuno->imagen != null && file_exists(public_path('img/reserva' . '/' . $desayuno->imagen)))
+                                @if($desayuno->imagen != null && public_path('img' . '/' . $desayuno->imagen))
                                     <picture class="">
                                         <source media="(min-width: 751px)"
-                                                srcset="{{ url('img/reserva/' . $desayuno->imagen) }}">
+                                                srcset="{{ url('img/' . $desayuno->imagen) }}">
                                         <source media="(min-width: 380px)"
-                                                srcset="{{ url('img/reserva/' . $desayuno->imagen) }}">
-                                        <img src="{{ url('img/reserva/' . $desayuno->imagen) }}" class="w-100"
+                                                srcset="{{ url('img/' . $desayuno->imagen) }}">
+                                        <img src="{{ url('img/' . $desayuno->imagen) }}" class="w-100"
                                              alt="{{ $desayuno->imagen_descripcion }}">
                                     </picture>
                                 @else
@@ -101,13 +101,13 @@
                 <div class="div__adminProductos shadow mx-1 my-2">
                     <a href="#" class="text-decoration-none text-dark d-flex w-100 " data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $desayuno->producto_id }}">
                         <div class="img__productosAdmin shadow">
-                            @if($desayuno->imagen != null && file_exists(public_path('img/reserva' . '/' . $desayuno->imagen)))
+                            @if($desayuno->imagen != null && public_path('img' . '/' . $desayuno->imagen))
                                 <picture class="">
                                     <source media="(min-width: 751px)"
-                                            srcset="{{ url('img/reserva/' . $desayuno->imagen) }}">
+                                            srcset="{{ url('img/' . $desayuno->imagen) }}">
                                     <source media="(min-width: 380px)"
-                                            srcset="{{ url('img/reserva/' . $desayuno->imagen) }}">
-                                    <img src="{{ url('img/reserva/' . $desayuno->imagen) }}" class="w-100"
+                                            srcset="{{ url('img/' . $desayuno->imagen) }}">
+                                    <img src="{{ url('img/' . $desayuno->imagen) }}" class="w-100"
                                          alt="{{ $desayuno->imagen_descripcion }}">
                                 </picture>
                             @else

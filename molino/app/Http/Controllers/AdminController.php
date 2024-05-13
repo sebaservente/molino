@@ -38,7 +38,7 @@ class AdminController extends Controller
             $nombreImagen = date('YmdHis') . "_" . \Str::slug($data['titulo']) . "." . $imagen->extension();
             $img = $manager->read($imagen);
             $img = $img->resize(500,500);
-            $imagenPath = public_path('img/reserva') . '/' . $nombreImagen;
+            $imagenPath = public_path('./img') . '/' . $nombreImagen;
 
             $img->toPng(320)->save($imagenPath);
 
@@ -73,7 +73,7 @@ class AdminController extends Controller
         $imagenVieja = $productos->imagen;
 
         if ($imagenVieja ?? false){
-            unlink(public_path('img/reserva' . '/' . $imagenVieja));
+            unlink(public_path('./img' . '/' . $imagenVieja));
 
         }
 
@@ -122,13 +122,13 @@ class AdminController extends Controller
             $nombreImagen = date('YmdHis') . "_" . \Str::slug($data['titulo']) . "." . $imagen->extension();
             $img = $manager->read($imagen);
             $img = $img->resize(500,500);
-            $imagenPath = public_path('img/reserva') . '/' . $nombreImagen;
+            $imagenPath = public_path('./img') . '/' . $nombreImagen;
             $img->toPng(320)->save($imagenPath);
             $data['imagen'] = $nombreImagen;
             $imagenVieja = $producto->imagen;
 
             if ($imagenVieja ?? false){
-                unlink(public_path('img/reserva' . '/' . $imagenVieja));
+                unlink(public_path('./img' . '/' . $imagenVieja));
 
             }
         }
