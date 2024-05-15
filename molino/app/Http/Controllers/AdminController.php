@@ -170,7 +170,10 @@ class AdminController extends Controller
 
     public function bebidas()
     {
-        return view('admin.productos.bebidas');
+        $productos = Producto::all();
+        return view('admin.productos.bebidas', [
+            'productos' => $productos
+        ]);
     }
 
     public function ensaladas()

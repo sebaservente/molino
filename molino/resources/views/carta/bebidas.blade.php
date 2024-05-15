@@ -55,31 +55,31 @@
             @if($bebidas->categoria->nombre == 'Bebidas')
                 <div class="productos ">
                     <a href="#" class="text-decoration-none shadow"  data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $bebidas->producto_id }}">
-                        <div class="img__productos">
-                            @if($bebidas->imagen != null && public_path('img/reserva') . '/' . $bebidas->imagen)
-                                <picture class="">
-                                    <source media="(min-width: 751px)"
-                                            srcset="{{ asset('img/reserva/' . $bebidas->imagen) }}">
-                                    <source media="(min-width: 380px)"
-                                            srcset="{{ asset('img/reserva/' . $bebidas->imagen) }}">
-                                    <img src="{{ asset('img/reserva/' . $bebidas->imagen) }}" class="w-100"
-                                         alt="{{ $bebidas->imagen_descripcion }}">
-                                </picture>
-                            @else
-                                <picture class="">
-                                    <source media="(min-width: 751px)" srcset="{{ asset('img/cafeCleche.png') }}">
-                                    <source media="(min-width: 380px)" srcset="{{ asset('img/cafeCleche.png') }}">
-                                    <img src="{{ asset('img/cafeCleche.png') }}" class="w-100"
-                                         alt="Imagen logo de la marca">
-                                </picture>
-                            @endif
-                        </div>
+{{--                        <div class="img__productos">--}}
+{{--                            @if($bebidas->imagen != null && public_path('img/reserva') . '/' . $bebidas->imagen)--}}
+{{--                                <picture class="">--}}
+{{--                                    <source media="(min-width: 751px)"--}}
+{{--                                            srcset="{{ asset('img/reserva/' . $bebidas->imagen) }}">--}}
+{{--                                    <source media="(min-width: 380px)"--}}
+{{--                                            srcset="{{ asset('img/reserva/' . $bebidas->imagen) }}">--}}
+{{--                                    <img src="{{ asset('img/reserva/' . $bebidas->imagen) }}" class="w-100"--}}
+{{--                                         alt="{{ $bebidas->imagen_descripcion }}">--}}
+{{--                                </picture>--}}
+{{--                            @else--}}
+{{--                                <picture class="">--}}
+{{--                                    <source media="(min-width: 751px)" srcset="{{ asset('img/cafeCleche.png') }}">--}}
+{{--                                    <source media="(min-width: 380px)" srcset="{{ asset('img/cafeCleche.png') }}">--}}
+{{--                                    <img src="{{ asset('img/cafeCleche.png') }}" class="w-100"--}}
+{{--                                         alt="Imagen logo de la marca">--}}
+{{--                                </picture>--}}
+{{--                            @endif--}}
+{{--                        </div>--}}
                         <div class="datos__productos">
-                            <div class="div__datos">
+                            <div class="div__datos w-75">
                                 <p class="datos__parrafo">{{ $bebidas->titulo }}</p>
                                 <p class="datos__descripcion">{{ $bebidas->descripcion }}</p>
                             </div>
-                            <p class="fw-bold text-dark">$ <span> {{ $bebidas->precio }}</span></p>
+                            <p class="fw-bold text-dark parrafoPrecio">$ <span> {{ $bebidas->precio }}</span></p>
                         </div>
                     </a>
                 </div>
