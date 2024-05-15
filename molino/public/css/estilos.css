@@ -28,9 +28,6 @@
 .fontSize1_3 {
     font-size: 1.3rem;
 }
-.fontSize1_5 {
-    font-size: 1.5rem;
-}
 .fontSizePequeño {
     font-size: .7rem;
 }
@@ -97,11 +94,13 @@ textarea {
 
 }
 .img__productos {
-    width: 6rem;
+    width: 9rem;
     margin: auto;
+    border: 2px solid #dc2626;
+    border-radius: 50%;
 }
 .img__productosHome {
-        width: 6rem;
+        width: 15%;
         border-radius: 50%;
         margin: auto;
         padding: .5rem;
@@ -123,24 +122,8 @@ textarea {
     width: 95%;
 }
 .datos__productos {
-    width: 100%;
+    width: 90%;
     padding-left: 1rem;
-    display: flex;
-}
-.parrafoPrecio {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-}
-.divModalMill {
-    display: flex;
-    background-color: #edf2f4;
-    border-radius: 10px;
-    max-width: 300px;
-    flex-wrap: wrap;
-    margin: 3rem auto;
-    padding: 1rem;
 }
 .datos__parrafo {
     white-space: nowrap;
@@ -162,10 +145,7 @@ textarea {
     padding-right: 1rem;
 }
 /*--------------FIN DE PRODUCTOS------------*/
-.menuHome {
-    width: 90%;
-    margin: auto;
-}
+
 /*-------------ADMIN PRODUCTOS----------------*/
 .div__productos {
     width: 100%;
