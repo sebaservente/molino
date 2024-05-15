@@ -94,8 +94,10 @@ textarea {
 
 }
 .img__productos {
-    width: 6rem;
+    width: 9rem;
     margin: auto;
+    border: 2px solid #dc2626;
+    border-radius: 50%;
 }
 .img__productosHome {
         width: 15%;
@@ -120,7 +122,7 @@ textarea {
     width: 95%;
 }
 .datos__productos {
-    width: 65%;
+    width: 90%;
     padding-left: 1rem;
 }
 .datos__parrafo {

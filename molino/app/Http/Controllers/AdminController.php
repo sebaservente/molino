@@ -157,7 +157,7 @@ class AdminController extends Controller
 
     public function desayuno()
     {
-        $productos = Producto::all();
+        $productos = Producto::with('categoria')->get();
         return view('admin.productos.desayuno', [
             'productos' => $productos
         ]);
