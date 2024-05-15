@@ -165,12 +165,15 @@ class AdminController extends Controller
 
     public function cafeteria()
     {
-        return view('admin.productos.cafeteria');
+        $productos = Producto::with('categoria')->get();
+        return view('admin.productos.cafeteria', [
+            'productos' => $productos
+        ]);
     }
 
     public function bebidas()
     {
-        $productos = Producto::all();
+        $productos = Producto::with('categoria')->get();
         return view('admin.productos.bebidas', [
             'productos' => $productos
         ]);
@@ -178,11 +181,17 @@ class AdminController extends Controller
 
     public function ensaladas()
     {
-        return view('admin.productos.ensaladas');
+        $productos = Producto::with('categoria')->get();
+        return view('admin.productos.ensaladas', [
+            'productos' => $productos
+        ]);
     }
 
     public function platos()
     {
-        return view('admin.productos.platos');
+        $productos = Producto::with('categoria')->get();
+        return view('admin.productos.platos', [
+            'productos' => $productos
+        ]);
     }
 }

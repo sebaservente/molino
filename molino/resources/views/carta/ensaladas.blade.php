@@ -10,14 +10,14 @@
 @section('main')
 
     <h1 class="text-center my-3 ">Ensaladas</h1>
-    <div class="img__productos shadow">
+    {{--<div class="img__productos shadow">
         <picture class="">
             <source media="(min-width: 751px)" srcset="{{ asset('img/cafeCleche.png') }}">
             <source media="(min-width: 380px)" srcset="{{ asset('img/cafeCleche.png') }}">
             <img src="{{ asset('img/cafeCleche.png') }}" class="w-100"
                  alt="Imagen logo de la marca">
         </picture>
-    </div>
+    </div>--}}
     <div class="div__productos">
         @foreach($productos as $ensaladas)
             {{-- todo Ventana Modal : Luego Hacer un componente--}}
@@ -82,11 +82,11 @@
                             @endif
                         </div>--}}
                         <div class="datos__productos">
-                            <div class="div__datos">
+                            <div class="div__datos w-75">
                                 <p class="datos__parrafo">{{ $ensaladas->titulo }}</p>
                                 <p class="datos__descripcion">{{ $ensaladas->descripcion }}</p>
                             </div>
-                            <p class="fw-bold  text-secondary">Precio:  <span class="text-dark">$ {{ $ensaladas->precio }}</span></p>
+                            <p class="fw-bold text-dark parrafoPrecio">$ <span> {{ $ensaladas->precio }}</span></p>
                         </div>
                     </a>
                 </div>

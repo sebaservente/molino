@@ -35,9 +35,9 @@
             <h2 class="">Mill</h2>
             <h3 class="">Raul scalabrini ortiz 801</h3>
             <h4 class=""><span>Horarios</span></h4>
-            <p class=""><span>Lunes a viernes</span>8:00hs a 20:00hs</p>
-            <p class=""><span>Sabados</span>10:00hs a 20:00hs</p>
-            <p class=""><span>Domingos</span>Cerrados</p>
+            <p class="fw-bold"><span>Lunes a viernes</span> 8:00hs a 20:00hs</p>
+            <p class="fw-bold"><span>Sabados</span> 10:00hs a 20:00hs</p>
+            <p class="fw-bold"><span>Domingos</span> Cerrados</p>
         </div>
     </div>
 @endsection
