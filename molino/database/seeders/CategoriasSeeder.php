@@ -50,6 +50,20 @@ class CategoriasSeeder extends Seeder
             ],
             [
                 'categoria_id' => 6,
+                'nombre' => 'Licuados',
+                'abreviatura' => 'DIA',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'categoria_id' => 7,
+                'nombre' => 'Postres',
+                'abreviatura' => 'DIA',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'categoria_id' => 8,
                 'nombre' => 'Plato del Día',
                 'abreviatura' => 'DIA',
                 'created_at' => now(),

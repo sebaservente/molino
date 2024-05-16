@@ -194,4 +194,11 @@ class AdminController extends Controller
             'productos' => $productos
         ]);
     }
+    public function licuados()
+    {
+        $productos = Producto::with('categoria')->get();
+        return view('admin.productos.licuados', [
+            'productos' => $productos
+        ]);
+    }
 }

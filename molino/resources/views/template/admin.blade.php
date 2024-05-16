@@ -166,7 +166,8 @@
                 <div class="px-1 py-1"><a href="{{ route('admin.platos') }}" class="btn btn-dark shadow">PLATOS</a></div>
                 <div class="px-1 py-1"><a href="{{ route('admin.ensaladas') }}" class="btn btn-dark shadow">ENSALADAS</a></div>
                 <div class="px-1 py-1"><a href="{{ route('admin.bebidas') }}" class="btn btn-dark shadow">BEBIDAS</a></div>
-                <div class="px-1 py-1"><a href="{{ route('admin.home') }}" class="btn btn-secondary  shadow">CREAR PLATO DEL DÍA</a></div>
+                <div class="px-1 py-1"><a href="{{ route('admin.licuados') }}" class="btn btn-dark shadow">LICUADOS</a></div>
+                <div class="px-1 py-1"><a href="{{ route('admin.create') }}" class="btn btn-secondary  shadow">CREAR PRODUCTO</a></div>
             </div>
 
 
