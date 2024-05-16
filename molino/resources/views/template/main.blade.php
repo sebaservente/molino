@@ -130,10 +130,9 @@
                     <li class="my-2"><a href="{{ route('ensaladas')  }}" class="text-decoration-none text-dark"><span class="px-2 py-3 uppercase"><i class="bi bi-cup-straw px-2 tress"></i></span>Ensaladas</a>
                     <li class="my-2"><a href="{{ route('platos') }}" class="text-decoration-none text-dark"><span class="px-2 py-3 uppercase"><i class="bi bi-cc-circle px-2 cincos"></i></span>Platos</a>
                     <li class="my-2"><a href="{{ route('bebidas') }}" class="text-decoration-none text-dark"><span class="px-2 py-3 uppercase"><i class="bi bi-cc-circle px-2 cincos"></i></span>Bebidas</a>
-                    <li class="my-2"><a href="" class="text-decoration-none text-dark"><span class="px-2 py-3 uppercase"><i class="bi bi-cc-circle px-2 cincos"></i></span>Licuados</a>
-                    <li class="my-2"><a href="" class="text-decoration-none text-dark"><span class="px-2 py-3 uppercase"><i class="bi bi-cc-circle px-2 cincos"></i></span>Postres</a>
-                    {{--<li><p class="Maña__uno cuatro w-100 py-3 uppercase"><span class="px-2"><i class="bi bi-cc-circle px-2 cuatros"></i></span>Platos</p></li>--}}
-                    {{--<li><p class="Maña__uno cinco w-100 py-3 uppercase"><span class="px-2"><i class="bi bi-cc-circle px-2 cincos"></i></span>Ensaladas</p></li>--}}
+                    <li class="my-2"><a href="{{ route('licuados') }}" class="text-decoration-none text-dark"><span class="px-2 py-3 uppercase"><i class="bi bi-cc-circle px-2 cincos"></i></span>Licuados</a>
+                    <li class="my-2"><a href="{{ route('postres') }}" class="text-decoration-none text-dark"><span class="px-2 py-3 uppercase"><i class="bi bi-cc-circle px-2 cincos"></i></span>Postres</a>
+                    <li class="my-2"><a href="{{ route('promos') }}" class="text-decoration-none text-dark"><span class="px-2 py-3 uppercase"><i class="bi bi-cc-circle px-2 cincos"></i></span>Promos</a>
                     <li><hr class="dropdown-divider"></li>
                     <li class="my-2"><a href="" class="text-decoration-none text-dark"><span class="px-2 py-3 uppercase"><i class="bi bi-cc-circle px-2 cincos"></i></span>Plato del Día</a>
                     <li><hr class="dropdown-divider"></li>

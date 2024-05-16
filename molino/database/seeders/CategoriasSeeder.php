@@ -69,6 +69,13 @@ class CategoriasSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now()
             ],
+            [
+                'categoria_id' => 9,
+                'nombre' => 'Promos',
+                'abreviatura' => 'DIA',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
         ]);
     }
 }

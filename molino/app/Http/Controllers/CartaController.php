@@ -42,10 +42,26 @@ class CartaController extends Controller
             'productos' => $productos,
         ]);
     }
+
     public function licuados()
     {
         $productos = Producto::with('categoria')->get();
         return view('carta.licuados',[
+            'productos' => $productos,
+        ]);
+    }
+    public function postres()
+    {
+        $productos = Producto::with('categoria')->get();
+        return view('carta.postres',[
+            'productos' => $productos,
+        ]);
+    }
+
+    public function promos()
+    {
+        $productos = Producto::with('categoria')->get();
+        return view('carta.promos',[
             'productos' => $productos,
         ]);
     }

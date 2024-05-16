@@ -21,6 +21,8 @@ Route::get('/carta/bebidas', [\App\Http\Controllers\CartaController::class, 'beb
 Route::get('/carta/platos', [\App\Http\Controllers\CartaController::class, 'platos'])->name('platos');
 Route::get('/carta/ensaladas', [\App\Http\Controllers\CartaController::class, 'ensaladas'])->name('ensaladas');
 Route::get('/carta/licuados', [\App\Http\Controllers\CartaController::class, 'licuados'])->name('licuados');
+Route::get('/carta/postres', [\App\Http\Controllers\CartaController::class, 'postres'])->name('postres');
+Route::get('/carta/promos', [\App\Http\Controllers\CartaController::class, 'promos'])->name('promos');
 
 
 Route::get('/admin/mill', [\App\Http\Controllers\AuthController::class, 'login'])->name('login');
@@ -43,6 +45,7 @@ Route::get('/admin/productos/ensaladas', [\App\Http\Controllers\AdminController:
 Route::get('/admin/productos/platos', [\App\Http\Controllers\AdminController::class, 'platos'])->name('admin.platos')->middleware(['auth']);
 Route::get('/admin/productos/licuados', [\App\Http\Controllers\AdminController::class, 'licuados'])->name('admin.licuados')->middleware(['auth']);
 Route::get('/admin/productos/postres', [\App\Http\Controllers\AdminController::class, 'postres'])->name('admin.postres')->middleware(['auth']);
+Route::get('/admin/productos/promos', [\App\Http\Controllers\AdminController::class, 'promos'])->name('admin.promos')->middleware(['auth']);
 
 
 

@@ -208,4 +208,11 @@ class AdminController extends Controller
             'productos' => $productos
         ]);
     }
+    public function promos()
+    {
+        $productos = Producto::with('categoria')->get();
+        return view('admin.productos.promos', [
+            'productos' => $productos
+        ]);
+    }
 }
