@@ -18,104 +18,46 @@
             <source media="(min-width: 380px)" srcset="<?= url('img/molino.png'); ?>">
             <img src="<?= url('img/molino.png'); ?>" class="rounded rounded-full m-auto" alt="Mi imagen responsive">
         </picture>
-        {{--<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse flex-row-reverse p-1" id="navbarNav">
-            <ul class="navbar-nav ">
-
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ route('home', ['texto' => 'Bienvenidos']) }}">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('nosotros', ['texto' => 'Conocenos']) }}">Nosotros</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="--}}{{--{{ route('contacto') }}--}}{{--">Contacto</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('panel') }}">Admin</a>
-                </li>
-                @auth
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Tienda
-                        </a>
-                        <ul class="dropdown-menu">
-                            --}}{{-- <li><a class="dropdown-item" href="#">Hoteles (Proximamente)</a></li>
-                             <li><a class="dropdown-item" href="{{ route('tienda.pases') }}">Pases</a></li>
-                             <li class="nav-item">
-                                 <a class="dropdown-item" href="{{ route('equipos') }}" >Equipos</a>
-                             </li>
-                             <li><hr class="dropdown-divider"></li>--}}{{--
-                            --}}{{-- <li class="nav-item">
-                                 <a class="dropdown-item" href="{{ route('carrito', ['user' => Auth::id()]) }}" >Mi Carrito
-                                     --}}{{----}}{{--@if(Auth::user())
-                                         <i class="bi bi-cart-plus px-1"></i>
-                                         <span class=""> {{ \Auth::user()->carrito }}</span>
-                                     @endif--}}{{----}}{{--
-                                 </a>
-                             </li>--}}{{--
-                        </ul>
-                    </li>
-                    <li class="nav-item d-flex align-items-center li__main">
-                        <a class="nav-link"
-                           href="--}}{{--{{ route('perfil', ['id' => Auth::user()->usuario_id]) }}--}}{{--" >Mi Perfil
-                        </a>
-                    </li>
-                    --}}{{--@if(Auth::user()->email === "admin@admin.com.ar")
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('admin.tienda') }}">Admin</a>
-                        </li>
-                    @endif--}}{{--
-                    <li class="nav-item">
-                        <form action="--}}{{--{{route('auth.logout')}}--}}{{--" method="post">
-                            @csrf
-                            <button type="submit" class="btn nav-link">Cerrar Sesion</button>
-                        </form>
-                    </li>
-
-                @elseguest
-                    <li class="nav-item">
-                        <a class="nav-link" href="--}}{{--{{ route('auth.login') }}--}}{{--">Iniciar Sesion</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="--}}{{--{{ route('auth.registrarse') }}--}}{{--">Registrarse</a>
-                    </li>
-
-                @endauth
-            </ul>
-        </div>--}}
     </div>
-
 </nav>
-
 <main>
-    {{--@if(Session::has('status.message'))
-        <div class="msgAlert">{!!  Session::get('status.message') !!} </div>
-    @endif--}}
-    {{-- <div class="d-flex justify-content-end py-1 m-auto w-100 bg-warning">
-        @auth()
-            <p class="text-center text-dark parrafo__perfil px-1"><b>{{ Auth::user()->email }} </b></p>
-
-            @if(Auth::user()->imagen != null && public_path('img/equipos') . '/' . Auth::user()->imagen)
-                <picture class="picture__imgPerfil">
-                    <source media="(min-width: 751px)" srcset="{{ asset('img/equipos/' . Auth::user()->imagen) }}">
-                    <source media="(min-width: 380px)" srcset="{{ asset('img/equipos/' . Auth::user()->imagen) }}">
-                    <img src="{{ asset('img/equipos/' . Auth::user()->imagen) }}"  class="rounded-full m-auto img__perfil " alt="foto de perfil usuario">
-                </picture>
-            @else
-                <picture class="picture__imgPerfil">
-                    <source media="(min-width: 751px)" srcset="{{ asset('img/botas-burton-motox150.jpg') }}">
-                    <source media="(min-width: 380px)" srcset="{{ asset('img/botas-burton-motox150.jpg') }}">
-                    <img src="{{ asset('img/botas-burton-motox150.jpg') }}" class="rounded-full m-auto img__perfil"  alt="Imagen logo de la marca">
-                </picture>
-            @endif
-        @elseguest
-            --}}{{--<p class="w-100 text-center  text-dark color__menu m-0">MERCADO PAGO - <span title="fuera de servicios" class="text-warning cursor-not-allowed">VER MAS</span> </p>--}}{{--
-        @endauth
-    </div>--}}
     <div class="container-fluid bg-dark">
+        <div class="modal fade" id="staticBackdrop{{--{{ $postres->producto_id }}--}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content text-center">
+                    <div class="modal-header">
+                        <h2 class="modal-title textBold8" id="staticBackdropLabel">Plato del dia</h2>
+                        {{--<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>--}}
+                    </div>
+                    <div class="modal-body">
+                        {{--<div class="img__productos">
+                            @if($postres->imagen != null && public_path('img/reserva') . '/' . $postres->imagen)
+                                <picture class="">
+                                    <source media="(min-width: 751px)"
+                                            srcset="{{ asset('img/reserva/' . $postres->imagen) }}">
+                                    <source media="(min-width: 380px)"
+                                            srcset="{{ asset('img/reserva/' . $postres->imagen) }}">
+                                    <img src="{{ asset('img/reserva/' . $postres->imagen) }}" class="w-100"
+                                         alt="{{ $postres->imagen_descripcion }}">
+                                </picture>
+                            @else
+                                <picture class="">
+                                    <source media="(min-width: 751px)" srcset="{{ asset('img/cafeCleche.png') }}">
+                                    <source media="(min-width: 380px)" srcset="{{ asset('img/cafeCleche.png') }}">
+                                    <img src="{{ asset('img/cafeCleche.png') }}" class="w-100"
+                                         alt="Imagen logo de la marca">
+                                </picture>
+                            @endif
+                        </div>--}}
+                        <p class="">{{--{{ $postres->descripcion }}--}}</p>
+                        <p class="textBold8 fontSize">Precio: $ <span class="textBold4">{{--{{ $postres->precio }}--}}</span></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <ul class="navbar-nav me-auto my-lg-0 menu text-danger" style="--bs-scroll-height: 20rem">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle mx-1 menu__ancla" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -134,7 +76,7 @@
                     <li class="my-2"><a href="{{ route('postres') }}" class="text-decoration-none text-dark"><span class="px-2 py-3 uppercase"><i class="bi bi-cc-circle px-2 cincos"></i></span>Postres</a>
                     <li class="my-2"><a href="{{ route('promos') }}" class="text-decoration-none text-dark"><span class="px-2 py-3 uppercase"><i class="bi bi-cc-circle px-2 cincos"></i></span>Promos</a>
                     <li><hr class="dropdown-divider"></li>
-                    <li class="my-2"><a href="" class="text-decoration-none text-dark"><span class="px-2 py-3 uppercase"><i class="bi bi-cc-circle px-2 cincos"></i></span>Plato del Día</a>
+                    <li class="my-2"><a href="" class="text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop{{--{{ $postres->producto_id }}--}}" ><span class="px-2 py-3 uppercase" ><i class="bi bi-cc-circle px-2 cincos" ></i></span>Plato del Día</a>
                     <li><hr class="dropdown-divider"></li>
                     <li class="my-2"><a href="{{ route('index') }}" class="text-decoration-none text-dark"><span class="px-2 py-3 uppercase"><i class="bi bi-cc-circle px-2 cincos"></i></span>Inicio</a>
                 </ul>

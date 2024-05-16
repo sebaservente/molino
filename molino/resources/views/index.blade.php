@@ -24,7 +24,7 @@
             <div class="my-1 w-100 border"><a href="" class="btn btn-none w-100 fontSize1_5" >Postres</a></div>
         </div>
         <div class="my-1 w-100 border"><a href="{{ 'promos' }}" class="btn btn-none w-100 fontSize1_5" >Promos</a></div>
-        <div class="my-1 w-100 border"><a href="" class="btn btn-none w-100 fontSize1_5" >Platos del Día</a></div>
+        <div class="my-1 w-100 border"><a href="" class="btn btn-none w-100 fontSize1_5" data-bs-toggle="modal" data-bs-target="#staticBackdrop{{--{{ $postres->producto_id }}--}}" >Platos del Día</a></div>
     </div>
     <div class="divModalMill drop-shadow-lg">
         <picture class="picture__img w-10">
