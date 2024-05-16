@@ -42,6 +42,7 @@ Route::get('/admin/productos/bebidas', [\App\Http\Controllers\AdminController::c
 Route::get('/admin/productos/ensaladas', [\App\Http\Controllers\AdminController::class, 'ensaladas'])->name('admin.ensaladas')->middleware(['auth']);
 Route::get('/admin/productos/platos', [\App\Http\Controllers\AdminController::class, 'platos'])->name('admin.platos')->middleware(['auth']);
 Route::get('/admin/productos/licuados', [\App\Http\Controllers\AdminController::class, 'licuados'])->name('admin.licuados')->middleware(['auth']);
+Route::get('/admin/productos/postres', [\App\Http\Controllers\AdminController::class, 'postres'])->name('admin.postres')->middleware(['auth']);
 
 
 

@@ -201,4 +201,11 @@ class AdminController extends Controller
             'productos' => $productos
         ]);
     }
+    public function postres()
+    {
+        $productos = Producto::with('categoria')->get();
+        return view('admin.productos.postres', [
+            'productos' => $productos
+        ]);
+    }
 }
