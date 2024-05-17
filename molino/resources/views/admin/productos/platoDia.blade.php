@@ -43,7 +43,16 @@
                             </div>
                             <p class="">{{ $platoDia->descripcion }}</p>
                             <p class="textBold8 fontSize">Precio: $ <span class="textBold4">{{ $platoDia->precio }}</span></p>
+                            @if($platoDia->descripcion_dos)
+                                <div class="">
+                                    <p class="">{{ $platoDia->descripcion_dos }}</p>
+                                    <p class="textBold8">Precio: $ <span class="textBold4">{{ $platoDia->precio_dos }}</span></p>
+                                </div>
+                            @endif
+
+
                         </div>
+
                         <div class="modal-footer">
                             <div class="btn__productosAdmin">
                                     <div class="hola px-2"><a href="{{ route('admin.upload' ,['id' => $platoDia->producto_id]) }}" class="text-decoration-none text-dark "><i class="bi bi-pencil-square px-1"></i>Actualizar</a></div>

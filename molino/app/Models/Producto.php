@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- *
+ * 
  *
  * @property int $producto_id
  * @property string $titulo
@@ -33,6 +33,14 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $cate
  * @method static \Illuminate\Database\Eloquent\Builder|Producto whereCate($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Producto whereCategoriaId($value)
+ * @property string|null $detalle_uno
+ * @property string|null $detalle_dos
+ * @method static \Illuminate\Database\Eloquent\Builder|Producto whereDetalleDos($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Producto whereDetalleUno($value)
+ * @property int|null $precio_dos
+ * @property string|null $descripcion_dos
+ * @method static \Illuminate\Database\Eloquent\Builder|Producto whereDescripcionDos($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Producto wherePrecioDos($value)
  * @mixin \Eloquent
  */
 class Producto extends Model
@@ -40,7 +48,7 @@ class Producto extends Model
     /*use HasFactory;*/
     protected $table = 'productos';
     protected $primaryKey = 'producto_id';
-    protected $fillable = ['categoria_id','titulo','precio','descripcion','imagen','imagen_descripcion'];
+    protected $fillable = ['categoria_id','titulo','precio','descripcion','precio_dos','descripcion_dos','imagen','imagen_descripcion'];
 
     public const VALIDAR_CREAR_PRODUCTOS = [
         'titulo' => 'required|min:2',

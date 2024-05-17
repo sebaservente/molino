@@ -20,22 +20,13 @@ class ProductosSeeder extends Seeder
               'titulo' => 'Cafe con leche + tostadas, queso y mermelada',
               'precio' => 2000,
               'descripcion' => 'Cafe con leche + tostadas, queso y mermelada',
+              'precio_dos' => null,
+              'descripcion_dos' => null,
               'imagen' => null,
               'imagen_descripcion' => null,
               'created_at' => now(),
               'updated_at' => now(),
             ],
-            [
-                'producto_id' => 2,
-                'categoria_id' => 2,
-                'titulo' => 'Cafe con Media lunas',
-                'precio' => 1600,
-                'descripcion' => 'Cafe con leche + dos medialunas',
-                'imagen' => null,
-                'imagen_descripcion' => null,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ]
         ]);
     }
 }
