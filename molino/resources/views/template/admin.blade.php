@@ -160,7 +160,7 @@
             </ul>
         </div>
         <div class="admin__menu">
-            <div class="menu__DelAdmin">
+           <div class="menu__DelAdmin">
                 <div class="px-1 py-1"><a href="{{ route('admin.desayuno') }}" class="btn btn-dark shadow">DESAYUNOS Y MERIENDAS</a></div>
                 <div class="px-1 py-1"><a href="{{ route('admin.cafeteria') }}" class="btn btn-dark shadow">CAFETERIA</a></div>
                 <div class="px-1 py-1"><a href="{{ route('admin.platos') }}" class="btn btn-dark shadow">PLATOS</a></div>
@@ -196,7 +196,7 @@
     <p>Mill &copy; 2024</p>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-@stack('js')
+
 </body>
 </html>
 

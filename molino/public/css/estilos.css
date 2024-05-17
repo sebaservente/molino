@@ -87,13 +87,13 @@ textarea {
     background: #edf2f4;
     width: 100%;
     max-width: 400px;
-    /* max-width: 400px;
-     height: 6rem;
-     display: flex;
-     flex-wrap: wrap;
-     justify-content: center;
-     border-radius: 10px;
-     */
+   /* max-width: 400px;
+    height: 6rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 10px;
+    */
 
 }
 .img__productos {
@@ -101,11 +101,11 @@ textarea {
     margin: auto;
 }
 .img__productosHome {
-    width: 6rem;
-    border-radius: 50%;
-    margin: auto;
-    padding: .5rem;
-    border: 1px solid red;
+        width: 6rem;
+        border-radius: 50%;
+        margin: auto;
+        padding: .5rem;
+        border: 1px solid red;
 }
 .img__productosAdmin {
     width: 4rem;
@@ -202,8 +202,8 @@ textarea {
     font-size: 0.9rem;
 }
 .img__productosAdmin {
-    /*  grid-column: 1 / 2;
-      grid-row: 1;*/
+  /*  grid-column: 1 / 2;
+    grid-row: 1;*/
 }
 .datos__productosAdmin {
     width: 80%;
@@ -212,8 +212,8 @@ textarea {
     align-items: center;
 }
 .btn__productosAdmin {
-    /* grid-column: 2;
-     grid-row: 1;*/
+   /* grid-column: 2;
+    grid-row: 1;*/
 
     margin: auto;
     display: grid;

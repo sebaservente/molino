@@ -100,7 +100,7 @@
             @if($platoDia->categoria->nombre == 'Plato del Día')
                 <div class="div__adminProductos shadow mx-1 my-2">
                     <a href="#" class="text-decoration-none text-dark d-flex w-100 " data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $platoDia->producto_id }}">
-                        <div class="img__productosAdmin shadow">
+                        <div class="img__productosAdmin ">
                             @if($platoDia->imagen != null && public_path('img/reserva' . '/' .$platoDia->imagen))
                                 <picture class="">
                                     <source media="(min-width: 751px)"

@@ -38,7 +38,7 @@ class AdminController extends Controller
             $nombreImagen = date('YmdHis') . "_" . \Str::slug($data['titulo']) . "." . $imagen->extension();
             $img = $manager->read($imagen);
             $img = $img->resize(500,500);
-            $imagenPath = public_path('img/reserva') . '/' . $nombreImagen;
+            $imagenPath = 'img' . '/' . $nombreImagen;
 
             $img->toPng(320)->save($imagenPath);
 
@@ -73,7 +73,7 @@ class AdminController extends Controller
         $imagenVieja = $productos->imagen;
 
         if ($imagenVieja ?? false){
-            unlink(public_path('img/reserva' . '/' . $imagenVieja));
+            unlink('img' . '/' . $imagenVieja);
 
         }
 
@@ -122,13 +122,13 @@ class AdminController extends Controller
             $nombreImagen = date('YmdHis') . "_" . \Str::slug($data['titulo']) . "." . $imagen->extension();
             $img = $manager->read($imagen);
             $img = $img->resize(500,500);
-            $imagenPath = public_path('img/reserva') . '/' . $nombreImagen;
+            $imagenPath = 'img' . '/' . $nombreImagen;
             $img->toPng(320)->save($imagenPath);
             $data['imagen'] = $nombreImagen;
             $imagenVieja = $producto->imagen;
 
             if ($imagenVieja ?? false){
-                unlink(public_path('img/reserva' . '/' . $imagenVieja));
+                unlink('img' . '/' . $imagenVieja);
 
             }
         }
@@ -194,6 +194,7 @@ class AdminController extends Controller
             'productos' => $productos
         ]);
     }
+    
     public function licuados()
     {
         $productos = Producto::with('categoria')->get();
@@ -201,21 +202,21 @@ class AdminController extends Controller
             'productos' => $productos
         ]);
     }
-    public function postres()
+     public function postres()
     {
         $productos = Producto::with('categoria')->get();
         return view('admin.productos.postres', [
             'productos' => $productos
         ]);
     }
-    public function promos()
+      public function promos()
     {
         $productos = Producto::with('categoria')->get();
         return view('admin.productos.promos', [
             'productos' => $productos
         ]);
     }
-    public function platoDia()
+     public function platoDia()
     {
         $productos = Producto::with('categoria')->get();
         return view('admin.productos.platoDia', [

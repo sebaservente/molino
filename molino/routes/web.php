@@ -23,13 +23,12 @@ Route::get('/carta/ensaladas', [\App\Http\Controllers\CartaController::class, 'e
 Route::get('/carta/licuados', [\App\Http\Controllers\CartaController::class, 'licuados'])->name('licuados');
 Route::get('/carta/postres', [\App\Http\Controllers\CartaController::class, 'postres'])->name('postres');
 Route::get('/carta/promos', [\App\Http\Controllers\CartaController::class, 'promos'])->name('promos');
-Route::get('/carta/platoDia', [\App\Http\Controllers\CartaController::class, 'platoDia'])->name('platoDia');
 
 
-Route::get('/admin/mill', [\App\Http\Controllers\AuthController::class, 'login'])->name('login');
-Route::post('/admin/mill', [\App\Http\Controllers\AuthController::class, 'loginIn'])->name('login.In');
+Route::get('/admin/mill', [\App\Http\Controllers\AuthController::class, 'login'])->name('login')->middleware(['guest']);
+Route::post('/admin/mill', [\App\Http\Controllers\AuthController::class, 'loginIn'])->name('login.In')->middleware(['guest']);
 Route::post('/admin/mill/cerrarSession', [\App\Http\Controllers\AuthController::class, 'logout'])->name('logout')->middleware(['auth']);
-Route::get('/admin/auth/recuperar-password', [\App\Http\Controllers\AuthController::class, 'recuperarPassword'])->name('recuperarPassword');
+Route::get('/admin/auth/recuperar-password', [\App\Http\Controllers\AuthController::class, 'recuperarPassword'])->name('recuperarPassword')->middleware(['guest']);
 
 Route::get('/admin/home', [\App\Http\Controllers\AdminController::class, 'home'])->name('admin.home')->middleware(['auth']);
 Route::get('/admin/create', [\App\Http\Controllers\AdminController::class, 'create'])->name('admin.create')->middleware(['auth']);
@@ -48,7 +47,6 @@ Route::get('/admin/productos/licuados', [\App\Http\Controllers\AdminController::
 Route::get('/admin/productos/postres', [\App\Http\Controllers\AdminController::class, 'postres'])->name('admin.postres')->middleware(['auth']);
 Route::get('/admin/productos/promos', [\App\Http\Controllers\AdminController::class, 'promos'])->name('admin.promos')->middleware(['auth']);
 Route::get('/admin/productos/platoDia', [\App\Http\Controllers\AdminController::class, 'platoDia'])->name('admin.platoDia')->middleware(['auth']);
-
 
 
 

@@ -15,7 +15,6 @@
         <div class="my-5">
             <div class="d-flex justify-content-center">
                 <h2 class="h2__crearProducto">Crear Producto</h2>
-                <a href="#" class="btn btn-danger shadow px-3">Cerrar Sesión</a>
             </div>
             <div class="div__formCrearProducto ">
                 <form action="{{ route('admin.create.confirm') }}" method="post" enctype="multipart/form-data" class="p-2 rounded rounded-lg shadow">

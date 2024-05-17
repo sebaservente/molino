@@ -42,7 +42,7 @@ class CartaController extends Controller
             'productos' => $productos,
         ]);
     }
-
+    
     public function licuados()
     {
         $productos = Producto::with('categoria')->get();
@@ -50,25 +50,18 @@ class CartaController extends Controller
             'productos' => $productos,
         ]);
     }
-    public function postres()
+     public function postres()
     {
         $productos = Producto::with('categoria')->get();
         return view('carta.postres',[
             'productos' => $productos,
         ]);
     }
-
-    public function promos()
+    
+     public function promos()
     {
         $productos = Producto::with('categoria')->get();
         return view('carta.promos',[
-            'productos' => $productos,
-        ]);
-    }
-    public function platoDia()
-    {
-        $productos = Producto::with('categoria')->get();
-        return view('carta.platoDia',[
             'productos' => $productos,
         ]);
     }

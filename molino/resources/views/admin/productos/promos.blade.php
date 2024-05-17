@@ -46,7 +46,7 @@
                         </div>
                         <div class="modal-footer">
                             <div class="btn__productosAdmin">
-                                    <div class="hola px-2"><a href="{{ route('admin.upload' ,['id' => $promos->producto_id]) }}" class="text-decoration-none text-dark "><i class="bi bi-pencil-square px-1"></i>Editar</a></div>
+                                    <div class="hola px-2"><a href="{{ route('admin.upload' ,['id' => $promos->producto_id]) }}" class="text-decoration-none text-dark "><i class="bi bi-pencil-square px-1"></i>Actualizar</a></div>
                                     <div class="btnEliminarAdmin px-2">
                                         <a href="#" class="text-decoration-none text-dark "  data-bs-toggle="modal" data-bs-target="#staticBackdrop2{{ $promos->producto_id }}"><i class="bi bi-trash px-1"></i>Eliminar</a>
                                     </div>
@@ -99,8 +99,8 @@
 
             @if($promos->categoria->nombre == 'Promos')
                 <div class="div__adminProductos shadow mx-1 my-2">
-                    <a href="#" class="text-decoration-none text-dark d-flex w-100 " data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $romos->producto_id }}">
-                        <div class="img__productosAdmin shadow">
+                    <a href="#" class="text-decoration-none text-dark d-flex w-100 " data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $promos->producto_id }}">
+                        <div class="img__productosAdmin ">
                             @if($promos->imagen != null && public_path('img/reserva' . '/' . $promos->imagen))
                                 <picture class="">
                                     <source media="(min-width: 751px)"

@@ -75,16 +75,13 @@ class User extends Authenticatable
     ];
 
     public const VALIDAR_INICIO = [
-        'email' => 'required|email|exists:users',
-        'password' => 'required|min:6',
+        'email' => 'required',
+        'password' => 'required',
 
     ];
     public const MENSAJES_INICIO = [
         'email.required' => 'El email es obligatorio.',
-        'email.email' => 'El email debe ser valido.',
-        'email.exists'   => 'El email no esta registrado',
         'password.required' => 'La Contraseña es obligatoria.',
-        'password.min' => 'La contraseña debe tener al menos 6 caracteres.',
 
     ];
 }

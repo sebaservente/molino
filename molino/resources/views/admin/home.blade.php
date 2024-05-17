@@ -21,9 +21,10 @@
         </div>
         <div class="my-1">
             <div class="my-1 w-100 border"><a href="{{ route('admin.licuados') }}" class="btn btn-none w-100 fontSize1_5" >Licuados</a></div>
-            <div class="my-1 w-100 border"><a href="{{ route('admin.postres') }}" class="btn btn-none w-100 fontSize1_5" >Postres</a></div>
+            <div class="my-1 w-100 border"><a href="{{ route('admin.postres')}}" class="btn btn-none w-100 fontSize1_5" >Postres</a></div>
         </div>
-        <div class="my-1 w-100 border"><a href="" class="btn btn-none w-100 fontSize1_5" >Platos del Día</a></div>
+        <div class="my-1 w-100 border"><a href="{{ route('admin.promos') }}" class="btn btn-none w-100 fontSize1_5" >Promos</a></div>
+        <div class="my-1 w-100 border"><a href="{{ route('admin.platoDia') }}" class="btn btn-none w-100 fontSize1_5" >Platos del Día</a></div>
     </div>
 
 @endsection

@@ -23,30 +23,30 @@
                         <div class="modal-body">
                             <div class="img__productos">
 {{--                                @if($licuados->imagen != null && Storage::disk('public')->has('img/reserva/' . $licuados->imagen))--}}
-                                @if($licuados->imagen != null && public_path('img/reserva' . '/' . $licuados->imagen))
-                                    <picture class="">
-                                        <source media="(min-width: 751px)"
-                                                srcset="{{ url('img/reserva/' . $licuados->imagen) }}">
-                                        <source media="(min-width: 380px)"
-                                                srcset="{{ url('img/reserva/' . $licuados->imagen) }}">
-                                        <img src="{{ url('img/reserva/' . $licuados->imagen) }}" class="w-100"
-                                             alt="{{ $licuados->imagen_descripcion }}">
-                                    </picture>
-                                @else
-                                    <picture class="">
-                                        <source media="(min-width: 751px)" srcset="{{ url('img/cafeCleche.png') }}">
-                                        <source media="(min-width: 380px)" srcset="{{ url('img/cafeCleche.png') }}">
-                                        <img src="{{ url('img/cafeCleche.png') }}" class="w-100"
-                                             alt="Imagen logo de la marca">
-                                    </picture>
-                                @endif
+                                 @if($licuados->imagen != null && 'img' . '/' . $licuados->imagen)
+                                <picture class="">
+                                    <source media="(min-width: 751px)"
+                                            srcset="{{ url('img/' . $licuados->imagen) }}">
+                                    <source media="(min-width: 380px)"
+                                            srcset="{{ url('img/' . $licuados->imagen) }}">
+                                    <img src="{{ url('img/' . $licuados->imagen) }}" class="w-100"
+                                         alt="{{ $licuados->imagen_descripcion }}">
+                                </picture>
+                            @else
+                                <picture class="">
+                                    <source media="(min-width: 751px)" srcset="{{ url('img/cafeCleche.png') }}">
+                                    <source media="(min-width: 380px)" srcset="{{ url('img/cafeCleche.png') }}">
+                                    <img src="{{ url('img/cafeCleche.png') }}" class="w-100"
+                                         alt="Imagen logo de la marca">
+                                </picture>
+                            @endif
                             </div>
                             <p class="">{{ $licuados->descripcion }}</p>
                             <p class="textBold8 fontSize">Precio: $ <span class="textBold4">{{ $licuados->precio }}</span></p>
                         </div>
                         <div class="modal-footer">
                             <div class="btn__productosAdmin">
-                                    <div class="hola px-2"><a href="{{ route('admin.upload' ,['id' => $licuados->producto_id]) }}" class="text-decoration-none text-dark "><i class="bi bi-pencil-square px-1"></i>Editar</a></div>
+                                    <div class="hola px-2"><a href="{{ route('admin.upload' ,['id' => $licuados->producto_id]) }}" class="text-decoration-none text-dark "><i class="bi bi-pencil-square px-1"></i>Actualizar</a></div>
                                     <div class="btnEliminarAdmin px-2">
                                         <a href="#" class="text-decoration-none text-dark "  data-bs-toggle="modal" data-bs-target="#staticBackdrop2{{ $licuados->producto_id }}"><i class="bi bi-trash px-1"></i>Eliminar</a>
                                     </div>
@@ -65,23 +65,23 @@
                         </div>
                         <div class="modal-body">
                             <div class="img__productos">
-                                @if($licuados->imagen != null && public_path('img/reserva' . '/' . $licuados->imagen))
-                                    <picture class="">
-                                        <source media="(min-width: 751px)"
-                                                srcset="{{ url('img/reserva/' . $licuados->imagen) }}">
-                                        <source media="(min-width: 380px)"
-                                                srcset="{{ url('img/reserva/' . $licuados->imagen) }}">
-                                        <img src="{{ url('img/reserva/' . $licuados->imagen) }}" class="w-100"
-                                             alt="{{ $licuados->imagen_descripcion }}">
-                                    </picture>
-                                @else
-                                    <picture class="">
-                                        <source media="(min-width: 751px)" srcset="{{ url('img/cafeCleche.png') }}">
-                                        <source media="(min-width: 380px)" srcset="{{ url('img/cafeCleche.png') }}">
-                                        <img src="{{ url('img/cafeCleche.png') }}" class="w-100"
-                                             alt="Imagen logo de la marca">
-                                    </picture>
-                                @endif
+                                 @if($licuados->imagen != null && 'img' . '/' . $licuados->imagen)
+                                <picture class="">
+                                    <source media="(min-width: 751px)"
+                                            srcset="{{ url('img/' . $licuados->imagen) }}">
+                                    <source media="(min-width: 380px)"
+                                            srcset="{{ url('img/' . $licuados->imagen) }}">
+                                    <img src="{{ url('img/' . $licuados->imagen) }}" class="w-100"
+                                         alt="{{ $licuados->imagen_descripcion }}">
+                                </picture>
+                            @else
+                                <picture class="">
+                                    <source media="(min-width: 751px)" srcset="{{ url('img/cafeCleche.png') }}">
+                                    <source media="(min-width: 380px)" srcset="{{ url('img/cafeCleche.png') }}">
+                                    <img src="{{ url('img/cafeCleche.png') }}" class="w-100"
+                                         alt="Imagen logo de la marca">
+                                </picture>
+                            @endif
                             </div>
                             <p class="">{{ $licuados->descripcion }}</p>
                             <p class="textBold8 fontSize">Precio: $ <span class="textBold4">{{ $licuados->precio }}</span></p>
@@ -100,14 +100,14 @@
             @if($licuados->categoria->nombre == 'Licuados')
                 <div class="div__adminProductos shadow mx-1 my-2">
                     <a href="#" class="text-decoration-none text-dark d-flex w-100 " data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $licuados->producto_id }}">
-                        <div class="img__productosAdmin shadow">
-                            @if($licuados->imagen != null && public_path('img/reserva' . '/' . $licuados->imagen))
+                        <div class="img__productosAdmin">
+                            @if($licuados->imagen != null && 'img' . '/' . $licuados->imagen)
                                 <picture class="">
                                     <source media="(min-width: 751px)"
-                                            srcset="{{ url('img/reserva/' . $licuados->imagen) }}">
+                                            srcset="{{ url('img/' . $licuados->imagen) }}">
                                     <source media="(min-width: 380px)"
-                                            srcset="{{ url('img/reserva/' . $licuados->imagen) }}">
-                                    <img src="{{ url('img/reserva/' . $licuados->imagen) }}" class="w-100"
+                                            srcset="{{ url('img/' . $licuados->imagen) }}">
+                                    <img src="{{ url('img/' . $licuados->imagen) }}" class="w-100"
                                          alt="{{ $licuados->imagen_descripcion }}">
                                 </picture>
                             @else
