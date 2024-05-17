@@ -215,4 +215,11 @@ class AdminController extends Controller
             'productos' => $productos
         ]);
     }
+    public function platoDia()
+    {
+        $productos = Producto::with('categoria')->get();
+        return view('admin.productos.platoDia', [
+            'productos' => $productos
+        ]);
+    }
 }

@@ -65,4 +65,11 @@ class CartaController extends Controller
             'productos' => $productos,
         ]);
     }
+    public function platoDia()
+    {
+        $productos = Producto::with('categoria')->get();
+        return view('carta.platoDia',[
+            'productos' => $productos,
+        ]);
+    }
 }

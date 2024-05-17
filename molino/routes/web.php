@@ -23,6 +23,7 @@ Route::get('/carta/ensaladas', [\App\Http\Controllers\CartaController::class, 'e
 Route::get('/carta/licuados', [\App\Http\Controllers\CartaController::class, 'licuados'])->name('licuados');
 Route::get('/carta/postres', [\App\Http\Controllers\CartaController::class, 'postres'])->name('postres');
 Route::get('/carta/promos', [\App\Http\Controllers\CartaController::class, 'promos'])->name('promos');
+Route::get('/carta/platoDia', [\App\Http\Controllers\CartaController::class, 'platoDia'])->name('platoDia');
 
 
 Route::get('/admin/mill', [\App\Http\Controllers\AuthController::class, 'login'])->name('login');
@@ -46,6 +47,7 @@ Route::get('/admin/productos/platos', [\App\Http\Controllers\AdminController::cl
 Route::get('/admin/productos/licuados', [\App\Http\Controllers\AdminController::class, 'licuados'])->name('admin.licuados')->middleware(['auth']);
 Route::get('/admin/productos/postres', [\App\Http\Controllers\AdminController::class, 'postres'])->name('admin.postres')->middleware(['auth']);
 Route::get('/admin/productos/promos', [\App\Http\Controllers\AdminController::class, 'promos'])->name('admin.promos')->middleware(['auth']);
+Route::get('/admin/productos/platoDia', [\App\Http\Controllers\AdminController::class, 'platoDia'])->name('admin.platoDia')->middleware(['auth']);
 
 
 

@@ -7,7 +7,7 @@
 
 @section('title', 'Iniciar Sesión')
 
-@pushOnce('scripts')
+{{--@push('js')
     <script>
         let password = document.querySelector('#password');
         let email = document.querySelector('#email');
@@ -15,10 +15,10 @@
         let span = document.querySelector('.span');
         let spanPassword = document.querySelector('.spanPassword');
 
-        span.style.display = 'none';
+        span.style.color = 'red';
         spanPassword.style.display = 'none';
 
-        let sentidos = 0;
+        /*let sentidos = 0;
         email.addEventListener('change', () => {
             if(!sentidos){
                 span.style.display = 'flex';
@@ -28,7 +28,7 @@
                 span.style.color = 'red';
                 sentidos = 0;
             }
-        })
+        })*/
 
         let sentidoPassword = 0;
         password.addEventListener('change', () => {
@@ -43,8 +43,9 @@
         })
 
         let sentido = 0;
-        ver.addEventListener('click', ()=>{
-            if(!sentido){
+        ver.addEventListener("click", ()=>{
+            console.log('hola mundo')
+            /*if(!sentido){
                 password.type = 'text';
                 password.style.color = 'gray';
                 ver.style.color = 'orange';
@@ -55,10 +56,10 @@
                 password.style.color = 'black';
                 ver.style.color = 'black';
                 sentido = 0;
-            }
+            }*/
         })
     </script>
-@endPushOnce
+@endpush--}}
 
 @section('admin')
     <h1 class="pt-4 text-center textBold8 text-uppercase fontSize1_3">Administración Mill</h1>
@@ -86,8 +87,8 @@
                     <input type="password" name="password" id="password" class="form-control"
                            @error('password') aria-describedby="error-password" @enderror >
                 </div>
-                <span class="spanPassword"><i class="bi bi-check2-circle px-2"></i></span>
-                <span> <i class="bi bi-eye px-2 py-2" id="ver"></i></span>
+                    {{--<span class="spanPassword"><i class="bi bi-check2-circle px-2"></i></span>--}}
+                  {{--  <span class="span"> <i class="bi bi-eye px-2 py-2 " role="button" id="ver"></i></span>--}}
                 @error('password')
                 <div class="text-dark textBold8" id="error-password"><span class=""><i class="bi bi-x-circle px-1"></i></span>{{ $message }}</div>
                 @enderror
