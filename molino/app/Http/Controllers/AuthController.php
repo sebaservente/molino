@@ -48,9 +48,5 @@ class AuthController extends Controller
     }
 
 
-    public function recuperarPassword()
-    {
-        /*dd('hola mundo');*/
-        return view('admin.auth.recuperar-password');
-    }
+
 }

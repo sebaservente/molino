@@ -12,7 +12,7 @@
     <div class="py-5">
         <h2 class="text-center textBold8 text-uppercase">Recupera la Contraseña</h2>
         <div class="div__formCrearProducto">
-            <form action="{{ route('login.In') }}" method="post" class="p-3 rounded rounded-lg shadow">
+            <form action="{{ route('password.email') }}" method="post" class="p-3 rounded rounded-lg shadow">
                 @csrf
                 <div class="py-2">
                     <label for="email" class="form-label">Email</label>

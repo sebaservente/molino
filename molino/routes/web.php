@@ -28,7 +28,10 @@ Route::get('/carta/promos', [\App\Http\Controllers\CartaController::class, 'prom
 Route::get('/admin/mill', [\App\Http\Controllers\AuthController::class, 'login'])->name('login')->middleware(['guest']);
 Route::post('/admin/mill', [\App\Http\Controllers\AuthController::class, 'loginIn'])->name('login.In')->middleware(['guest']);
 Route::post('/admin/mill/cerrarSession', [\App\Http\Controllers\AuthController::class, 'logout'])->name('logout')->middleware(['auth']);
-Route::get('/admin/auth/recuperar-password', [\App\Http\Controllers\AuthController::class, 'recuperarPassword'])->name('recuperarPassword')->middleware(['guest']);
+Route::get('/admin/auth/recuperar-password', [\App\Http\Controllers\RecuperarPasswordController::class, 'recuperarPassword'])->name('password.request')->middleware(['guest']);
+Route::post('/admin/auth/recuperar-password', [\App\Http\Controllers\RecuperarPasswordController::class, 'recuperarPasswordPost'])->name('password.email')->middleware(['guest']);
+Route::get('/admin/auth/reset-password/{token}', [\App\Http\Controllers\RecuperarPasswordController::class, 'resetPassword'])->name('password.reset')->middleware(['guest']);
+Route::post('/admin/auth/reset-password', [\App\Http\Controllers\RecuperarPasswordController::class, 'updatePassword'])->name('password.update')->middleware(['guest']);
 
 Route::get('/admin/home', [\App\Http\Controllers\AdminController::class, 'home'])->name('admin.home')->middleware(['auth']);
 Route::get('/admin/create', [\App\Http\Controllers\AdminController::class, 'create'])->name('admin.create')->middleware(['auth']);

@@ -39,7 +39,7 @@
                 <div class="py-3">
                     <button class="btn btn-dark w-100 shadow">Ingresar</button>
                     {{--<a href="{{ route('admin.create') }}" class="btn btn-danger">Ingresar</a>--}}
-                    <div class="pt-3"><a href="{{ route('recuperarPassword') }}" class="text-decoration-none text-dark fontSizePequeño">¿ Olvidaste tu Contraseña ?</a></div>
+                    <div class="pt-3"><a href="{{ route('password.request') }}" class="text-decoration-none text-dark fontSizePequeño">¿ Olvidaste tu Contraseña ?</a></div>
                 </div>
             </form>
 
