@@ -157,7 +157,7 @@ class AdminController extends Controller
 
     public function desayuno()
     {
-        $productos = Producto::with('categoria')->get();
+        $productos = Producto::with(['categoria'])->get();
         return view('admin.productos.desayuno', [
             'productos' => $productos
         ]);
@@ -165,60 +165,56 @@ class AdminController extends Controller
 
     public function cafeteria()
     {
-        $productos = Producto::with('categoria')->get();
+        $productos = Producto::with(['categoria'])->get();
         return view('admin.productos.cafeteria', [
             'productos' => $productos
         ]);
     }
-
     public function bebidas()
     {
-        $productos = Producto::with('categoria')->get();
+        $productos = Producto::with(['categoria'])->get();
         return view('admin.productos.bebidas', [
             'productos' => $productos
         ]);
     }
-
     public function ensaladas()
     {
-        $productos = Producto::with('categoria')->get();
+        $productos = Producto::with(['categoria'])->get();
         return view('admin.productos.ensaladas', [
             'productos' => $productos
         ]);
     }
-
     public function platos()
     {
-        $productos = Producto::with('categoria')->get();
+        $productos = Producto::with(['categoria'])->get();
         return view('admin.productos.platos', [
             'productos' => $productos
         ]);
     }
-    
     public function licuados()
     {
-        $productos = Producto::with('categoria')->get();
+        $productos = Producto::with(['categoria'])->get();
         return view('admin.productos.licuados', [
             'productos' => $productos
         ]);
     }
-     public function postres()
+    public function postres()
     {
-        $productos = Producto::with('categoria')->get();
+        $productos = Producto::with(['categoria'])->get();
         return view('admin.productos.postres', [
             'productos' => $productos
         ]);
     }
-      public function promos()
+    public function promos()
     {
-        $productos = Producto::with('categoria')->get();
+        $productos = Producto::with(['categoria'])->get();
         return view('admin.productos.promos', [
             'productos' => $productos
         ]);
     }
-     public function platoDia()
+    public function platoDia()
     {
-        $productos = Producto::with('categoria')->get();
+        $productos = Producto::with(['categoria'])->get();
         return view('admin.productos.platoDia', [
             'productos' => $productos
         ]);

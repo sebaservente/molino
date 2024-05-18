@@ -9,7 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
 /**
- * 
+ *
  *
  * @property int $id
  * @property string $name
@@ -77,12 +77,13 @@ class User extends Authenticatable
     ];
 
     public const VALIDAR_INICIO = [
-        'email' => 'required',
+        'email' => 'required|exists:users',
         'password' => 'required',
 
     ];
     public const MENSAJES_INICIO = [
         'email.required' => 'El email es obligatorio.',
+        'email.exists' => 'El Email no existe.',
         'password.required' => 'La Contraseña es obligatoria.',
 
     ];

@@ -52,6 +52,37 @@
                     @error('precio')
                     <div class="text-dark textBold8" id="error-precio"><span class=""><i class="bi bi-x-circle px-1"></i></span>{{ $message }}</div>
                     @enderror
+
+                    <div class="my-2">
+                        <label for="precio_dos" class="form-label">Precio Dos</label>
+                        <input type="text"
+                               id="precio_dos"
+                               class="form-control"
+                               name="precio_dos"
+                               placeholder="Precio 2 del Producto"
+                               value="{{ old('precio_dos', $producto->precio_dos) }}"
+                               @error('precio_dos') aria-describedby="error-precio_dos" @enderror>
+                    </div>
+                    @error('precio_dos')
+                    <div class="text-dark textBold8" id="error-precio_dos"><span class=""><i class="bi bi-x-circle px-1"></i></span>{{ $message }}</div>
+                    @enderror
+                    <div class="my-2">
+                        <label for="descripcion_dos" class="form-label">Descripción Dos</label>
+                        <input type="text"
+                               id="descripcion_dos"
+                               class="form-control"
+                               name="descripcion_dos"
+                               placeholder="Descripción 2 del Producto"
+                               value="{{ old('descripcion_dos', $producto->descripcion_dos) }}"
+                               @error('descripcion_dos') aria-describedby="error-descripcion_dos" @enderror>
+                    </div>
+                    @error('descripcion_dos')
+                    <div class="text-dark textBold8" id="error-descripcion_dos"><span class=""><i class="bi bi-x-circle px-1"></i></span>{{ $message }}</div>
+                    @enderror
+
+
+
+
                     <div class="my-2">
                         <label for="descripcion" class="form-label">Descripción</label>
                         <textarea id="descripcion" name="descripcion" class="form-control">{{ old('descripcion' , $producto->descripcion) }}</textarea>

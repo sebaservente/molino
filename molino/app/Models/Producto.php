@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * 
+ *
  *
  * @property int $producto_id
  * @property string $titulo
@@ -53,7 +53,7 @@ class Producto extends Model
     public const VALIDAR_CREAR_PRODUCTOS = [
         'titulo' => 'required|min:2',
         'precio' => 'required|numeric|min:0',
-        'categoria_id' => 'required|numeric|min:1|exists:categorias,categoria_id',
+        'categoria_id' => 'required|numeric|min:1|exists:categorias',
         'descripcion' => 'required|min:2',
         'imagen_descripcion' => 'required|min:2',
     ];

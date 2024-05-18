@@ -1,6 +1,6 @@
 <?php
 /**
- * @var
+ * @var \App\Models\Producto[] $productos
  */
 ?>
 @extends('template.main')
@@ -9,7 +9,8 @@
 
 @section('main')
     <h1 class="text-center mt-4">Mill</h1>
-   <div class="menuHome mt-4">
+
+    <div class="menuHome mt-4">
         <div class="my-1 w-100 border"><a href="{{ route('desayunos' ) }}" class="btn btn-none w-100 fontSize1_5" >Desayunos y Meriendas</a></div>
         <div class="my-1">
             <div class="my-1 w-100 border"><a href="{{ route('cafeteria' ) }}" class="btn btn-none w-100 fontSize1_5" >Cafeteria</a></div>
@@ -24,8 +25,9 @@
             <div class="my-1 w-100 border"><a href="{{ route('postres')}}" class="btn btn-none w-100 fontSize1_5" >Postres</a></div>
         </div>
         <div class="my-1 w-100 border"><a href="{{ route('promos') }}" class="btn btn-none w-100 fontSize1_5" >Promos</a></div>
-        {{--<div class="my-1 w-100 border"><a href="" class="btn btn-none w-100 fontSize1_5" >Platos del Día</a></div>--}}
+        {{--<div class="my-1 w-100 border"><a href="" class="btn btn-none w-100 fontSize1_5" data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $platoDia->producto_id }}" >Platos del Día</a></div>--}}
     </div>
+    {{--HORARIOS MILL--}}
     <div class="divModalMill drop-shadow-lg">
         <picture class="picture__img w-10">
             <source media="(min-width: 751px)" srcset="<?= url('img/molino.png'); ?>"<?= url('../img/molino.png'); ?>>
