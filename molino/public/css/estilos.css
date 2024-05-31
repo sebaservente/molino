@@ -72,6 +72,22 @@ textarea {
     justify-content: center;
     background: #f3f0f0;
 }
+.nombre_mill {
+    background-image: url(../img/nombre_mill.png);
+    background-size: 16rem;
+    height: 6rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.nombre_mill_chico {
+    background-image: url(../img/nombre_mill.png);
+    background-size: 6rem;
+    height: 3rem;
+    width: 6rem;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    margin: 0;
+}
 /*--------------PRODUCTOS------------*/
 
 .productos {
@@ -165,6 +181,7 @@ textarea {
 .menuHome {
     width: 90%;
     margin: auto;
+    max-width: 400px;
 }
 /*-------------ADMIN PRODUCTOS----------------*/
 .div__productos {
