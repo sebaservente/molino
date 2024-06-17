@@ -168,6 +168,16 @@ textarea {
     margin: 1rem 0 0 0;
     font-size: 0.9rem;
 }
+.datos__parrafoAdmin {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-weight: 700;
+    color: #000;
+    width: 95%;
+    margin: auto;
+    padding: 0.2rem;
+}
 .datos__parrafo span {
     font-weight: 400;
 }
@@ -250,6 +260,12 @@ textarea {
 }
 .btnEliminarAdmin:hover {
     background: #f682a0;
+}
+.divBuscador {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 400px;
+    padding: .5rem;
 }
 /*-------------FIN ADMIN PRODUCTOS----------------*/
 @media (min-width: 401px) and (max-width: 500px) {

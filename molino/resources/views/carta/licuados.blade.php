@@ -5,11 +5,12 @@
 ?>
 @extends('template.main')
 
-@section('title', 'Desayunos y Meriendas')
+@section('title', 'Licuados')
 
 @section('main')
-    <h1 class="text-center my-3 ">Licuados</h1>
-    {{--<div class="img__productosHome shadow">
+
+    <h1 class="text-center my-3">Licuados</h1>
+    {{--<div class="img__productos shadow">
         <picture class="">
             <source media="(min-width: 751px)" srcset="{{ asset('img/cafeCleche.png') }}">
             <source media="(min-width: 380px)" srcset="{{ asset('img/cafeCleche.png') }}">
@@ -19,17 +20,17 @@
     </div>--}}
     <div class="div__productos">
         @foreach($productos as $licuados)
-            
+            {{-- todo Ventana Modal : Luego Hacer un componente--}}
 
             <div class="modal fade" id="staticBackdrop{{ $licuados->producto_id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content text-center">
                         <div class="modal-header">
                             <h2 class="modal-title textBold8" id="staticBackdropLabel">{{ $licuados->titulo }}</h2>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            {{--<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>--}}
                         </div>
                         <div class="modal-body">
-                            {{--<div class="img__productos ">
+                            {{--<div class="img__productos">
                                 @if($licuados->imagen != null && public_path('img/reserva') . '/' . $licuados->imagen)
                                     <picture class="">
                                         <source media="(min-width: 751px)"
@@ -90,7 +91,6 @@
                     </a>
                 </div>
             @endif
-
         @endforeach
     </div>
 

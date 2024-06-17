@@ -106,7 +106,7 @@
                 </div>
             </div>
 
-            @if($platoDia->categoria->nombre == 'Plato del Día')
+            @if($platoDia->categoria->nombre == 'Plato del Dia')
                 <div class="div__adminProductos shadow mx-1 my-2">
                     <a href="#" class="text-decoration-none text-dark d-flex w-100 " data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $platoDia->producto_id }}">
                         <div class="img__productosAdmin ">

@@ -170,6 +170,7 @@
                 <div class="px-1 py-1"><a href="{{ route('admin.postres') }}" class="btn btn-dark shadow">POSTRES</a></div>
                 <div class="px-1 py-1"><a href="{{ route('admin.promos') }}" class="btn btn-dark shadow">PROMOS</a></div>
                 <div class="px-1 py-1"><a href="{{ route('admin.platoDia') }}" class="btn btn-dark shadow">PLATO DEL DÍA</a></div>
+                <div class="px-1 py-1"><a href="{{ route('admin.papelera') }}" class="btn btn-danger shadow">PAPELERA</a></div>
                 <div class="px-1 py-1"><a href="{{ route('admin.create') }}" class="btn btn-secondary  shadow">CREAR PRODUCTO</a></div>
             </div>
 

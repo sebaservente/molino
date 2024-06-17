@@ -11,14 +11,25 @@ use Intervention\Image\Drivers\Gd\Driver;
 class AdminController extends Controller
 {
 
-    public function home()
+    public function home(Request $request)
     {
-        $productos = Producto::all();
+        $builder = Producto::with(['categoria']);
+
+        $buscarParams = [
+            'titulo' => $request->query('titulo', null),
+        ];
+
+        if ($buscarParams['titulo']) {
+            $builder->where('titulo', 'like', '%' . $buscarParams['titulo'] . '%');
+        }
+
+        $productos = $builder->paginate(10)->withQueryString();
+
         return view('admin.home', [
-            'productos' => $productos
+            'productos' => $productos,
+            'buscarParams' => $buscarParams,
         ]);
     }
-
     public function create()
     {
         $categorias = Categoria::orderBy('nombre')->get();
@@ -218,5 +229,20 @@ class AdminController extends Controller
         return view('admin.productos.platoDia', [
             'productos' => $productos
         ]);
+    }
+    public function papelera(Request $request)
+    {
+      return view('admin.papelera',[
+         'productos' => Producto::onlyTrashed()->with(['categoria'])->get(),
+      ]);
+    }
+    public function restaurar(int $id)
+    {
+        dd($id);
+    }
+
+    public function eliminar(int $id)
+    {
+        dd($id);
     }
 }

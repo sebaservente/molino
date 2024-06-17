@@ -40,6 +40,9 @@ Route::post('/admin/create/{id}/delete', [\App\Http\Controllers\AdminController:
 Route::get('/admin/upload/{id}', [\App\Http\Controllers\AdminController::class, 'upload'])->name('admin.upload')->whereNumber('id')->middleware(['auth']);
 Route::post('/admin/upload/{id}/uploadConfirm', [\App\Http\Controllers\AdminController::class, 'uploadConfirm'])->name('admin.uploadConfirm')->whereNumber('id')->middleware(['auth']);
 
+Route::get('/admin/papelera', [\App\Http\Controllers\AdminController::class, 'papelera'])->name('admin.papelera')->middleware(['auth']);
+Route::post('/admin/papelera/{id}', [\App\Http\Controllers\AdminController::class, 'restaurar'])->name('admin.restaurar')->whereNumber('id')->middleware(['auth']);
+Route::post('/admin/papelera/{id}/delete', [\App\Http\Controllers\AdminController::class, 'eliminar'])->name('admin.eliminar')->whereNumber('id')->middleware(['auth']);
 
 Route::get('/admin/productos/desayuno', [\App\Http\Controllers\AdminController::class, 'desayuno'])->name('admin.desayuno')->middleware(['auth']);
 Route::get('/admin/productos/cafeteria', [\App\Http\Controllers\AdminController::class, 'cafeteria'])->name('admin.cafeteria')->middleware(['auth']);
