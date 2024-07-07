@@ -111,8 +111,6 @@
                         </div>
 
                     </div>
-
-
                     <div class="productos ">
                         <a href="#" class="text-decoration-none shadow"  data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $producto->producto_id }}">
                             {{--                        <div class="img__productos">--}}

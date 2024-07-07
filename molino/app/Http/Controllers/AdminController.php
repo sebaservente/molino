@@ -238,11 +238,34 @@ class AdminController extends Controller
     }
     public function restaurar(int $id)
     {
-        dd($id);
+       $productos = Producto::onlyTrashed()->findOrFail($id);
+       $productos->restore();
+        return redirect()
+            ->route('admin.home')
+            ->with('status.message', 'El Producto <b>" ' . $productos->titulo . ' "</b> fue restaurado exitosamente')
+            ->with('status.type', 'success');
+
     }
 
     public function eliminar(int $id)
     {
-        dd($id);
+        $productos = Producto::onlyTrashed()->findOrFail($id);
+        try {
+            \DB::transaction(function()use ( $productos ){
+                /*$productos->categoria()->detach();*/
+                $productos->forceDelete();
+            });
+            return redirect()
+                ->route('admin.home')
+                ->with('status.message', 'El Producto <b>" ' . $productos->titulo . ' "</b> fue eliminado definitivamente')
+                ->with('status.type', 'success');
+        }catch (\Exception $e){
+            return redirect()
+                ->back()
+                ->with('status.message', 'Ocurrio un error y el producto <b>" ' . $productos->titulo . ' "</b> no pudo ser eliminado.')
+                ->with('status.type', 'danger');
+        }
+
+
     }
 }

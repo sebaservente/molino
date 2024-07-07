@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
- *
+ * 
  *
  * @property int $producto_id
  * @property string $titulo
@@ -42,6 +42,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property string|null $descripcion_dos
  * @method static \Illuminate\Database\Eloquent\Builder|Producto whereDescripcionDos($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Producto wherePrecioDos($value)
+ * @property \Illuminate\Support\Carbon|null $deleted_at
+ * @method static \Illuminate\Database\Eloquent\Builder|Producto onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|Producto whereDeletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Producto withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|Producto withoutTrashed()
  * @mixin \Eloquent
  */
 class Producto extends Model
