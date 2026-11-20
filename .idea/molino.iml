@@ -32,6 +32,8 @@
       <excludeFolder url="file://$MODULE_DIR$/molino/vendor/guzzlehttp/psr7" />
       <excludeFolder url="file://$MODULE_DIR$/molino/vendor/guzzlehttp/uri-template" />
       <excludeFolder url="file://$MODULE_DIR$/molino/vendor/hamcrest/hamcrest-php" />
+      <excludeFolder url="file://$MODULE_DIR$/molino/vendor/intervention/gif" />
+      <excludeFolder url="file://$MODULE_DIR$/molino/vendor/intervention/image" />
       <excludeFolder url="file://$MODULE_DIR$/molino/vendor/laravel/framework" />
       <excludeFolder url="file://$MODULE_DIR$/molino/vendor/laravel/pint" />
       <excludeFolder url="file://$MODULE_DIR$/molino/vendor/laravel/prompts" />
@@ -131,11 +133,15 @@
       <excludeFolder url="file://$MODULE_DIR$/molino/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/molino/vendor/voku/portable-ascii" />
       <excludeFolder url="file://$MODULE_DIR$/molino/vendor/webmozart/assert" />
-      <excludeFolder url="file://$MODULE_DIR$/molino/vendor/intervention/gif" />
-      <excludeFolder url="file://$MODULE_DIR$/molino/vendor/intervention/image" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Final_laravel" />
+    <orderEntry type="module" module-name="servente_sebastian" />
+    <orderEntry type="module" module-name="it_cursos" />
+    <orderEntry type="library" name="Bootstrap" level="project" />
+    <orderEntry type="module" module-name="kiosco_Tiendas" />
+    <orderEntry type="module" module-name="MisPlantas" />
+    <orderEntry type="module" module-name="plantas" />
   </component>
 </module>

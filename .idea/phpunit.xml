@@ -3,10 +3,20 @@
   <component name="PHPUnit">
     <option name="directories">
       <list>
-        <option value="$PROJECT_DIR$/molino/tests/Unit" />
-        <option value="$PROJECT_DIR$/molino/tests/Feature" />
+        <option value="$PROJECT_DIR$/../kiosco_Tiendas/back/tiendas/tests/Unit" />
+        <option value="$PROJECT_DIR$/../kiosco_Tiendas/back/tiendas/tests/Feature" />
+        <option value="$PROJECT_DIR$/../kiosco_Tiendas/ecommerce/tests/Unit" />
+        <option value="$PROJECT_DIR$/../kiosco_Tiendas/ecommerce/tests/Feature" />
+        <option value="$PROJECT_DIR$/../MisPlantas/MySeed/tests/Unit" />
+        <option value="$PROJECT_DIR$/../MisPlantas/MySeed/tests/Feature" />
+        <option value="$PROJECT_DIR$/../servente_sebastian/wildboard-app/tests/Unit" />
+        <option value="$PROJECT_DIR$/../servente_sebastian/wildboard-app/tests/Feature" />
         <option value="$PROJECT_DIR$/../Final_laravel/laravel_tp_final/servente_sebastian/wildboard-tp-01/tests/Unit" />
         <option value="$PROJECT_DIR$/../Final_laravel/laravel_tp_final/servente_sebastian/wildboard-tp-01/tests/Feature" />
+        <option value="$PROJECT_DIR$/molino/tests/Unit" />
+        <option value="$PROJECT_DIR$/molino/tests/Feature" />
+        <option value="$PROJECT_DIR$/../it_cursos/agencia/tests/Unit" />
+        <option value="$PROJECT_DIR$/../it_cursos/agencia/tests/Feature" />
       </list>
     </option>
   </component>

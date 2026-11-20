@@ -3,7 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../Final_laravel/.idea/Final_laravel.iml" filepath="$PROJECT_DIR$/../Final_laravel/.idea/Final_laravel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../MisPlantas/.idea/MisPlantas.iml" filepath="$PROJECT_DIR$/../MisPlantas/.idea/MisPlantas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../it_cursos/.idea/it_cursos.iml" filepath="$PROJECT_DIR$/../it_cursos/.idea/it_cursos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../kiosco_Tiendas/.idea/kiosco_Tiendas.iml" filepath="$PROJECT_DIR$/../kiosco_Tiendas/.idea/kiosco_Tiendas.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/molino.iml" filepath="$PROJECT_DIR$/.idea/molino.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../plantas/.idea/plantas.iml" filepath="$PROJECT_DIR$/../plantas/.idea/plantas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../servente_sebastian/.idea/servente_sebastian.iml" filepath="$PROJECT_DIR$/../servente_sebastian/.idea/servente_sebastian.iml" />
     </modules>
   </component>
 </project>

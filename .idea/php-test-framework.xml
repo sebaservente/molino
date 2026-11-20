@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpTestFrameworkSettings">
+    <test_tools>
+      <tool tool_name="Pest">
+        <settings>
+          <configurations>
+            <local_configuration configuration_file_path="$PROJECT_DIR$/../MySeed/control-plantas/phpunit.xml" executable_path="$PROJECT_DIR$/../MySeed/control-plantas/vendor/pestphp/pest/bin/pest" use_configuration_file="true" />
+            <local_configuration configuration_file_path="$PROJECT_DIR$/../MySeed/phpunit.xml" executable_path="$PROJECT_DIR$/../MySeed/vendor/pestphp/pest/bin/pest" use_configuration_file="true" />
+            <local_configuration configuration_file_path="$PROJECT_DIR$/../MySed/MySeed/phpunit.xml" executable_path="$PROJECT_DIR$/../MySed/MySeed/vendor/pestphp/pest/bin/pest" use_configuration_file="true" />
+            <local_configuration configuration_file_path="$PROJECT_DIR$/../plantas/controplantas/phpunit.xml" executable_path="$PROJECT_DIR$/../plantas/controplantas/vendor/pestphp/pest/bin/pest" use_configuration_file="true" />
+            <local_configuration configuration_file_path="$PROJECT_DIR$/../MisPlantas/MySeed/phpunit.xml" executable_path="$PROJECT_DIR$/../MisPlantas/MySeed/vendor/pestphp/pest/bin/pest" use_configuration_file="true" />
+            <local_configuration configuration_file_path="$PROJECT_DIR$/../kiosco_Tiendas/ecommerce/phpunit.xml" executable_path="$PROJECT_DIR$/../kiosco_Tiendas/ecommerce/vendor/pestphp/pest/bin/pest" use_configuration_file="true" />
+          </configurations>
+        </settings>
+      </tool>
+    </test_tools>
+  </component>
+</project>

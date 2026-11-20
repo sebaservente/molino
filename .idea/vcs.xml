@@ -3,5 +3,12 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../Final_laravel/laravel_tp_final" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../LA-automotores/LA-automotores" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../MisPlantas/MySeed" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../kiosco_Tiendas" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../plantas" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../servente_sebastian" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../servente_sebastian/wildboard-app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../solanasVacation/solanas" vcs="Git" />
   </component>
 </project>

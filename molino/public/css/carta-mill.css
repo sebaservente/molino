@@ -1,0 +1,96 @@
+/* Mill: las dos cartas públicas. Los logos originales se muestran sin filtros. */
+:root { --cream:#fbf6e9; --olive:#424d27; --terracotta:#a94429; --blue:#173d87; --red:#b42232; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; scroll-padding-top:145px; }
+body.mill-carta { margin:0; background:#eae7e0; font-family:Arial,Helvetica,sans-serif; line-height:1.45; color:var(--ink); }
+.theme-cafeteria { --ink:var(--olive); --accent:var(--terracotta); --band:var(--olive); --line:#c8bca6; }
+.theme-comidas { --ink:var(--blue); --accent:var(--red); --band:var(--red); --line:#c8bca6; }
+a { color:inherit; text-underline-offset:4px; }
+a:focus-visible { outline:2px solid var(--accent); outline-offset:4px; }
+.skip-link { position:fixed; top:-100px; left:12px; z-index:10; background:white; padding:12px; }
+.skip-link:focus { top:12px; }
+.menu-sheet { width:min(1060px,100%); margin:25px auto; padding:0 34px; background:var(--cream); box-shadow:0 3px 20px #0000000c; }
+.brand-header { display:flex; justify-content:center; padding:25px 0 18px; }
+.brand { display:inline-flex; align-items:center; gap:19px; text-decoration:none; color:black; }
+.brand-windmill { width:56px; height:96px; object-fit:contain; }
+.brand-wordmark { display:flex; flex-direction:column; align-items:center; gap:13px; }
+.brand-wordmark img { display:block; width:240px; height:auto; }
+.brand-wordmark span { color:#000; font-family:Georgia,'Times New Roman',serif; font-size:12px; font-weight:900; text-transform:uppercase; letter-spacing:2.5px; }
+.menu-navigation { position:sticky; top:0; z-index:3; background:var(--cream); }
+.primary-tabs { display:flex; justify-content:center; align-items:stretch; border-bottom:1px solid var(--line); }
+.primary-tabs a { display:flex; align-items:center; justify-content:center; min-height:51px; padding:9px 24px; font-size:16px; font-weight:800; text-decoration:none; border-bottom:3px solid transparent; }
+.primary-tabs a+a { border-left:1px solid var(--line); }
+.primary-tabs .tab-cafe { color:var(--olive); }
+.primary-tabs .tab-comidas { color:var(--blue); }
+.primary-tabs .tab-cafe[aria-current] { border-bottom-color:var(--olive); }
+.primary-tabs .tab-comidas[aria-current] { border-bottom-color:var(--blue); }
+.category-links { display:flex; justify-content:safe center; gap:22px; overflow-x:auto; border-bottom:1px solid var(--line); scrollbar-width:thin; scrollbar-color:var(--accent) transparent; }
+.category-links a { flex:0 0 auto; display:flex; align-items:center; min-height:45px; padding:4px 0; font-size:12px; font-weight:700; white-space:nowrap; text-decoration:none; }
+.category-links a:hover { color:var(--accent); text-decoration:underline; }
+main { padding:26px 0 12px; }
+.menu-back { margin:0 0 22px; font-size:12px; }
+.menu-grid { column-count:2; column-gap:48px; column-rule:1px solid var(--line); }
+.menu-category { break-inside:avoid; margin:0 0 25px; padding-top:1px; }
+.category-title { margin:0 0 14px; color:var(--accent); font-family:'Arial Rounded MT Bold','Trebuchet MS',Arial,sans-serif; font-size:24px; font-weight:900; line-height:1.15; overflow-wrap:anywhere; scroll-margin-top:10px; }
+.category-title--band { padding:9px 12px; color:var(--cream); background:var(--band); }
+.theme-cafeteria .category-title--band { background:var(--olive); }
+.theme-cafeteria .menu-category:has(.category-title--band) .category-title { border-radius:2px; }
+.theme-comidas .category-title--alternate { background:var(--blue); }
+.menu-category--promo { padding:16px; border:2px solid var(--olive); border-radius:18px; }
+.menu-product { margin:0 0 15px; break-inside:avoid; }
+.menu-product:last-child { margin-bottom:0; }
+.product-heading { display:flex; align-items:baseline; justify-content:space-between; gap:12px; }
+.product-heading h2 { min-width:0; margin:0; font-size:12px; font-weight:800; line-height:1.4; overflow-wrap:anywhere; }
+.theme-comidas .product-heading h2 { text-transform:uppercase; }
+.product-price { flex-shrink:0; white-space:nowrap; font-size:12px; font-weight:800; font-variant-numeric:tabular-nums; }
+.product-description { margin:4px 0 0; color:var(--accent); font-size:10px; line-height:1.5; white-space:pre-line; overflow-wrap:anywhere; }
+.product-option { display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin-top:6px; font-size:10px; color:var(--accent); }
+.product-option > :first-child { min-width:0; overflow-wrap:anywhere; }
+.product-option .product-price { color:var(--ink); }
+.menu-grid--single { column-count:1; }
+.menu-grid--single .menu-products { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:17px 48px; }
+.menu-grid--single .menu-product { margin:0; }
+.menu-empty { padding-bottom:30px; font-size:12px; }
+.menu-footer { padding:8px 0 15px; }
+.address { display:flex; gap:18px; align-items:center; justify-content:center; margin:10px 0 20px; color:var(--accent); font-size:12px; font-weight:700; text-align:center; }
+.address:before,.address:after { content:''; flex:1; border-top:2px solid var(--accent); }
+.footer-details { display:flex; justify-content:space-between; gap:20px; font-size:10px; }
+.footer-details p { margin:0; }
+.copyright { text-align:center; margin:16px 0 0; font-size:10px; }
+@media(max-width:767px) {
+    body.mill-carta { background:var(--cream); }
+    .menu-sheet { padding:0 18px; margin:0; box-shadow:none; }
+    .brand-header { padding:22px 0 17px; }
+    .brand { gap:15px; }
+    .brand-windmill { width:44px; height:75px; }
+    .brand-wordmark { gap:11px; }
+    .brand-wordmark img { width:210px; }
+    .brand-wordmark span { font-size:10px; letter-spacing:1.6px; }
+    .primary-tabs a { min-height:50px; padding:9px 12px; font-size:13px; }
+    .category-links { justify-content:flex-start; gap:20px; }
+    .menu-grid { column-count:1; }
+    .menu-grid--single .menu-products { grid-template-columns:minmax(0,1fr); }
+    main { padding-top:24px; }
+    .menu-category { margin-bottom:26px; }
+    .menu-product { margin-bottom:17px; }
+    .footer-details { flex-wrap:wrap; gap:13px; }
+}
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+@media print { .menu-sheet { margin:0; padding:0; width:100%; box-shadow:none; } .menu-navigation,.skip-link,.menu-back { display:none; } .category-title--band { print-color-adjust:exact; } }
+
+/* Nombres de productos y precios */
+.product-heading h2,
+.product-price {
+    font-size: 14px;
+}
+
+/* Descripciones y opciones */
+.product-description,
+.product-option {
+    font-size: 12px;
+}
+
+/* Navegación por categorías */
+.category-links a {
+    font-size: 14px;
+}

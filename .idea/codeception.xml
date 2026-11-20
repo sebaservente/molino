@@ -9,6 +9,15 @@
         <Configuration>
           <option name="path" value="$PROJECT_DIR$/molino/tests" />
         </Configuration>
+        <Configuration>
+          <option name="path" value="$PROJECT_DIR$/../kiosco_Tiendas/ecommerce/tests" />
+        </Configuration>
+        <Configuration>
+          <option name="path" value="$PROJECT_DIR$/../MySed/MySeed/tests" />
+        </Configuration>
+        <Configuration>
+          <option name="path" value="$PROJECT_DIR$/../MisPlantas/MySeed/tests" />
+        </Configuration>
       </list>
     </option>
   </component>
