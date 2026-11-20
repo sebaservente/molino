@@ -1,0 +1,29 @@
+/* Se heredan logo, colores y tipografías de carta-mill.css. */
+body.mill-login { min-height:100vh; background:var(--cream); }
+.mill-login .login-container { width:min(440px,100%); margin:0 auto; padding:34px 20px 24px; }
+.mill-login .brand-header { padding:0 0 30px; }
+.login-panel { padding:28px; border:1px solid var(--line); border-radius:14px; box-shadow:0 4px 12px #424d2708; }
+.login-panel h1 { margin:0; color:var(--ink); font-family:'Arial Rounded MT Bold','Trebuchet MS',Arial,sans-serif; font-size:24px; font-weight:900; text-align:center; line-height:1.25; }
+.login-intro { margin:9px 0 25px; text-align:center; font-size:13px; }
+.login-field { margin-bottom:20px; }
+.login-field > label { display:block; margin-bottom:7px; font-size:14px; font-weight:700; }
+.login-field input { width:100%; min-width:0; min-height:46px; padding:10px 12px; border:1px solid #ac9d84; border-radius:7px; background:#ffffff66; color:var(--ink); font:inherit; font-size:16px; }
+.login-field input:focus { outline:2px solid var(--olive); outline-offset:2px; }
+.login-field input[aria-invalid] { border-color:var(--terracotta); }
+.login-password { position:relative; }
+.login-password input { padding-right:48px; }
+.password-toggle { position:absolute; inset:1px 1px 1px auto; width:44px; border:0; border-radius:6px; background:transparent; color:var(--olive); cursor:pointer; }
+.password-toggle:not([hidden]) { display:grid; place-items:center; }
+.password-toggle:focus-visible,.login-submit:focus-visible { outline:2px solid var(--olive); outline-offset:3px; }
+.login-options { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin:0 0 24px; font-size:12px; }
+.remember-label { display:inline-flex; align-items:center; gap:7px; cursor:pointer; }
+.remember-label input { width:17px; height:17px; margin:0; accent-color:var(--olive); }
+.login-options a,.login-back { color:var(--terracotta); }
+.login-submit { width:100%; min-height:46px; padding:10px 16px; border:1px solid var(--olive); border-radius:7px; background:var(--olive); color:var(--cream); font:inherit; font-size:15px; font-weight:700; cursor:pointer; }
+.login-submit:hover { filter:brightness(.92); }
+.login-error,.login-notice { color:var(--terracotta); font-size:12px; overflow-wrap:anywhere; }
+.login-error { margin:6px 0 0; }
+.login-notice { padding:10px; border:1px solid var(--terracotta); border-radius:6px; margin:0 0 18px; }
+.login-back { display:block; width:fit-content; margin:22px auto 0; font-size:14px; }
+.login-footer { margin:22px 0 0; text-align:center; font-size:11px; }
+@media(max-width:480px) { .mill-login .login-container { padding-top:25px; } .login-panel { padding:24px 18px; } }

@@ -18,21 +18,21 @@ class AuthController extends Controller
         /*dd($request);*/
         $request->validate(User::VALIDAR_INICIO, User::MENSAJES_INICIO);
         $credentials = [
-           'email' => $request->input('email'),
-           'password' => $request->input('password'),
+            'email' => $request->input('email'),
+            'password' => $request->input('password'),
         ];
-        if (\Auth::attempt($credentials)){
-           $request->session()->regenerate();
-           return redirect()
-               ->route('admin.home')
-               ->with('status.message', 'Sessión iniciada correctamente. ')
-               ->with('status.type', 'success') ;
+        if (\Auth::attempt($credentials, $request->boolean('remember'))){
+            $request->session()->regenerate();
+            return redirect()
+                ->route('admin.home')
+                ->with('status.message', 'Sessión iniciada correctamente. ')
+                ->with('status.type', 'success') ;
         }
         return redirect()
-           ->route('login')
-           ->with('status.message', 'Datos incorrectos')
-           ->with('status.type', 'danger')
-           ->withInput();
+            ->route('login')
+            ->with('status.message', 'Datos incorrectos')
+            ->with('status.type', 'danger')
+            ->withInput($request->only('email', 'remember'));
     }
 
     public function logout(Request $request)

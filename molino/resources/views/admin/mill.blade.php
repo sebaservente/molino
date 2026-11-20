@@ -1,52 +1,58 @@
-<?php
-/**
- * @var
- */
-?>
-@extends('template.admin')
-
-@section('title', 'Iniciar Sesión')
-
-@section('admin')
-    <h1 class="pt-4 text-center textBold8 text-uppercase fontSize1_3">Administración Mill</h1>
-    <div class="py-5">
-        <h2 class="text-center textBold8 text-uppercase">Login de Ingreso</h2>
-        <div class="div__formCrearProducto">
-            <form action="{{ route('login.In') }}" method="post" class="p-3 rounded rounded-lg shadow">
-                @csrf
-                <div class="py-2">
-                    <label for="email" class="form-label">Email</label>
-                    <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        class="form-control"
-                        value="{{ old('email')}}"
-                        @error('email') aria-describedby="error-email" @enderror>
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fbf6e9">
+    <title>Administración · Mill</title>
+    <link rel="icon" href="{{ asset('icons/icon-192x192.png') }}">
+    <link rel="stylesheet" href="{{ asset('css/carta-mill.css') }}?v=20261118-dos-cartas">
+    <link rel="stylesheet" href="{{ asset('css/login-mill.css') }}?v=20261119">
+    <script src="{{ asset('js/login-mill.js') }}?v=20261119" defer></script>
+</head>
+<body class="mill-carta theme-cafeteria mill-login">
+<main class="login-container">
+    <header class="brand-header">
+        <a class="brand" href="{{ route('index') }}" aria-label="Mill, el bar de la esquina, volver a la carta">
+            <img class="brand-windmill" src="{{ asset('img/molino.png') }}" alt="" width="56" height="96">
+            <span class="brand-wordmark">
+                    <img src="{{ asset('img/nombre_mill.png') }}" alt="Mill" width="240" height="50">
+                    <span>El bar de la esquina</span>
+                </span>
+        </a>
+    </header>
+    <section class="login-panel" aria-labelledby="login-title">
+        <h1 id="login-title">Administración</h1>
+        <p class="login-intro">Ingresá para administrar la carta de Mill.</p>
+        @if(session('status.message'))
+            <p class="login-notice" role="alert">{{ session('status.message') }}</p>
+        @endif
+        <form action="{{ route('login.In') }}" method="post">
+            @csrf
+            <div class="login-field">
+                <label for="email">Correo electrónico</label>
+                <input type="email" name="email" id="email" value="{{ old('email') }}" placeholder="tu@email.com" autocomplete="username" required autofocus @error('email') aria-invalid="true" aria-describedby="error-email" @enderror>
+                @error('email')<p class="login-error" id="error-email">{{ $message }}</p>@enderror
+            </div>
+            <div class="login-field">
+                <label for="password">Contraseña</label>
+                <div class="login-password">
+                    <input type="password" name="password" id="password" autocomplete="current-password" required @error('password') aria-invalid="true" aria-describedby="error-password" @enderror>
+                    <button class="password-toggle" type="button" aria-controls="password" aria-pressed="false" aria-label="Mostrar contraseña" hidden>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>
+                    </button>
                 </div>
-                @error('email')
-                <div class="text-dark textBold8" id="error-email"><span class=""><i class="bi bi-x-circle px-1"></i></span>{{ $message }}</div>
-                @enderror
-                <div class="py-2">
-                    <label for="password" class="form-label">Contraseña</label>
-                    <input type="password" name="password" id="password" class="form-control"
-                           @error('password') aria-describedby="error-password" @enderror >
-                </div>
-                @error('password')
-                <div class="text-dark textBold8" id="error-password"><span class=""><i class="bi bi-x-circle px-1"></i></span>{{ $message }}</div>
-                @enderror
-                <div class="py-3">
-                    <button class="btn btn-dark w-100 shadow">Ingresar</button>
-                    {{--<a href="{{ route('admin.create') }}" class="btn btn-danger">Ingresar</a>--}}
-                    <div class="pt-3"><a href="{{ route('password.request') }}" class="text-decoration-none text-dark fontSizePequeño">¿ Olvidaste tu Contraseña ?</a></div>
-                </div>
-            </form>
-
-
-
-        </div>
-    </div>
-
-
-@endsection
+                @error('password')<p class="login-error" id="error-password">{{ $message }}</p>@enderror
+            </div>
+            <div class="login-options">
+                <label class="remember-label"><input type="checkbox" name="remember" value="1" @checked(old('remember'))> Recordarme</label>
+                <a href="{{ route('password.request') }}">¿Olvidaste tu contraseña?</a>
+            </div>
+            <button class="login-submit" type="submit">Ingresar</button>
+        </form>
+    </section>
+    <a class="login-back" href="{{ route('index') }}">← Volver a la carta</a>
+    <p class="login-footer">Mill · El bar de la esquina</p>
+</main>
+</body>
+</html>
