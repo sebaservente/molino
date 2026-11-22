@@ -1,0 +1,26 @@
+@extends('template.panel')
+@section('title', $producto->exists ? 'Editar producto' : 'Agregar producto')
+@section('panel')
+@php
+    $cartaProducto = old('carta_producto', $producto->categoria?->carta === 'ambas' ? ($filtros['carta'] ?? 'cafeteria') : ($producto->categoria?->carta ?? ($filtros['carta'] ?? 'cafeteria')));
+    $volver = route('admin.productos', $filtros);
+@endphp
+<p><a href="{{ $volver }}">← Productos</a></p>
+<h1>{{ $producto->exists ? 'Editar producto' : 'Agregar producto' }}</h1>
+<form class="panel-card product-form" method="post" enctype="multipart/form-data" action="{{ $producto->exists ? route('admin.uploadConfirm', array_merge($filtros, ['id' => $producto->producto_id])) : route('admin.create.confirm', $filtros) }}">
+    @csrf
+    <div class="form-grid"><div class="field"><label for="carta_producto">Carta</label><select name="carta_producto" id="carta_producto" required><option value="cafeteria" @selected($cartaProducto === 'cafeteria')>Cafetería y meriendas</option><option value="comidas" @selected($cartaProducto === 'comidas')>Comidas</option></select></div>
+    <div class="field"><label for="categoria_id">Categoría</label><select name="categoria_id" id="categoria_id" required><option value="">Elegí una categoría</option>@foreach($categorias as $categoria)<option value="{{ $categoria->categoria_id }}" data-carta="{{ $categoria->carta }}" @selected(old('categoria_id', $producto->categoria_id) == $categoria->categoria_id)>{{ $categoria->nombre }}{{ $categoria->carta === 'ambas' ? ' (ambas cartas)' : '' }}</option>@endforeach</select>@error('categoria_id')<p class="field-error">{{ $message }}</p>@enderror</div></div>
+    @if($categorias->isEmpty())<p class="field-error">Primero <a href="{{ route('admin.categorias.crear') }}">creá una categoría</a>.</p>@endif
+    <div class="field"><label for="titulo">Nombre</label><input id="titulo" name="titulo" required minlength="2" maxlength="255" value="{{ old('titulo', $producto->titulo) }}">@error('titulo')<p class="field-error">{{ $message }}</p>@enderror</div>
+    <div class="field"><label for="descripcion">Descripción <span class="hint">(opcional)</span></label><textarea id="descripcion" name="descripcion" rows="3" maxlength="5000">{{ old('descripcion', $producto->descripcion) }}</textarea>@error('descripcion')<p class="field-error">{{ $message }}</p>@enderror</div>
+    <div class="form-grid"><div class="field"><label for="precio">Precio en pesos</label><input id="precio" name="precio" type="number" min="0" max="2147483647" step="1" inputmode="numeric" required value="{{ old('precio', $producto->precio) }}"><p class="hint">Sin puntos ni comas. Ejemplo: 4500.</p>@error('precio')<p class="field-error">{{ $message }}</p>@enderror</div>
+    <div class="field"><label for="posicion">Orden de aparición</label><input id="posicion" name="posicion" type="number" min="0" max="100000" required value="{{ old('posicion', $producto->posicion ?? 0) }}"><p class="hint">Un número menor aparece primero.</p></div></div>
+    <details class="option-details" @if(filled(old('descripcion_dos', $producto->descripcion_dos)) || old('precio_dos', $producto->precio_dos) !== null || $errors->has('precio_dos') || $errors->has('descripcion_dos')) open @endif><summary>Segunda opción y precio (opcional)</summary><p class="hint">Para quitar una opción existente, vaciá los dos campos.</p><div class="form-grid"><div class="field"><label for="descripcion_dos">Nombre de la opción</label><input id="descripcion_dos" name="descripcion_dos" maxlength="255" value="{{ old('descripcion_dos', $producto->descripcion_dos) }}">@error('descripcion_dos')<p class="field-error">{{ $message }}</p>@enderror</div><div class="field"><label for="precio_dos">Precio de la opción</label><input id="precio_dos" name="precio_dos" type="number" min="0" max="2147483647" step="1" value="{{ old('precio_dos', $producto->precio_dos) }}">@error('precio_dos')<p class="field-error">{{ $message }}</p>@enderror</div></div></details>
+    <div class="field"><label for="imagen">Imagen del producto (opcional)</label><input id="imagen" name="imagen" type="file" accept="image/jpeg,image/png,image/webp"><p class="hint">JPG, PNG o WebP. Máximo 4 MB. Si hay un error, seleccioná nuevamente el archivo.</p>@error('imagen')<p class="field-error">{{ $message }}</p>@enderror</div>
+    @if($producto->imagen)<p class="hint">Imagen actual: {{ $producto->imagen }}</p><label class="check-label"><input type="checkbox" name="quitar_imagen" value="1" @checked(old('quitar_imagen'))> Quitar imagen actual</label>@endif
+    <div class="field"><label for="imagen_descripcion">Descripción de la imagen (opcional)</label><input id="imagen_descripcion" name="imagen_descripcion" maxlength="255" value="{{ old('imagen_descripcion', $producto->imagen_descripcion) }}"></div>
+    <input type="hidden" name="visible" value="0"><label class="check-label"><input type="checkbox" name="visible" value="1" @checked(old('visible', $producto->visible ?? true))> Visible en la carta</label>
+    <div class="form-actions"><button class="btn-primary" @disabled($categorias->isEmpty())>Guardar cambios</button><a class="btn-outline" href="{{ $volver }}">Cancelar</a></div>
+</form>
+@endsection

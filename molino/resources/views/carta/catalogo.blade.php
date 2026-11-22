@@ -1,28 +1,17 @@
 @php
     $normalizar = fn ($nombre) => \Illuminate\Support\Str::lower(\Illuminate\Support\Str::ascii(trim($nombre)));
-    $categoriasCafe = ['desayunos y meriendas', 'desayunos', 'cafeteria', 'cosas dulces', 'dulces', 'sandwichs', 'sandwiches', 'sandwich', 'huevos revueltos', 'licuados', 'promos'];
-    $categoriasCompartidas = ['bebidas'];
     $seleccion = isset($categoriaActual) ? $normalizar($categoriaActual) : null;
     $cartaTipo = in_array(request()->query('carta'), ['cafeteria', 'comidas'], true) ? request()->query('carta') : 'cafeteria';
-    if ($seleccion && !in_array($seleccion, $categoriasCompartidas, true)) {
-        $cartaTipo = in_array($seleccion, $categoriasCafe, true) ? 'cafeteria' : 'comidas';
-    }
-    $orden = $cartaTipo === 'cafeteria'
-        ? ['cafeteria', 'desayunos y meriendas', 'cosas dulces', 'dulces', 'huevos revueltos', 'licuados', 'promos', 'sandwichs', 'sandwiches', 'bebidas']
-        : ['ensaladas', 'wraps', 'omelette / huevos', 'omelettes', 'wok', 'pollo', 'pastas', 'polentas', 'milanesas', 'platos', 'plato del dia', 'postres', 'bebidas'];
+    $productosCarta = collect($productos)->filter(fn ($producto) => $producto->categoria !== null && $producto->visible);
+    $categoriaSeleccionada = $seleccion ? $productosCarta->first(fn ($producto) => $normalizar($producto->categoria->nombre) === $seleccion)?->categoria : null;
+    if ($categoriaSeleccionada && in_array($categoriaSeleccionada->carta, ['cafeteria', 'comidas'], true)) $cartaTipo = $categoriaSeleccionada->carta;
     $titulos = ['cafeteria' => 'Cafetería', 'plato del dia' => 'Plato del día'];
-    $secciones = collect($productos)->filter(fn ($producto) => $producto->categoria !== null)
-        ->groupBy(fn ($producto) => $producto->categoria_id)
-        ->filter(function ($items) use ($normalizar, $categoriasCafe, $categoriasCompartidas, $cartaTipo) {
-            $nombre = $normalizar($items->first()->categoria->nombre);
-            return in_array($nombre, $categoriasCompartidas, true)
-                || ($cartaTipo === 'cafeteria') === in_array($nombre, $categoriasCafe, true);
-        })->sortBy(function ($items) use ($normalizar, $orden) {
-            $posicion = array_search($normalizar($items->first()->categoria->nombre), $orden, true);
-            return $posicion === false ? count($orden) : $posicion;
-        });
+    $secciones = $productosCarta->groupBy(fn ($producto) => $producto->categoria_id)
+        ->filter(fn ($items) => in_array($items->first()->categoria->carta, [$cartaTipo, 'ambas'], true))
+        ->sortBy(fn ($items) => $items->first()->categoria->posicion);
     $grupos = $secciones->filter(fn ($items) => !$seleccion || $normalizar($items->first()->categoria->nombre) === $seleccion);
 @endphp
+
 @extends('template.main')
 @section('title', $categoriaActual ?? ($cartaTipo === 'cafeteria' ? 'Cafetería y meriendas' : 'Comidas'))
 @section('main')

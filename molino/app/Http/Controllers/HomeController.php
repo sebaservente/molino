@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $productos = Producto::with(['categoria'])->get();
+        $productos = Producto::publicos()->with('categoria')->get();
         return view('index', [
             'productos' => $productos
         ]);

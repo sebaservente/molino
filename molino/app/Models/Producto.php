@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
- * 
+ *
  *
  * @property int $producto_id
  * @property string $titulo
@@ -56,7 +56,7 @@ class Producto extends Model
 
     protected $table = 'productos';
     protected $primaryKey = 'producto_id';
-    protected $fillable = ['categoria_id','titulo','precio','descripcion','precio_dos','descripcion_dos','imagen','imagen_descripcion'];
+    protected $fillable = ['categoria_id','titulo','precio','descripcion','precio_dos','descripcion_dos','imagen','imagen_descripcion','visible','posicion'];
 
     public const VALIDAR_CREAR_PRODUCTOS = [
         'titulo' => 'required|min:2',
@@ -77,6 +77,13 @@ class Producto extends Model
         'imagen_descripcion.required' => 'La descripción de la imagen es obligatoria.',
         'imagen_descripcion.min' => 'Debes escribir al menos :min caracteres.',
     ];
+
+    protected $casts = ['visible' => 'boolean', 'posicion' => 'integer'];
+
+    public function scopePublicos($query)
+    {
+        return $query->where('visible', true)->orderBy('posicion')->orderBy('producto_id');
+    }
 
     public function categoria()
     {

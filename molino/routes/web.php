@@ -54,5 +54,35 @@ Route::get('/admin/productos/postres', [\App\Http\Controllers\AdminController::c
 Route::get('/admin/productos/promos', [\App\Http\Controllers\AdminController::class, 'promos'])->name('admin.promos')->middleware(['auth']);
 Route::get('/admin/productos/platoDia', [\App\Http\Controllers\AdminController::class, 'platoDia'])->name('admin.platoDia')->middleware(['auth']);
 
+// LISTADO GENERAL DE PRODUCTOS
+Route::get('/admin/productos', [\App\Http\Controllers\AdminController::class, 'productos'])
+    ->name('admin.productos')->middleware(['auth']);
 
+// MOSTRAR U OCULTAR UN PRODUCTO
+Route::post('/admin/productos/{id}/visible', [\App\Http\Controllers\AdminController::class, 'visible'])
+    ->name('admin.visible')->whereNumber('id')->middleware(['auth']);
+
+// LISTADO DE CATEGORÍAS
+Route::get('/admin/categorias', [\App\Http\Controllers\CategoriaAdminController::class, 'index'])
+    ->name('admin.categorias')->middleware(['auth']);
+
+// FORMULARIO PARA CREAR UNA CATEGORÍA
+Route::get('/admin/categorias/crear', [\App\Http\Controllers\CategoriaAdminController::class, 'formulario'])
+    ->name('admin.categorias.crear')->middleware(['auth']);
+
+// GUARDAR UNA CATEGORÍA NUEVA
+Route::post('/admin/categorias/crear', [\App\Http\Controllers\CategoriaAdminController::class, 'guardar'])
+    ->name('admin.categorias.guardar')->middleware(['auth']);
+
+// FORMULARIO PARA EDITAR UNA CATEGORÍA
+Route::get('/admin/categorias/{id}/editar', [\App\Http\Controllers\CategoriaAdminController::class, 'formulario'])
+    ->name('admin.categorias.editar')->whereNumber('id')->middleware(['auth']);
+
+// GUARDAR LOS CAMBIOS DE UNA CATEGORÍA
+Route::post('/admin/categorias/{id}/editar', [\App\Http\Controllers\CategoriaAdminController::class, 'guardar'])
+    ->name('admin.categorias.actualizar')->whereNumber('id')->middleware(['auth']);
+
+// BORRAR UNA CATEGORÍA VACÍA
+Route::post('/admin/categorias/{id}/borrar', [\App\Http\Controllers\CategoriaAdminController::class, 'borrar'])
+    ->name('admin.categorias.borrar')->whereNumber('id')->middleware(['auth']);
 
